@@ -90,10 +90,12 @@
 }
 
 @layer utilities {
-  .font-serif { font-family: var(--font-serif); font-weight: 800; letter-spacing: -0.02em; }
-  .font-mono { font-family: var(--font-mono); }
+  .font-serif { font-family: var(--font-serif); font-weight: 900; letter-spacing: -0.035em; }
+  .font-mono { font-family: var(--font-mono); font-feature-settings: "ss01", "zero"; }
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
+
+  .display-xl { font-family: var(--font-serif); font-weight: 900; letter-spacing: -0.045em; line-height: 0.92; }
 
   .prose-essay p { margin-bottom: 1.4em; }
   .prose-essay p:last-child { margin-bottom: 0; }
