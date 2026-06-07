@@ -28,34 +28,35 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-rule: var(--rule);
-  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  /* Display = grotesca con carácter. Body = la misma, peso normal. */
+  --font-serif: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
 :root {
-  --radius: 0.25rem;
-  /* Paper & ink — blanco roto, negro cálido, grises cálidos */
-  --background: oklch(0.97 0.005 75);
-  --foreground: oklch(0.20 0.01 60);
-  --card: oklch(0.97 0.005 75);
-  --card-foreground: oklch(0.20 0.01 60);
-  --popover: oklch(0.97 0.005 75);
-  --popover-foreground: oklch(0.20 0.01 60);
-  --primary: oklch(0.20 0.01 60);
-  --primary-foreground: oklch(0.97 0.005 75);
-  --secondary: oklch(0.93 0.006 70);
-  --secondary-foreground: oklch(0.20 0.01 60);
-  --muted: oklch(0.93 0.006 70);
-  --muted-foreground: oklch(0.55 0.008 60);
-  --accent: oklch(0.52 0.09 40); /* terracota desaturado, uso muy contenido */
-  --accent-foreground: oklch(0.97 0.005 75);
-  --destructive: oklch(0.55 0.18 27);
-  --destructive-foreground: oklch(0.97 0.005 75);
-  --border: oklch(0.88 0.006 70);
-  --input: oklch(0.88 0.006 70);
-  --ring: oklch(0.55 0.008 60);
-  --rule: oklch(0.86 0.006 70);
+  --radius: 0;
+  /* Noir editorial — negro denso, blanco, grises fríos. */
+  --background: oklch(0.04 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.04 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.04 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.04 0 0);
+  --secondary: oklch(0.18 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.14 0 0);
+  --muted-foreground: oklch(0.62 0 0);
+  --accent: oklch(0.985 0 0);
+  --accent-foreground: oklch(0.04 0 0);
+  --destructive: oklch(0.6 0.2 27);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.22 0 0);
+  --input: oklch(0.22 0 0);
+  --ring: oklch(0.62 0 0);
+  --rule: oklch(0.22 0 0);
 }
 
 @layer base {
@@ -65,22 +66,22 @@
 
   html {
     scroll-behavior: smooth;
+    background-color: var(--color-background);
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
-    font-size: 18px;
-    line-height: 1.7;
-    font-feature-settings: "ss01", "cv11";
+    font-size: 17px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
   ::selection {
-    background: var(--accent);
-    color: var(--accent-foreground);
+    background: var(--foreground);
+    color: var(--background);
   }
 
   [id] {
@@ -89,7 +90,7 @@
 }
 
 @layer utilities {
-  .font-serif { font-family: var(--font-serif); font-weight: 400; letter-spacing: -0.01em; }
+  .font-serif { font-family: var(--font-serif); font-weight: 800; letter-spacing: -0.02em; }
   .font-mono { font-family: var(--font-mono); }
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
