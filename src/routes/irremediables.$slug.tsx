@@ -73,14 +73,14 @@ function ProyectoPage() {
 
           <header className="mt-12 border-b border-[color:var(--rule)] pb-12">
             <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-              Irremediable №{proyecto.numero}
+              Irremediable {proyecto.numero}
             </p>
-            <h1 className="display-xl mt-8 text-5xl uppercase text-balance md:text-8xl">
+            <h1 className="mt-6 font-serif text-4xl uppercase leading-[1.05] text-balance md:text-6xl">
               {proyecto.titulo}
             </h1>
           </header>
 
-          <p className="mt-14 max-w-xl font-mono text-sm uppercase tracking-tight text-muted-foreground">
+          <p className="mt-12 max-w-xl font-serif text-2xl italic leading-tight text-pretty text-muted-foreground md:text-3xl">
             “{proyecto.observacion}”
           </p>
 
