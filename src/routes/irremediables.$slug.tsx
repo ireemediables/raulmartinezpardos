@@ -27,7 +27,7 @@ export const Route = createFileRoute("/irremediables/$slug")({
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800;12..96,900&family=JetBrains+Mono:wght@400;500;700&display=swap",
         },
       ],
     };
@@ -72,15 +72,15 @@ function ProyectoPage() {
           </Link>
 
           <header className="mt-12 border-b border-[color:var(--rule)] pb-12">
-            <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Irremediable {proyecto.numero}
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+              Irremediable №{proyecto.numero}
             </p>
-            <h1 className="mt-6 font-serif text-4xl uppercase leading-[1.05] text-balance md:text-6xl">
+            <h1 className="display-xl mt-8 text-5xl uppercase text-balance md:text-8xl">
               {proyecto.titulo}
             </h1>
           </header>
 
-          <p className="mt-12 font-serif text-2xl uppercase italic text-pretty text-muted-foreground md:text-3xl">
+          <p className="mt-14 max-w-xl font-mono text-sm uppercase tracking-tight text-muted-foreground">
             “{proyecto.observacion}”
           </p>
 
@@ -93,15 +93,15 @@ function ProyectoPage() {
 
         {siguiente && (
           <nav className="mx-auto max-w-2xl border-t border-[color:var(--rule)] px-6 py-16 md:px-10">
-            <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              Siguiente
+            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+              Siguiente — №{siguiente.numero}
             </p>
             <Link
               to="/irremediables/$slug"
               params={{ slug: siguiente.slug }}
-              className="mt-4 block font-serif text-3xl uppercase transition-transform hover:translate-x-2 md:text-4xl"
+              className="display-xl mt-6 block text-4xl uppercase transition-transform hover:translate-x-2 md:text-6xl"
             >
-              {siguiente.numero} — {siguiente.titulo} →
+              {siguiente.titulo} →
             </Link>
           </nav>
         )}
