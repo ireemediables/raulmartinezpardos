@@ -85,7 +85,7 @@ function ProyectoPage() {
           </p>
 
           <div className="prose-essay mt-16 text-lg text-pretty">
-            {proyecto.cuerpo.map((parr, i) => (
+            {proyecto.cuerpo.map((parr: string, i: number) => (
               <p key={i}>{parr}</p>
             ))}
           </div>
