@@ -94,14 +94,14 @@ function ProyectoPage() {
         {siguiente && (
           <nav className="mx-auto max-w-2xl border-t border-[color:var(--rule)] px-6 py-16 md:px-10">
             <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-              Siguiente — №{siguiente.numero}
+              Siguiente
             </p>
             <Link
               to="/irremediables/$slug"
               params={{ slug: siguiente.slug }}
-              className="display-xl mt-6 block text-4xl uppercase transition-transform hover:translate-x-2 md:text-6xl"
+              className="mt-4 block font-serif text-3xl uppercase leading-[1.05] transition-transform hover:translate-x-1.5 md:text-4xl"
             >
-              {siguiente.titulo} →
+              {siguiente.numero} — {siguiente.titulo} →
             </Link>
           </nav>
         )}
