@@ -28,10 +28,10 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-rule: var(--rule);
-  /* Negro tipográfico — cuaderno técnico, peso extremo. */
+  /* Noir editorial — grotesca con carácter + mono editorial. */
   --font-serif: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
 :root {
@@ -90,12 +90,12 @@
 }
 
 @layer utilities {
-  .font-serif { font-family: var(--font-serif); font-weight: 900; letter-spacing: -0.035em; }
-  .font-mono { font-family: var(--font-mono); font-feature-settings: "ss01", "zero"; }
+  .font-serif { font-family: var(--font-serif); font-weight: 700; letter-spacing: -0.022em; }
+  .font-mono { font-family: var(--font-mono); }
   .text-balance { text-wrap: balance; }
   .text-pretty { text-wrap: pretty; }
 
-  .display-xl { font-family: var(--font-serif); font-weight: 900; letter-spacing: -0.045em; line-height: 0.92; }
+  .display-xl { font-family: var(--font-serif); font-weight: 700; letter-spacing: -0.028em; line-height: 1.02; }
 
   .prose-essay p { margin-bottom: 1.4em; }
   .prose-essay p:last-child { margin-bottom: 0; }

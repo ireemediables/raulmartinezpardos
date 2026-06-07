@@ -33,7 +33,7 @@ export const Route = createFileRoute("/")({
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,700;12..96,800;12..96,900&family=JetBrains+Mono:wght@400;500;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap",
       },
     ],
   }),
@@ -72,35 +72,38 @@ function Home() {
       <Header />
       <main>
         {/* Punto de partida */}
-        <Section id="partida" n="01" label="Punto de partida">
-          <h1 className="display-xl text-balance text-5xl uppercase md:text-7xl lg:text-8xl">
-            Hay observaciones<br />que se quedan dentro<br />y no se van.
+        <Section id="partida" n="I" label="Punto de partida">
+          <h1 className="font-serif text-balance text-4xl uppercase leading-[1.05] md:text-6xl">
+            Hay observaciones que se quedan dentro y no se van.{" "}
+            <span className="font-serif italic normal-case text-muted-foreground">
+              Ideas Irremediables
+            </span>{" "}
+            es lo que ocurre cuando decido escucharlas.
           </h1>
-          <p className="mt-12 max-w-2xl text-pretty text-lg text-muted-foreground md:text-xl">
-            <span className="font-mono text-sm uppercase tracking-tight text-foreground">Ideas Irremediables</span>{" "}
-            es lo que ocurre cuando decido escucharlas. {puntoDePartida.parrafo}
+          <p className="mt-10 max-w-2xl text-pretty text-lg text-muted-foreground md:text-xl">
+            {puntoDePartida.parrafo}
           </p>
         </Section>
 
         {/* Método */}
-        <Section id="metodo" n="02" label="Método">
-          <h2 className="display-xl text-4xl uppercase md:text-6xl">
-            Una manera de mirar,<br />no un proceso.
+        <Section id="metodo" n="II" label="Método">
+          <h2 className="font-serif text-3xl uppercase leading-[1.05] md:text-5xl">
+            Una manera de mirar, no un proceso.
           </h2>
-          <p className="mt-10 max-w-2xl text-lg text-muted-foreground text-pretty">
+          <p className="mt-8 max-w-2xl text-lg text-muted-foreground text-pretty">
             {metodo.intro}
           </p>
-          <ol className="mt-20 space-y-16">
+          <ol className="mt-16 space-y-12">
             {metodo.pasos.map((p, i) => (
-              <li key={p.n} className="grid gap-6 md:grid-cols-[8rem_1fr]">
-                <span className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                  Paso {String(i + 1).padStart(2, "0")}
+              <li key={p.n} className="grid gap-4 border-t border-[color:var(--rule)] pt-8 md:grid-cols-[7rem_1fr] md:gap-8">
+                <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+                  {String(i + 1).padStart(2, "0")} — {p.n}
                 </span>
                 <div>
-                  <h3 className="display-xl text-3xl uppercase md:text-5xl">
+                  <h3 className="font-serif text-2xl uppercase md:text-3xl">
                     {p.titulo}
                   </h3>
-                  <p className="mt-4 max-w-xl text-pretty text-muted-foreground">{p.texto}</p>
+                  <p className="mt-3 max-w-xl text-pretty text-muted-foreground">{p.texto}</p>
                 </div>
               </li>
             ))}
@@ -108,39 +111,39 @@ function Home() {
         </Section>
 
         {/* Para quién */}
-        <Section id="para-quien" n="03" label="Para quién">
-          <p className="display-xl text-3xl uppercase md:text-5xl">
+        <Section id="para-quien" n="III" label="Para quién">
+          <p className="font-serif text-2xl uppercase leading-[1.1] text-pretty md:text-4xl">
             {paraQuien.parrafos[0]}
           </p>
-          <p className="mt-10 max-w-2xl text-pretty text-muted-foreground md:text-lg">
+          <p className="mt-10 max-w-2xl border-l border-foreground/40 pl-6 text-pretty italic text-muted-foreground md:text-lg">
             {paraQuien.parrafos[1]}
           </p>
         </Section>
 
         {/* Irremediables */}
-        <Section id="irremediables" n="04" label="Irremediables">
-          <h2 className="display-xl text-4xl uppercase md:text-6xl">
-            Una colección,<br />no un portfolio.
+        <Section id="irremediables" n="IV" label="Irremediables">
+          <h2 className="font-serif text-3xl uppercase leading-[1.05] md:text-5xl">
+            Una colección, no un portfolio.
           </h2>
-          <p className="mt-6 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-            {String(irremediables.length).padStart(2, "0")} entradas — léelas como quien hojea un cuaderno
+          <p className="mt-5 font-serif italic text-muted-foreground md:text-lg">
+            Léelos como quien hojea un cuaderno.
           </p>
-          <ul className="mt-16 border-t border-foreground">
+          <ul className="mt-16 border-t border-[color:var(--rule)]">
             {irremediables.map((p) => (
-              <li key={p.slug} className="border-b border-foreground">
+              <li key={p.slug} className="border-b border-[color:var(--rule)]">
                 <Link
                   to="/irremediables/$slug"
                   params={{ slug: p.slug }}
-                  className="group grid grid-cols-[3rem_1fr_auto] items-baseline gap-4 py-8 transition-colors hover:text-muted-foreground md:grid-cols-[5rem_1fr_auto] md:gap-8 md:py-12"
+                  className="group grid grid-cols-[3rem_1fr_auto] items-baseline gap-4 py-7 transition-colors hover:text-muted-foreground md:grid-cols-[5rem_1fr_auto] md:gap-8 md:py-9"
                 >
-                  <span className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                    №{p.numero}
+                  <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
+                    {p.numero}
                   </span>
                   <div className="min-w-0">
-                    <h3 className="display-xl text-3xl uppercase leading-[0.95] transition-transform group-hover:translate-x-2 md:text-5xl">
+                    <h3 className="font-serif text-2xl uppercase leading-tight transition-transform group-hover:translate-x-1.5 md:text-3xl">
                       {p.titulo}
                     </h3>
-                    <p className="mt-3 max-w-xl text-sm leading-snug text-muted-foreground">
+                    <p className="mt-2 max-w-xl text-sm leading-snug text-muted-foreground">
                       {p.observacion}
                     </p>
                   </div>
@@ -154,17 +157,17 @@ function Home() {
         </Section>
 
         {/* Manifiesto */}
-        <Section id="manifiesto" n="05" label="Manifiesto">
-          <ol className="space-y-14">
+        <Section id="manifiesto" n="V" label="Manifiesto">
+          <ol className="space-y-12">
             {manifiesto.map((linea, i) => (
               <li
                 key={i}
                 className="grid grid-cols-[3rem_1fr] gap-4 md:grid-cols-[5rem_1fr] md:gap-8"
               >
-                <span className="pt-3 font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                <span className="pt-3 font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <p className="display-xl text-2xl uppercase text-pretty md:text-4xl">
+                <p className="font-serif text-2xl uppercase leading-snug text-pretty md:text-3xl">
                   {linea}
                 </p>
               </li>
@@ -172,17 +175,19 @@ function Home() {
           </ol>
         </Section>
 
-        {/* Contacto — purely typographic */}
-        <Section id="contacto" n="06" label="Contacto" bordered={false}>
-          <h2 className="display-xl text-4xl uppercase md:text-6xl">
-            {contactoTexto.invitacion}
-          </h2>
-          <a
-            href={`mailto:${contacto.email}`}
-            className="mt-12 inline-block font-mono text-lg uppercase tracking-tight underline decoration-2 underline-offset-[6px] transition-all hover:underline-offset-[10px] md:text-2xl"
-          >
-            {contacto.email} →
-          </a>
+        {/* Contacto — bloque invertido editorial */}
+        <Section id="contacto" n="VI" label="Contacto" bordered={false}>
+          <div className="bg-foreground p-10 text-background md:p-16">
+            <h2 className="font-serif text-3xl uppercase leading-tight text-pretty md:text-4xl">
+              {contactoTexto.invitacion}
+            </h2>
+            <a
+              href={`mailto:${contacto.email}`}
+              className="mt-10 inline-block border-b-2 border-background pb-1 font-mono text-base uppercase tracking-tight transition-all hover:pb-2 md:text-lg"
+            >
+              {contacto.email}
+            </a>
+          </div>
         </Section>
       </main>
       <Footer />
