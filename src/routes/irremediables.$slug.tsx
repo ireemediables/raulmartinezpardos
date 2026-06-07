@@ -27,7 +27,7 @@ export const Route = createFileRoute("/irremediables/$slug")({
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap",
         },
       ],
     };
@@ -39,7 +39,7 @@ export const Route = createFileRoute("/irremediables/$slug")({
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
           No encontrado
         </p>
-        <h1 className="mt-6 font-serif text-4xl md:text-5xl">
+        <h1 className="mt-6 font-serif text-4xl uppercase md:text-5xl">
           Esta idea aún no es irremediable.
         </h1>
         <p className="mt-8">
@@ -75,12 +75,12 @@ function ProyectoPage() {
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               Irremediable {proyecto.numero}
             </p>
-            <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-balance md:text-6xl">
+            <h1 className="mt-6 font-serif text-4xl uppercase leading-[1.05] text-balance md:text-6xl">
               {proyecto.titulo}
             </h1>
           </header>
 
-          <p className="mt-12 font-serif text-2xl text-pretty text-muted-foreground md:text-3xl">
+          <p className="mt-12 font-serif text-2xl uppercase italic text-pretty text-muted-foreground md:text-3xl">
             “{proyecto.observacion}”
           </p>
 
@@ -99,7 +99,7 @@ function ProyectoPage() {
             <Link
               to="/irremediables/$slug"
               params={{ slug: siguiente.slug }}
-              className="mt-4 block font-serif text-3xl hover:text-[color:var(--accent)] transition-colors md:text-4xl"
+              className="mt-4 block font-serif text-3xl uppercase transition-transform hover:translate-x-2 md:text-4xl"
             >
               {siguiente.numero} — {siguiente.titulo} →
             </Link>

@@ -7,43 +7,66 @@ export type Irremediable = {
   cuerpo: string[];
 };
 
-// Contenido provisional — sustituir por los proyectos reales de Raúl.
+// Proyectos seleccionados — sustituir los cuerpos por el detalle de cada caso.
 export const irremediables: Irremediable[] = [
   {
-    slug: "el-cafe-de-las-siete",
+    slug: "paluego",
     numero: "01",
-    titulo: "El café de las siete",
+    titulo: "PALUEGO",
     observacion:
-      "Hay un señor que cada mañana pide lo mismo sin pedirlo. El camarero ya sabe.",
+      "Lo que se deja para después rara vez vuelve. Y aun así, lo seguimos dejando.",
     resumen:
-      "Una marca sobre los rituales silenciosos que sostienen los barrios.",
+      "Una marca construida sobre la honestidad incómoda de aplazar.",
     cuerpo: [
-      "Este es un texto provisional. Aquí irá el desarrollo del caso: el contexto, la idea de marca, la propuesta visual y verbal, y por qué esta observación se volvió irremediable.",
-      "Cuéntalo en primera persona, sin tecnicismos. La gente que lea esto no busca un brief, busca entender cómo piensas.",
+      "Texto provisional. Aquí irá el desarrollo del caso PALUEGO: contexto, observación originadora, estrategia, naming y propuesta de marca.",
     ],
   },
   {
-    slug: "objetos-que-nadie-recoge",
+    slug: "tomatelo",
     numero: "02",
-    titulo: "Objetos que nadie recoge",
+    titulo: "tomaTÉlo",
     observacion:
-      "Un guante huérfano colocado sobre una valla, esperando a su dueño durante semanas.",
+      "Hay frases que cambian de sentido sólo con cómo las escribes.",
     resumen:
-      "Una identidad construida sobre la pequeña conspiración de quien cuida lo perdido.",
+      "Una identidad que vive en la tensión entre lo escrito y lo dicho.",
     cuerpo: [
-      "Texto provisional. Desarrolla aquí la historia del proyecto.",
+      "Texto provisional. Desarrolla aquí la historia del proyecto tomaTÉlo.",
     ],
   },
   {
-    slug: "la-letra-del-rotulo",
+    slug: "ni-mu",
     numero: "03",
-    titulo: "La letra del rótulo",
+    titulo: "NI MU",
     observacion:
-      "Las tildes hechas a mano en los carteles de las fruterías son siempre demasiado grandes.",
+      "Los silencios cuentan más cosas que los discursos. Y se editan peor.",
     resumen:
-      "Una marca que rinde tributo a la tipografía no profesional del comercio de calle.",
+      "Una marca que reivindica callar como acto creativo.",
     cuerpo: [
-      "Texto provisional. Desarrolla aquí la historia del proyecto.",
+      "Texto provisional. Desarrolla aquí la historia del proyecto NI MU.",
+    ],
+  },
+  {
+    slug: "la-alcahueta",
+    numero: "04",
+    titulo: "LA ALCAHUETA",
+    observacion:
+      "Algunas palabras antiguas todavía saben hacer cosas que las nuevas no.",
+    resumen:
+      "Una identidad que recupera un oficio sin disfrazarlo de moderno.",
+    cuerpo: [
+      "Texto provisional. Desarrolla aquí la historia del proyecto LA ALCAHUETA.",
+    ],
+  },
+  {
+    slug: "bonvuayas",
+    numero: "05",
+    titulo: "BONVUAYAS",
+    observacion:
+      "Lo mal pronunciado a veces se queda. Y termina siendo lo único que se recuerda.",
+    resumen:
+      "Una marca que abraza el error como firma.",
+    cuerpo: [
+      "Texto provisional. Desarrolla aquí la historia del proyecto BONVUAYAS.",
     ],
   },
 ];
