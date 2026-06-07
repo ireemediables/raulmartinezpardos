@@ -72,16 +72,13 @@ function Home() {
       <Header />
       <main>
         {/* Punto de partida */}
-        <Section id="partida" n="I" label="Punto de partida">
-          <h1 className="font-serif text-balance text-4xl uppercase leading-[1.05] md:text-6xl">
-            Hay observaciones que se quedan dentro y no se van.{" "}
-            <span className="font-serif italic normal-case text-muted-foreground">
-              Ideas Irremediables
-            </span>{" "}
-            es lo que ocurre cuando decido escucharlas.
+        <Section id="partida" n="01" label="Punto de partida">
+          <h1 className="display-xl text-balance text-5xl uppercase md:text-7xl lg:text-8xl">
+            Hay observaciones<br />que se quedan dentro<br />y no se van.
           </h1>
-          <p className="mt-10 text-pretty text-lg text-muted-foreground md:text-xl">
-            {puntoDePartida.parrafo}
+          <p className="mt-12 max-w-2xl text-pretty text-lg text-muted-foreground md:text-xl">
+            <span className="font-mono text-sm uppercase tracking-tight text-foreground">Ideas Irremediables</span>{" "}
+            es lo que ocurre cuando decido escucharlas. {puntoDePartida.parrafo}
           </p>
         </Section>
 
