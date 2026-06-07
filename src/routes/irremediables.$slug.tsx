@@ -27,7 +27,7 @@ export const Route = createFileRoute("/irremediables/$slug")({
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap",
         },
       ],
     };
