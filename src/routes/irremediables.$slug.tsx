@@ -39,7 +39,7 @@ export const Route = createFileRoute("/irremediables/$slug")({
         <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
           No encontrado
         </p>
-        <h1 className="mt-6 font-serif text-4xl md:text-5xl">
+        <h1 className="mt-6 font-serif text-4xl uppercase md:text-5xl">
           Esta idea aún no es irremediable.
         </h1>
         <p className="mt-8">
