@@ -99,7 +99,7 @@ function ProyectoPage() {
             <Link
               to="/irremediables/$slug"
               params={{ slug: siguiente.slug }}
-              className="mt-4 block font-serif text-3xl hover:text-[color:var(--accent)] transition-colors md:text-4xl"
+              className="mt-4 block font-serif text-3xl uppercase transition-transform hover:translate-x-2 md:text-4xl"
             >
               {siguiente.numero} — {siguiente.titulo} →
             </Link>
