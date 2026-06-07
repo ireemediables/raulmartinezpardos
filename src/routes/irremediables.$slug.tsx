@@ -80,7 +80,7 @@ function ProyectoPage() {
             </h1>
           </header>
 
-          <p className="mt-12 font-serif text-2xl text-pretty text-muted-foreground md:text-3xl">
+          <p className="mt-12 font-serif text-2xl uppercase italic text-pretty text-muted-foreground md:text-3xl">
             “{proyecto.observacion}”
           </p>
 
