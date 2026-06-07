@@ -75,7 +75,7 @@ function ProyectoPage() {
             <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
               Irremediable {proyecto.numero}
             </p>
-            <h1 className="mt-6 font-serif text-4xl leading-[1.1] text-balance md:text-6xl">
+            <h1 className="mt-6 font-serif text-4xl uppercase leading-[1.05] text-balance md:text-6xl">
               {proyecto.titulo}
             </h1>
           </header>
