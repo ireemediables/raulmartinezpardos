@@ -16,6 +16,8 @@ import heroNimu from "@/assets/nimu/hero.asset.json";
 import boardNimu from "@/assets/nimu/board.asset.json";
 import heroArteSerestre from "@/assets/arteserestre/hero.asset.json";
 import boardArteSerestre from "@/assets/arteserestre/board.asset.json";
+import heroYes from "@/assets/yes/hero.asset.json";
+import boardYes from "@/assets/yes/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
