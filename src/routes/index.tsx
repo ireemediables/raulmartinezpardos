@@ -100,19 +100,19 @@ function Home() {
 
         {/* Método */}
         <Section id="metodo" n="02" label="Método">
-          <p className="accent-italic text-lg text-muted-foreground sm:text-xl md:text-2xl">
+          <p className="accent-italic text-[1.05rem] text-muted-foreground sm:text-xl md:text-2xl">
             {metodo.intro}
           </p>
-          <ol className="mt-12 space-y-5 font-serif text-xl text-pretty sm:mt-14 sm:space-y-6 sm:text-2xl md:text-3xl">
+          <ol className="mt-14 space-y-7 font-serif text-[1.2rem] text-pretty sm:mt-16 sm:space-y-7 sm:text-2xl md:text-3xl">
             {metodo.pasos.map((paso, i) => (
               <li
                 key={i}
-                className="grid grid-cols-[2.25rem_1fr] items-baseline gap-x-4 sm:grid-cols-[3rem_1fr] sm:gap-x-6"
+                className="grid grid-cols-[2rem_1fr] items-baseline gap-x-4 sm:grid-cols-[3rem_1fr] sm:gap-x-6"
               >
                 <span className="eyebrow self-baseline">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className="leading-[1.25]">{paso}</span>
+                <span className="leading-[1.3]">{paso}</span>
               </li>
             ))}
           </ol>
