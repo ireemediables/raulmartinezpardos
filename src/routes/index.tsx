@@ -135,8 +135,8 @@ function Home() {
             ))}
           </ul>
 
-          <div className="mt-20 border-t border-[color:var(--rule)] pt-14 sm:mt-28 sm:pt-20">
-            <p className="display text-balance text-[1.75rem] leading-[1.15] sm:text-3xl md:text-5xl md:leading-[1.05]">
+          <div className="mt-20 border-t border-[color:var(--rule)] pt-14 sm:mt-24 sm:pt-16 md:mt-28 md:pt-20">
+            <p className="display text-balance text-[1.55rem] leading-[1.18] sm:text-[2rem] md:text-4xl lg:text-5xl lg:leading-[1.05]">
               Todo proyecto gira alrededor de una idea.
               <br />
               <span className="accent-italic text-muted-foreground">
