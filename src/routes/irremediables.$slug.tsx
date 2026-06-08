@@ -146,6 +146,13 @@ function CasoCompletoView({
             className="block h-[70vh] min-h-[420px] w-full object-cover sm:h-[80vh] md:h-[90vh]"
             loading="eager"
           />
+          <figcaption className="pointer-events-none absolute inset-x-0 bottom-0">
+            <div className="mx-auto max-w-6xl px-6 pb-6 sm:px-8 sm:pb-8 md:px-10 md:pb-10">
+              <p className="eyebrow text-white/90 [text-shadow:0_1px_12px_rgba(0,0,0,0.45)]">
+                {proyecto.numero} — {proyecto.titulo.toUpperCase()}
+              </p>
+            </div>
+          </figcaption>
         </figure>
         <div className="mx-auto max-w-3xl px-6 py-10 sm:px-8 sm:py-12 md:px-10 md:py-14">
           <Link
@@ -155,9 +162,6 @@ function CasoCompletoView({
           >
             ← Irremediables
           </Link>
-          <p className="eyebrow mt-8 text-foreground">
-            {proyecto.numero} — {proyecto.titulo.toUpperCase()}
-          </p>
         </div>
       </section>
 
@@ -170,7 +174,7 @@ function CasoCompletoView({
 
       {/* 02 — OBSERVACIÓN */}
       <CaseSection n="02" label="Observación">
-        <div className="prose-essay max-w-2xl text-[16px] text-muted-foreground sm:text-lg md:text-xl">
+        <div className="prose-essay max-w-2xl text-[16px] text-foreground sm:text-lg md:text-xl">
           {caso.observacion.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
@@ -187,7 +191,6 @@ function CasoCompletoView({
       {/* 04 — NOMBRE */}
       <CaseSection n="04" label="Nombre">
         <div className="py-10 sm:py-16 md:py-20">
-          <p className="eyebrow mb-6 sm:mb-8">El nombre</p>
           <h2 className="display text-balance text-[2.5rem] leading-[1.05] tracking-[-0.02em] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
             {caso.nombre}
           </h2>
@@ -208,11 +211,8 @@ function CasoCompletoView({
         </div>
       </CaseSection>
 
-      {/* 07 — BOARD */}
-      <section className="border-b border-[color:var(--rule)] py-24 sm:py-28 md:py-36">
-        <div className="mx-auto max-w-3xl px-6 sm:px-8 md:px-10">
-          <SectionLabel n="07">Board</SectionLabel>
-        </div>
+      {/* BOARD — continuación de dirección visual */}
+      <section className="border-b border-[color:var(--rule)] pb-24 sm:pb-28 md:pb-36">
         <figure className="mx-auto max-w-6xl px-6 sm:px-8 md:px-10">
           <img
             src={caso.board.src}
