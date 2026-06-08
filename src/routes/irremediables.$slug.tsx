@@ -12,9 +12,9 @@ export const Route = createFileRoute("/irremediables/$slug")({
   head: ({ loaderData }) => {
     const p = loaderData?.proyecto;
     const title = p
-      ? `${p.titulo} — Ideas Irremediables`
-      : "Irremediable — Ideas Irremediables";
-    const description = p?.resumen ?? "Un proyecto de Ideas Irremediables.";
+      ? `${p.titulo} — Ideas irremediables`
+      : "Irremediable — Ideas irremediables";
+    const description = p?.observacion ?? "Un proyecto de Ideas irremediables.";
     return {
       meta: [
         { title },
@@ -27,7 +27,7 @@ export const Route = createFileRoute("/irremediables/$slug")({
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700;12..96,800&family=Space+Mono:wght@400;700&display=swap",
+          href: "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=JetBrains+Mono:wght@400&display=swap",
         },
       ],
     };
@@ -36,10 +36,8 @@ export const Route = createFileRoute("/irremediables/$slug")({
     <div className="min-h-screen">
       <Header />
       <main className="mx-auto max-w-3xl px-6 py-40 md:px-10">
-        <p className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground">
-          No encontrado
-        </p>
-        <h1 className="mt-6 font-serif text-4xl uppercase md:text-5xl">
+        <p className="eyebrow">No encontrado</p>
+        <h1 className="mt-6 display text-4xl md:text-5xl">
           Esta idea aún no es irremediable.
         </h1>
         <p className="mt-8">
@@ -62,29 +60,26 @@ function ProyectoPage() {
     <div className="min-h-screen">
       <Header />
       <main>
-        <article className="mx-auto max-w-2xl px-6 py-24 md:px-10 md:py-32">
+        <article className="mx-auto max-w-2xl px-6 py-24 md:px-10 md:py-36">
           <Link
             to="/"
             hash="irremediables"
-            className="font-mono text-xs uppercase tracking-[0.18em] text-muted-foreground hover:text-foreground"
+            className="text-sm text-muted-foreground transition-colors hover:text-foreground"
           >
             ← Irremediables
           </Link>
 
-          <header className="mt-12 border-b border-[color:var(--rule)] pb-12">
-            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-              Irremediable {proyecto.numero}
-            </p>
-            <h1 className="mt-6 font-serif text-4xl uppercase leading-[1.05] text-balance md:text-6xl">
+          <header className="mt-14 border-b border-[color:var(--rule)] pb-14">
+            <p className="eyebrow">Irremediable {proyecto.numero}</p>
+            <h1 className="mt-6 display text-balance text-5xl md:text-6xl">
               {proyecto.titulo}
             </h1>
+            <p className="mt-8 max-w-xl accent-italic text-xl text-muted-foreground md:text-2xl">
+              {proyecto.observacion}
+            </p>
           </header>
 
-          <p className="mt-12 max-w-xl font-serif text-2xl italic leading-tight text-pretty text-muted-foreground md:text-3xl">
-            “{proyecto.observacion}”
-          </p>
-
-          <div className="prose-essay mt-16 text-lg text-pretty">
+          <div className="prose-essay mt-16 text-lg text-pretty text-muted-foreground">
             {proyecto.cuerpo.map((parr: string, i: number) => (
               <p key={i}>{parr}</p>
             ))}
@@ -92,16 +87,15 @@ function ProyectoPage() {
         </article>
 
         {siguiente && (
-          <nav className="mx-auto max-w-2xl border-t border-[color:var(--rule)] px-6 py-16 md:px-10">
-            <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-              Siguiente
-            </p>
+          <nav className="mx-auto max-w-2xl border-t border-[color:var(--rule)] px-6 py-20 md:px-10">
+            <p className="eyebrow">Siguiente</p>
             <Link
               to="/irremediables/$slug"
               params={{ slug: siguiente.slug }}
-              className="mt-4 block font-serif text-3xl uppercase leading-[1.05] transition-transform hover:translate-x-1.5 md:text-4xl"
+              className="mt-5 block font-serif text-3xl leading-tight transition-transform duration-500 hover:translate-x-1 md:text-4xl"
             >
-              {siguiente.numero} — {siguiente.titulo} →
+              {siguiente.titulo}
+              <span className="accent-italic text-muted-foreground"> — {siguiente.observacion}</span>
             </Link>
           </nav>
         )}

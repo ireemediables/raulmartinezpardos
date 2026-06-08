@@ -1,57 +1,79 @@
-// Textos provisionales — reemplazar por los definitivos de Raúl.
+// Textos definitivos proporcionados por Raúl. No modificar el tono ni inventar.
 export const contacto = {
-  email: "hola@ideasirremediables.com",
+  email: "raulmartinezpardos@gmail.com",
+  telefono: "+34 655 96 15 03",
+};
+
+export const cabecera = {
+  nombre: "Raúl Martínez Pardos",
+  proyecto: "Ideas irremediables",
+  tagline: "Nombres · Conceptos · Dirección visual",
 };
 
 export const puntoDePartida = {
   frase:
-    "Hay observaciones que se quedan dentro y no se van. Ideas Irremediables es lo que ocurre cuando decido escucharlas.",
-  parrafo:
-    "Soy Raúl Martínez. Llevo años fijándome en cosas pequeñas: gestos, costumbres, objetos que se quedan donde no debían. De ahí salen estos proyectos de marca. No son ejercicios de estilo: son intentos honestos de darle forma a algo que ya estaba pasando.",
+    "Las ideas irremediables son esas que, cuando aparecen, ya no te las sacas de encima.",
+  parrafos: [
+    "Mi nombre ya lo sabes, te contaré lo que hago.",
+    "Mi labor consiste en encontrar la idea principal alrededor de la que un proyecto puede contarse.",
+    "Porque cuando esa idea encaja, lo demás deja de ser pura decoración.",
+  ],
 };
 
 export const metodo = {
-  intro:
-    "No hay un proceso replicable, pero sí una manera de mirar. Estos son los tres momentos que siempre acaban repitiéndose, en este orden y nunca limpios del todo.",
+  intro: "Más o menos funciona así…",
   pasos: [
-    {
-      n: "01",
-      titulo: "Observar",
-      texto:
-        "Anotar lo que llama la atención sin saber todavía por qué. La mayoría de cosas no llegan a ninguna parte. Algunas sí.",
-    },
-    {
-      n: "02",
-      titulo: "Interpretar",
-      texto:
-        "Pasar tiempo con la observación hasta que aparece la idea de marca. No al revés. La estrategia sale de la mirada, no del PowerPoint.",
-    },
-    {
-      n: "03",
-      titulo: "Proponer",
-      texto:
-        "Dar forma. Verbal, visual, lo que la idea pida. La estética es la última decisión, no la primera.",
-    },
+    "Observo.",
+    "Observo un poco más.",
+    "Aparece una idea.",
+    "Intento ignorarla.",
+    "Si no se deja, es irremediable.",
+    "Entonces la desarrollo.",
+    "A veces funciona.",
+    "Otras no.",
+    "Pero cuando encaja, lo sé.",
   ],
 };
 
 export const paraQuien = {
+  intro: "Podría ser para ti, si…",
+  items: [
+    "Tienes una agencia y, de vez en cuando, sientes que un proyecto necesita algo diferente.",
+    "Estás montando un negocio y sabes que las cosas con personalidad no pasan desapercibidas.",
+    "Tu proyecto está claro, pero todavía no ha encontrado la forma correcta de contarse.",
+    "… o simplemente hay demasiadas ideas y ninguna parece ser la principal.",
+  ],
+  fraseDestacada: "Todo proyecto gira alrededor de una idea. La cuestión es encontrarla.",
+};
+
+export const irremediablesIntro = {
+  titulo: "Algunas ideas no se dejan ignorar…",
   parrafos: [
-    "Para personas y organizaciones que sospechan que su marca debería decir algo más que lo que dice ahora, y están dispuestas a mirar de cerca.",
-    "Probablemente no para quien necesita un logo en quince días, ni para quien ya tiene decididas las respuestas y sólo busca alguien que las maquete.",
+    "Aquí encontrarás una colección de proyectos construidos a partir de una observación.",
+    "No son encargos reales. Tampoco son ocurrencias aleatorias.",
+    "Son ejercicios para explorar cómo, a través de la observación, aparece una idea. Y cómo, a partir de la dedicación, esa idea puede convertirse en el origen de todo lo demás.",
   ],
 };
 
-export const manifiesto = [
-  "Las ideas vienen primero. La estética viene después.",
-  "Una marca que no parte de una observación honesta es decoración.",
-  "Mirar es un trabajo. Y se nota cuando no se ha hecho.",
-  "Lo cotidiano no es lo opuesto a lo profundo. Suele ser el camino.",
-  "Prefiero una idea incómoda y verdadera que una idea cómoda y olvidable.",
-  "No todo proyecto necesita existir. Algunos sí, irremediablemente.",
-];
+export const manifiesto = {
+  titulo: "En qué creo…",
+  parrafos: [
+    "Hay ideas que llegan, hacen ruido un rato y desaparecen.",
+    "Y hay otras que no.",
+    "Se quedan contigo mientras conduces, mientras paseas, mientras intentas pensar en otra cosa.",
+    "Aparecen donde no toca. Insisten.",
+    "Son aquellas que convierten una conversación cualquiera en una posibilidad. Las que terminan transformándose en una marca, un producto, un proyecto o una nueva forma de hacer las cosas.",
+    "Y esas son las que me interesan.",
+    "Las irremediables.",
+    "Vivimos en la época de la inmediatez. Nunca había sido tan fácil generar imágenes, textos o posibilidades en tan poco tiempo.",
+    "Y sería absurdo ignorarlo.",
+    "Pero todavía hay algo que ninguna herramienta puede hacer por nosotros:",
+    "enamorarse de una idea.",
+    "Por eso todavía existimos.",
+  ],
+};
 
 export const contactoTexto = {
-  invitacion:
-    "Si has llegado hasta aquí, escríbeme. Cuéntame una observación, no un brief. Por ahí se empieza mejor.",
+  invitacion: "Quizá conocernos también sea irremediable.",
+  cierre: "En ese caso, hablemos.",
 };
