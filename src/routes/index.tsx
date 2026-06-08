@@ -81,7 +81,9 @@ function Home() {
             {cabecera.proyecto}
             <br />
             <span className="accent-italic text-[0.8em]">
-              <span className="text-muted-foreground">— </span>una forma de mirar.
+              <span className="text-muted-foreground">— </span>son esas que, cuando aparecen,
+              <br />
+              ya no te las sacas de encima.
             </span>
           </h1>
         </div>
