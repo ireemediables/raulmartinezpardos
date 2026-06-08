@@ -79,7 +79,8 @@ function Home() {
           <p className="eyebrow mb-10 text-[11px] text-foreground/75 sm:mb-12 sm:text-[11.5px]">{cabecera.tagline}</p>
           <h1 className="display text-balance text-[1.75rem] leading-[1.12] sm:text-[2.125rem] md:text-4xl lg:text-5xl lg:leading-[1.05]">
             {cabecera.proyecto}
-            <span className="accent-italic text-muted-foreground text-[0.8em]"> — </span>
+            <span className="accent-italic text-muted-foreground text-[0.8em]"> —</span>
+            <br />
             <span className="accent-italic text-[0.8em]">una forma de mirar.</span>
           </h1>
         </div>
