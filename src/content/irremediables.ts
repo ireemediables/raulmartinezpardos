@@ -14,6 +14,8 @@ import heroBonvuayas from "@/assets/bonvuayas/hero.asset.json";
 import boardBonvuayas from "@/assets/bonvuayas/board.asset.json";
 import heroNimu from "@/assets/nimu/hero.asset.json";
 import boardNimu from "@/assets/nimu/board.asset.json";
+import heroArteSerestre from "@/assets/arteserestre/hero.asset.json";
+import boardArteSerestre from "@/assets/arteserestre/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
@@ -247,6 +249,26 @@ export const irremediables: Irremediable[] = [
     titulo: "Arte Serestre",
     observacion: "Arte sobre seres.",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroArteSerestre.url, alt: "Interior de una cueva oscura con luz tenue filtrándose desde la entrada, en blanco y negro." },
+      puntoDePartida: "Estudio de tatuajes.",
+      observacion: [
+        "Mucho antes de los lienzos.",
+        "Mucho antes de los museos.",
+        "Mucho antes de las galerías.",
+        "El ser humano ya sentía la necesidad de dejar una huella.",
+        "Lo hizo sobre la piedra.",
+        "Lo hizo sobre las paredes de las cuevas.",
+        "Y también sobre sí mismo.",
+      ],
+      concepto: "Arte sobre seres.",
+      nombre: "ARTE SERESTRE",
+      eslogan: { texto: "Dejando huella, por necesidad.", tachadas: [] },
+      direccionVisual: [
+        "El símbolo convierte la piel en una pared rupestre para representar una necesidad que acompaña al ser humano desde sus orígenes: dejar huella.",
+      ],
+      board: { src: boardArteSerestre.url, alt: "Board visual del proyecto Arte Serestre." },
+    },
   },
   {
     slug: "yes",
