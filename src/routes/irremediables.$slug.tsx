@@ -211,11 +211,8 @@ function CasoCompletoView({
         </div>
       </CaseSection>
 
-      {/* 07 — BOARD */}
-      <section className="border-b border-[color:var(--rule)] py-24 sm:py-28 md:py-36">
-        <div className="mx-auto max-w-3xl px-6 sm:px-8 md:px-10">
-          <SectionLabel n="07">Board</SectionLabel>
-        </div>
+      {/* BOARD — continuación de dirección visual */}
+      <section className="border-b border-[color:var(--rule)] pb-24 sm:pb-28 md:pb-36">
         <figure className="mx-auto max-w-6xl px-6 sm:px-8 md:px-10">
           <img
             src={caso.board.src}
