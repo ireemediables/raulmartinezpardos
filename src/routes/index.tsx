@@ -3,6 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { irremediables } from "@/content/irremediables";
+import perfilAsset from "@/assets/autor/perfil.asset.json";
 import {
   cabecera,
   puntoDePartida,
