@@ -265,6 +265,66 @@ function ProyectoPage() {
               </div>
             </nav>
           )}
+
+          {!siguiente && (
+            <nav className="py-24 sm:py-28 md:py-36">
+              <div className="mx-auto max-w-3xl px-6 sm:px-8 md:px-10">
+                <p className="eyebrow mb-6">Fin de la colección</p>
+                <p className="display text-balance text-[1.6rem] leading-[1.15] sm:text-3xl md:text-4xl">
+                  Hasta aquí, doce ideas que no se dejaron ignorar.
+                </p>
+                <p className="accent-italic mt-6 text-muted-foreground sm:text-lg">
+                  Gracias por acompañarme hasta el final del recorrido.
+                </p>
+                <ul className="mt-12 divide-y divide-[color:var(--rule)] border-y border-[color:var(--rule)]">
+                  <li>
+                    <Link
+                      to="/"
+                      hash="irremediables"
+                      className="group flex items-baseline justify-between gap-6 py-6 sm:py-7"
+                    >
+                      <span>
+                        <span className="eyebrow block mb-2">Índice</span>
+                        <span className="font-serif text-xl transition-transform duration-500 group-hover:translate-x-1 sm:text-2xl">
+                          Volver a Irremediables
+                        </span>
+                      </span>
+                      <span className="text-muted-foreground transition-colors group-hover:text-foreground">↑</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/"
+                      className="group flex items-baseline justify-between gap-6 py-6 sm:py-7"
+                    >
+                      <span>
+                        <span className="eyebrow block mb-2">Inicio</span>
+                        <span className="font-serif text-xl transition-transform duration-500 group-hover:translate-x-1 sm:text-2xl">
+                          Volver a la Home
+                        </span>
+                      </span>
+                      <span className="text-muted-foreground transition-colors group-hover:text-foreground">↑</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/irremediables/$slug"
+                      params={{ slug: irremediables[0].slug }}
+                      className="group flex items-baseline justify-between gap-6 py-6 sm:py-7"
+                    >
+                      <span>
+                        <span className="eyebrow block mb-2">01 — {irremediables[0].titulo}</span>
+                        <span className="font-serif text-xl transition-transform duration-500 group-hover:translate-x-1 sm:text-2xl">
+                          Empezar de nuevo la colección
+                        </span>
+                      </span>
+                      <span className="text-muted-foreground transition-colors group-hover:text-foreground">→</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          )}
         </main>
         <Footer />
       </div>
