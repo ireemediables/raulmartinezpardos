@@ -88,10 +88,10 @@ function Home() {
       <main>
         {/* Punto de partida */}
         <Section id="partida" n="01" label="Punto de partida">
-          <p className="display text-balance text-[1.5rem] leading-[1.18] sm:text-[1.875rem] md:text-3xl lg:text-4xl lg:leading-[1.05]">
+          <p className="display text-balance text-[1.4rem] leading-[1.2] sm:text-[1.75rem] md:text-3xl lg:text-4xl lg:leading-[1.05]">
             {puntoDePartida.frase}
           </p>
-          <div className="prose-essay mt-10 max-w-2xl text-[15.5px] text-muted-foreground sm:mt-12 sm:text-base md:mt-14 md:text-lg">
+          <div className="prose-essay mt-12 max-w-2xl text-[15px] text-muted-foreground sm:mt-14 sm:text-base md:mt-14 md:text-lg">
             {puntoDePartida.parrafos.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
