@@ -4,6 +4,8 @@ import heroTejados from "@/assets/tejados/hero.asset.json";
 import boardTejados from "@/assets/tejados/board.asset.json";
 import heroPaluego from "@/assets/paluego/hero.asset.json";
 import boardPaluego from "@/assets/paluego/board.asset.json";
+import heroTomatelo from "@/assets/tomatelo/hero.asset.json";
+import boardTomatelo from "@/assets/tomatelo/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
