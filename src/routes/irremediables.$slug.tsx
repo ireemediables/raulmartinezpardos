@@ -191,7 +191,6 @@ function CasoCompletoView({
       {/* 04 — NOMBRE */}
       <CaseSection n="04" label="Nombre">
         <div className="py-10 sm:py-16 md:py-20">
-          <p className="eyebrow mb-6 sm:mb-8">El nombre</p>
           <h2 className="display text-balance text-[2.5rem] leading-[1.05] tracking-[-0.02em] sm:text-6xl md:text-7xl lg:text-[5.5rem]">
             {caso.nombre}
           </h2>
