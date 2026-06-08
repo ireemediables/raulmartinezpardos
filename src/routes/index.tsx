@@ -192,8 +192,17 @@ function Home() {
           <p className="accent-italic text-[1.05rem] text-muted-foreground sm:text-xl md:text-2xl">
             {manifiesto.titulo}
           </p>
-          <div className="mt-12 flex flex-col sm:mt-14 md:grid md:grid-cols-[1fr_200px] md:gap-12 md:items-start lg:grid-cols-[1fr_220px] lg:gap-16">
-            <figure className="order-1 mb-10 w-[160px] md:order-2 md:mb-0 md:w-full">
+          <div className="prose-essay mt-12 max-w-2xl font-serif text-[1.1rem] leading-[1.55] text-pretty sm:mt-14 sm:text-xl md:text-2xl">
+            {manifiesto.parrafos.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+        </Section>
+
+        {/* Epílogo — foto + cierre personal */}
+        <section className="border-b border-[color:var(--rule)] py-24 sm:py-28 md:py-40">
+          <div className="mx-auto max-w-3xl px-6 sm:px-8 md:px-10">
+            <figure className="w-[140px] sm:w-[160px]">
               <img
                 src={perfilAsset.url}
                 alt="Raúl Martínez Pardos"
@@ -201,13 +210,16 @@ function Home() {
                 loading="lazy"
               />
             </figure>
-            <div className="prose-essay order-2 max-w-2xl font-serif text-[1.1rem] leading-[1.55] text-pretty sm:text-xl md:order-1 md:text-2xl">
-              {manifiesto.parrafos.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
+            <p className="mt-10 max-w-xl font-serif text-[1.15rem] leading-[1.5] text-pretty sm:mt-12 sm:text-[1.35rem] md:text-[1.5rem]">
+              Las historias son largas,
+              <br />
+              y pienso que es más importante
+              <br />
+              <span className="accent-italic text-muted-foreground">qué hacer con ellas.</span>
+            </p>
           </div>
-        </Section>
+        </section>
+
 
 
         {/* Contacto */}
