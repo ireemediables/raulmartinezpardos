@@ -59,30 +59,32 @@ export function Header() {
   };
 
   return (
-    <header
-      className={`sticky top-0 z-40 border-b border-[color:var(--rule)] backdrop-blur ${
-        open ? "bg-background" : "bg-background/85 supports-[backdrop-filter]:bg-background/70"
-      }`}
-    >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8 sm:py-5 md:px-10">
-        <Link to="/" className="flex flex-col leading-tight">
-          <span className="text-[11px] text-muted-foreground sm:text-xs">{cabecera.nombre}</span>
-          <span className="font-serif text-[15px] sm:text-base">
-            {cabecera.proyecto}
-          </span>
-        </Link>
-        <nav className="hidden items-center gap-4 whitespace-nowrap text-[12.5px] md:flex lg:gap-7 lg:text-sm">
-          {sections.map((s) => linkFor(s.id, s.label))}
-        </nav>
-        <button
-          aria-label="Menú"
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-          className="eyebrow relative z-[60] text-muted-foreground transition-colors hover:text-foreground md:hidden"
-        >
-          {open ? "Cerrar" : "Menú"}
-        </button>
-      </div>
+    <>
+      <header
+        className={`sticky top-0 z-40 border-b border-[color:var(--rule)] backdrop-blur ${
+          open ? "bg-background" : "bg-background/85 supports-[backdrop-filter]:bg-background/70"
+        }`}
+      >
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8 sm:py-5 md:px-10">
+          <Link to="/" className="flex flex-col leading-tight">
+            <span className="text-[11px] text-muted-foreground sm:text-xs">{cabecera.nombre}</span>
+            <span className="font-serif text-[15px] sm:text-base">
+              {cabecera.proyecto}
+            </span>
+          </Link>
+          <nav className="hidden items-center gap-4 whitespace-nowrap text-[12.5px] md:flex lg:gap-7 lg:text-sm">
+            {sections.map((s) => linkFor(s.id, s.label))}
+          </nav>
+          <button
+            aria-label="Menú"
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="eyebrow relative z-[60] text-muted-foreground transition-colors hover:text-foreground md:hidden"
+          >
+            {open ? "Cerrar" : "Menú"}
+          </button>
+        </div>
+      </header>
       {open && (
         <div className="fixed inset-0 z-50 flex flex-col gap-7 overflow-y-auto bg-background px-6 pb-12 pt-24 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-8 sm:px-8 sm:pb-14 sm:pt-28 md:hidden [&::-webkit-scrollbar]:hidden">
           {sections.map((s, i) => (
@@ -95,6 +97,6 @@ export function Header() {
           ))}
         </div>
       )}
-    </header>
+    </>
   );
 }
