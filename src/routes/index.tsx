@@ -148,29 +148,29 @@ function Home() {
 
         {/* Irremediables */}
         <Section id="irremediables" n="04" label="Irremediables">
-          <p className="display text-balance text-[1.5rem] leading-[1.18] sm:text-[1.875rem] md:text-3xl lg:text-4xl lg:leading-[1.05]">
+          <p className="display text-balance text-[1.4rem] leading-[1.2] sm:text-[1.75rem] md:text-3xl lg:text-4xl lg:leading-[1.05]">
             {irremediablesIntro.titulo}
           </p>
-          <div className="prose-essay mt-8 max-w-2xl text-base text-muted-foreground sm:mt-12 sm:text-lg">
+          <div className="prose-essay mt-10 max-w-2xl text-[15.5px] text-muted-foreground sm:mt-12 sm:text-lg">
             {irremediablesIntro.parrafos.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
 
-          <ul className="mt-14 border-t border-[color:var(--rule)] sm:mt-20">
+          <ul className="mt-16 border-t border-[color:var(--rule)] sm:mt-20">
             {irremediables.map((p) => (
               <li key={p.slug} className="border-b border-[color:var(--rule)]">
                 <Link
                   to="/irremediables/$slug"
                   params={{ slug: p.slug }}
-                  className="group grid grid-cols-[2rem_1fr_auto] items-baseline gap-4 py-6 transition-colors sm:grid-cols-[2.5rem_1fr_auto] sm:gap-5 sm:py-7 md:grid-cols-[3.5rem_1fr_auto] md:gap-8 md:py-8"
+                  className="group grid grid-cols-[2rem_1fr_auto] items-baseline gap-4 py-7 transition-colors sm:grid-cols-[2.5rem_1fr_auto] sm:gap-5 sm:py-7 md:grid-cols-[3.5rem_1fr_auto] md:gap-8 md:py-8"
                 >
                   <span className="eyebrow">{p.numero}</span>
                   <div className="min-w-0">
-                    <h3 className="font-serif text-xl leading-[1.15] transition-transform duration-500 group-hover:translate-x-1 sm:text-2xl sm:leading-tight md:text-3xl">
+                    <h3 className="font-serif text-[1.2rem] leading-[1.2] transition-transform duration-500 group-hover:translate-x-1 sm:text-2xl sm:leading-tight md:text-3xl">
                       {p.titulo}
                     </h3>
-                    <p className="mt-1.5 text-[13px] text-muted-foreground accent-italic sm:text-sm">
+                    <p className="mt-2 text-[13px] text-muted-foreground accent-italic sm:text-sm">
                       {p.observacion}
                     </p>
                   </div>
