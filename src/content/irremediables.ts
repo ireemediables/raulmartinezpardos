@@ -342,7 +342,7 @@ export const irremediables: Irremediable[] = [
       puntoDePartida: "Cadena de bares de picoteo.",
       observacion: [
         "Cuando vamos a un bar, parece que vamos a comer y a tomar unas cañas.",
-        "Porque en realidad vamos a algo más.",
+        "Pero en realidad, vamos a algo más.",
         "Y es que nos reunimos, sobre todo, para hablar.",
         "Y\u2026 ¿por qué callar cuando nos gusta contarnos cosas?",
       ],
