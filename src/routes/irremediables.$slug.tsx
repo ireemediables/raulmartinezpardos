@@ -4,6 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import {
   getIrremediable,
   getNextIrremediable,
+  irremediables,
   type CasoCompleto,
 } from "@/content/irremediables";
 
