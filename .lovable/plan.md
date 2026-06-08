@@ -1,10 +1,10 @@
-En `src/routes/index.tsx`, dentro de la sección "02 — MÉTODO", el segundo bloque italicizado tiene un `<br />` fijo entre "lo suficiente," y "le pongo nombre.", lo que en móvil produce tres líneas.
+En `src/routes/index.tsx`, sección "02 — MÉTODO", ajustar los saltos de línea del segundo bloque italicizado para que en móvil aparezca en 3 líneas y en ≥sm se mantenga en 2.
 
-Cambio único:
-- Sustituir ese `<br />` por uno responsive que sólo aparezca en pantallas ≥ sm, y añadir un espacio para que en móvil ambas frases fluyan en el mismo párrafo y se rompan de forma natural.
+Estructura propuesta:
+- "Y cuando una idea" + `<br className="sm:hidden" />` + " insiste lo suficiente," + `<br />` + "le pongo nombre."
 
 Resultado:
-- Móvil: "Y cuando una idea insiste lo suficiente, le pongo nombre." (wrap natural, ~2 líneas)
-- Tablet/escritorio: se mantiene el salto manual actual.
+- Móvil: 3 líneas (Y cuando una idea / insiste lo suficiente, / le pongo nombre.)
+- ≥sm: 2 líneas (Y cuando una idea insiste lo suficiente, / le pongo nombre.)
 
-No se tocan tamaños, tipografías, espaciados, ni el resto de secciones.
+No se tocan tamaños ni estilos.

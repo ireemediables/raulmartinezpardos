@@ -112,9 +112,11 @@ function Home() {
             <br />
             <br />
             <span className="accent-italic text-muted-foreground">
-              Y cuando una idea insiste lo suficiente,
-              <br className="hidden sm:block" />
-              {" "}le pongo nombre.
+              Y cuando una idea
+              <br className="sm:hidden" />
+              {" "}insiste lo suficiente,
+              <br />
+              le pongo nombre.
             </span>
           </p>
         </Section>
