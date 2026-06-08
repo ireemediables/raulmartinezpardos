@@ -148,7 +148,7 @@ function Home() {
 
         {/* Irremediables */}
         <Section id="irremediables" n="04" label="Irremediables">
-          <p className="display text-balance text-[1.625rem] leading-[1.15] sm:text-3xl md:text-4xl md:leading-[1.05]">
+          <p className="display text-balance text-[1.5rem] leading-[1.18] sm:text-[1.875rem] md:text-3xl lg:text-4xl lg:leading-[1.05]">
             {irremediablesIntro.titulo}
           </p>
           <div className="prose-essay mt-8 max-w-2xl text-base text-muted-foreground sm:mt-12 sm:text-lg">
