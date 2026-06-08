@@ -76,7 +76,7 @@ function Home() {
       {/* Cabecera — apertura tranquila */}
       <section className="border-b border-[color:var(--rule)]">
         <div className="mx-auto max-w-3xl px-6 pb-20 pt-24 md:px-10 md:pb-28 md:pt-32">
-          <p className="eyebrow mb-10">{cabecera.tagline}</p>
+          <p className="eyebrow mb-10 text-[11.5px] text-foreground/75">{cabecera.tagline}</p>
           <h1 className="display text-balance text-4xl md:text-5xl">
             {cabecera.proyecto}
             <span className="accent-italic text-muted-foreground text-[0.8em]"> — </span>
