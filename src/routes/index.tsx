@@ -192,13 +192,8 @@ function Home() {
           <p className="accent-italic text-[1.05rem] text-muted-foreground sm:text-xl md:text-2xl">
             {manifiesto.titulo}
           </p>
-          <div className="mt-12 sm:mt-14 md:grid md:grid-cols-[1fr_200px] md:gap-12 md:items-start lg:grid-cols-[1fr_220px] lg:gap-16">
-            <div className="prose-essay max-w-2xl font-serif text-[1.1rem] leading-[1.55] text-pretty sm:text-xl md:order-1 md:text-2xl">
-              {manifiesto.parrafos.map((p, i) => (
-                <p key={i}>{p}</p>
-              ))}
-            </div>
-            <figure className="mb-10 w-[160px] md:order-2 md:mb-0 md:w-full">
+          <div className="mt-12 flex flex-col sm:mt-14 md:grid md:grid-cols-[1fr_200px] md:gap-12 md:items-start lg:grid-cols-[1fr_220px] lg:gap-16">
+            <figure className="order-1 mb-10 w-[160px] md:order-2 md:mb-0 md:w-full">
               <img
                 src={perfilAsset.url}
                 alt="Raúl Martínez Pardos"
@@ -206,6 +201,11 @@ function Home() {
                 loading="lazy"
               />
             </figure>
+            <div className="prose-essay order-2 max-w-2xl font-serif text-[1.1rem] leading-[1.55] text-pretty sm:text-xl md:order-1 md:text-2xl">
+              {manifiesto.parrafos.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
           </div>
         </Section>
 
