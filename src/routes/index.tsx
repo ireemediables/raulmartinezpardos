@@ -75,9 +75,9 @@ function Home() {
 
       {/* Cabecera — apertura tranquila */}
       <section className="border-b border-[color:var(--rule)]">
-        <div className="mx-auto max-w-3xl px-5 pb-16 pt-16 sm:px-6 md:px-10 md:pb-24 md:pt-24 lg:pb-28 lg:pt-32">
-          <p className="eyebrow mb-8 text-[11px] text-foreground/75 sm:mb-10 sm:text-[11.5px]">{cabecera.tagline}</p>
-          <h1 className="display text-balance text-[1.9rem] leading-[1.1] sm:text-[2.25rem] md:text-4xl lg:text-5xl lg:leading-[1.05]">
+        <div className="mx-auto max-w-3xl px-6 pb-20 pt-20 sm:px-8 sm:pb-24 sm:pt-24 md:px-10 md:pb-24 md:pt-28 lg:pb-28 lg:pt-32">
+          <p className="eyebrow mb-10 text-[11px] text-foreground/75 sm:mb-12 sm:text-[11.5px]">{cabecera.tagline}</p>
+          <h1 className="display text-balance text-[1.75rem] leading-[1.12] sm:text-[2.125rem] md:text-4xl lg:text-5xl lg:leading-[1.05]">
             {cabecera.proyecto}
             <span className="accent-italic text-muted-foreground text-[0.8em]"> — </span>
             <span className="accent-italic text-[0.8em]">una forma de mirar.</span>
