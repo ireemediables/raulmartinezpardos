@@ -18,6 +18,8 @@ import heroArteSerestre from "@/assets/arteserestre/hero.asset.json";
 import boardArteSerestre from "@/assets/arteserestre/board.asset.json";
 import heroYes from "@/assets/yes/hero.asset.json";
 import boardYes from "@/assets/yes/board.asset.json";
+import heroSiva from "@/assets/siva/hero.asset.json";
+import boardSiva from "@/assets/siva/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
@@ -305,6 +307,27 @@ export const irremediables: Irremediable[] = [
     titulo: "Síva+",
     observacion: "Siempre hay más.",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroSiva.url, alt: "Signo de interrogación luminoso formado por partículas sobre un círculo brillante, en blanco y negro." },
+      puntoDePartida: "Start up especializada en inteligencia artificial e innovación tecnológica.",
+      observacion: [
+        "Cada vez que creemos haber llegado al límite, aparece algo nuevo.",
+        "La electricidad.",
+        "Internet.",
+        "La inteligencia artificial.",
+        "Y siempre volvemos a decir lo mismo:",
+        "\u201CEsto es el no va a más.\u201D",
+        "Sin embargo, la historia de la tecnología siempre responde de la misma manera:",
+        "\u201CSí va a más.\u201D",
+      ],
+      concepto: "Siempre hay más.",
+      nombre: "SÍVA +",
+      eslogan: { texto: "El futuro ya es pasado.", tachadas: [] },
+      direccionVisual: [
+        "El símbolo prolonga el signo + más allá de sus propios límites para representar una evolución que nunca termina.",
+      ],
+      board: { src: boardSiva.url, alt: "Board visual del proyecto SÍVA +." },
+    },
   },
   {
     slug: "come-y-cana",
