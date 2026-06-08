@@ -198,12 +198,14 @@ function CasoCompletoView({
       </CaseSection>
 
       {/* 05 — ESLOGAN */}
-      <CaseSection n="05" label="Eslogan">
-        <EsloganTachado texto={caso.eslogan.texto} tachadas={caso.eslogan.tachadas} />
-      </CaseSection>
+      {caso.eslogan && (
+        <CaseSection n="05" label="Eslogan">
+          <EsloganTachado texto={caso.eslogan.texto} tachadas={caso.eslogan.tachadas} />
+        </CaseSection>
+      )}
 
       {/* 06 — DIRECCIÓN VISUAL */}
-      <CaseSection n="06" label="Dirección visual">
+      <CaseSection n={caso.eslogan ? "06" : "05"} label="Dirección visual">
         <div className="prose-essay max-w-2xl font-serif text-[1.15rem] leading-[1.5] sm:text-xl md:text-2xl">
           {caso.direccionVisual.map((p, i) => (
             <p key={i}>{p}</p>
