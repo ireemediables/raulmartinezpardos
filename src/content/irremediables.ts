@@ -2,6 +2,8 @@ import heroAlcahueta from "@/assets/alcahueta/hero.asset.json";
 import boardAlcahueta from "@/assets/alcahueta/board.asset.json";
 import heroTejados from "@/assets/tejados/hero.asset.json";
 import boardTejados from "@/assets/tejados/board.asset.json";
+import heroPaluego from "@/assets/paluego/hero.asset.json";
+import boardPaluego from "@/assets/paluego/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
@@ -9,7 +11,7 @@ export type CasoCompleto = {
   observacion: string[];
   concepto: string;
   nombre: string;
-  eslogan: { texto: string; tachadas: string[] };
+  eslogan?: { texto: string; tachadas: string[] };
   direccionVisual: string[];
   board: { src: string; alt: string };
 };
@@ -87,6 +89,25 @@ export const irremediables: Irremediable[] = [
     titulo: "Paluego",
     observacion: "La otra función del palillo.",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroPaluego.url, alt: "Vaso de cerveza y plato con palillos sobre una barra de taberna en blanco y negro." },
+      puntoDePartida: "Taberna popular especializada en banderillas, encurtidos y vermú.",
+      observacion: [
+        "En los platos hay banderillas de todo tipo.",
+        "Pero, ¿qué sucede cuando solo quedan los palillos?",
+        "No todos se tiran.",
+        "Algunos se utilizan para eliminar esos pequeños restos que se quedan entre los dientes.",
+        "Los \u201Cpaluego\u201D.",
+        "Una de esas palabras que nunca aparecen en los diccionarios.",
+        "Pero que todo el mundo entiende.",
+      ],
+      concepto: "La otra función del palillo.",
+      nombre: "PALUEGO",
+      direccionVisual: [
+        "El palillo se integra en el logotipo para reforzar el origen del nombre y convertir el concepto en un gesto gráfico inmediato.",
+      ],
+      board: { src: boardPaluego.url, alt: "Board visual del proyecto Paluego." },
+    },
   },
   {
     slug: "tomatelo",
