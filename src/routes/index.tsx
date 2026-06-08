@@ -107,19 +107,16 @@ function Home() {
           <p className="accent-italic text-[1.05rem] text-muted-foreground sm:text-xl md:text-2xl">
             {metodo.intro}
           </p>
-          <ol className="mt-14 space-y-7 font-serif text-[1.2rem] text-pretty sm:mt-16 sm:space-y-7 sm:text-2xl md:text-3xl">
-            {metodo.pasos.map((paso, i) => (
-              <li
-                key={i}
-                className="grid grid-cols-[2rem_1fr] items-baseline gap-x-4 sm:grid-cols-[3rem_1fr] sm:gap-x-6"
-              >
-                <span className="eyebrow self-baseline">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-                <span className="leading-[1.3]">{paso}</span>
-              </li>
-            ))}
-          </ol>
+          <p className="display text-balance mt-20 mb-12 text-[1.4rem] leading-[1.2] sm:mt-24 sm:mb-16 sm:text-[1.75rem] md:mt-28 md:mb-20 md:text-3xl lg:text-4xl lg:leading-[1.05]">
+            Observo cosas raras que no son tan raras.
+            <br />
+            <br />
+            <span className="accent-italic text-muted-foreground">
+              Y cuando una idea insiste lo suficiente,
+              <br />
+              le pongo nombre.
+            </span>
+          </p>
         </Section>
 
         {/* Para quién */}
