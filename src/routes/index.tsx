@@ -3,6 +3,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { irremediables } from "@/content/irremediables";
+import perfilAsset from "@/assets/autor/perfil.asset.json";
 import {
   cabecera,
   puntoDePartida,
@@ -191,12 +192,23 @@ function Home() {
           <p className="accent-italic text-[1.05rem] text-muted-foreground sm:text-xl md:text-2xl">
             {manifiesto.titulo}
           </p>
-          <div className="prose-essay mt-12 max-w-2xl font-serif text-[1.1rem] leading-[1.55] text-pretty sm:mt-14 sm:text-xl md:text-2xl">
-            {manifiesto.parrafos.map((p, i) => (
-              <p key={i}>{p}</p>
-            ))}
+          <div className="mt-12 sm:mt-14 md:grid md:grid-cols-[200px_1fr] md:gap-12 lg:grid-cols-[220px_1fr] lg:gap-16">
+            <figure className="mb-10 w-[160px] md:mb-0 md:w-full">
+              <img
+                src={perfilAsset.url}
+                alt="Raúl Martínez Pardos"
+                className="block h-auto w-full grayscale"
+                loading="lazy"
+              />
+            </figure>
+            <div className="prose-essay max-w-2xl font-serif text-[1.1rem] leading-[1.55] text-pretty sm:text-xl md:text-2xl">
+              {manifiesto.parrafos.map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
           </div>
         </Section>
+
 
         {/* Contacto */}
         <Section id="contacto" n="06" label="Contacto" bordered={false}>
