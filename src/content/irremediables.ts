@@ -20,6 +20,8 @@ import heroYes from "@/assets/yes/hero.asset.json";
 import boardYes from "@/assets/yes/board.asset.json";
 import heroSiva from "@/assets/siva/hero.asset.json";
 import boardSiva from "@/assets/siva/board.asset.json";
+import heroComeyCana from "@/assets/comeycana/hero.asset.json";
+import boardComeyCana from "@/assets/comeycana/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
@@ -335,6 +337,23 @@ export const irremediables: Irremediable[] = [
     titulo: "Come y Caña",
     observacion: "“Comer y callar” no tiene sentido.",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroComeyCana.url, alt: "Grupo de amigos riendo y conversando alrededor de una mesa con cañas y tapas, en blanco y negro." },
+      puntoDePartida: "Cadena de bares de picoteo.",
+      observacion: [
+        "Cuando vamos a un bar, parece que vamos a comer y a tomar unas cañas.",
+        "Porque en realidad vamos a algo más.",
+        "Y es que nos reunimos, sobre todo, para hablar.",
+        "Y\u2026 ¿por qué callar cuando nos gusta contarnos cosas?",
+      ],
+      concepto: "\u201CComer y callar\u201D no tiene sentido.",
+      nombre: "COME Y CAÑA",
+      eslogan: { texto: "Nos gusta contarnos cosas.", tachadas: [] },
+      direccionVisual: [
+        "La identidad se construye alrededor de la ñ, que sustituye visualmente a la ll de la expresión original y se transforma en la espuma de una caña.",
+      ],
+      board: { src: boardComeyCana.url, alt: "Board visual del proyecto Come y Caña." },
+    },
   },
 ];
 
@@ -344,6 +363,11 @@ export function getIrremediable(slug: string) {
 
 export function getNextIrremediable(slug: string) {
   const idx = irremediables.findIndex((i) => i.slug === slug);
-  if (idx === -1) return undefined;
-  return irremediables[(idx + 1) % irremediables.length];
+  if (idx === -1 || idx === irremediables.length - 1) return undefined;
+  return irremediables[idx + 1];
+}
+
+export function isLastIrremediable(slug: string) {
+  const idx = irremediables.findIndex((i) => i.slug === slug);
+  return idx === irremediables.length - 1;
 }
