@@ -18,6 +18,8 @@ import heroArteSerestre from "@/assets/arteserestre/hero.asset.json";
 import boardArteSerestre from "@/assets/arteserestre/board.asset.json";
 import heroYes from "@/assets/yes/hero.asset.json";
 import boardYes from "@/assets/yes/board.asset.json";
+import heroSiva from "@/assets/siva/hero.asset.json";
+import boardSiva from "@/assets/siva/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
