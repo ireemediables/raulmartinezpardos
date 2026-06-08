@@ -58,9 +58,9 @@ function Section({
   return (
     <section
       id={id}
-      className={`py-20 md:py-28 lg:py-40 ${bordered ? "border-b border-[color:var(--rule)]" : ""}`}
+      className={`py-24 sm:py-28 md:py-40 ${bordered ? "border-b border-[color:var(--rule)]" : ""}`}
     >
-      <div className="mx-auto max-w-3xl px-5 sm:px-6 md:px-10">
+      <div className="mx-auto max-w-3xl px-6 sm:px-8 md:px-10">
         <SectionLabel n={n}>{label}</SectionLabel>
         {children}
       </div>
