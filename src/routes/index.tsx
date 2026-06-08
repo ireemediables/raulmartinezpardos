@@ -211,9 +211,10 @@ function Home() {
               />
             </figure>
             <p className="mt-10 max-w-xl font-serif text-[1.15rem] leading-[1.5] text-pretty sm:mt-12 sm:text-[1.35rem] md:text-[1.5rem]">
-              Las historias son largas,
+              Las historias son largas.
               <br />
-              y pienso que es más importante
+              <br />
+              Y pienso que es más importante
               <br />
               <span className="accent-italic text-muted-foreground">qué hacer con ellas.</span>
             </p>
