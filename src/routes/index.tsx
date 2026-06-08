@@ -76,7 +76,7 @@ function Home() {
       {/* Cabecera — apertura tranquila */}
       <section className="border-b border-[color:var(--rule)]">
         <div className="mx-auto max-w-3xl px-6 pb-20 pt-16 sm:px-8 sm:pb-24 sm:pt-24 md:px-10 md:pb-24 md:pt-28 lg:pb-28 lg:pt-32">
-          <p className="mb-10 block text-center font-mono text-[7.5px] uppercase tracking-[0.16em] text-muted-foreground sm:mb-12 sm:text-left sm:eyebrow sm:text-[11.5px] sm:tracking-[0.18em]">{cabecera.tagline}</p>
+          <p className="mb-10 block text-center font-mono text-[7.5px] uppercase leading-none tracking-[0.16em] text-muted-foreground sm:mb-12 sm:text-left sm:text-[11.5px] sm:tracking-[0.18em]">{cabecera.tagline}</p>
           <h1 className="display text-balance text-[1.5rem] leading-[1.15] sm:text-[2.125rem] sm:leading-[1.12] md:text-4xl lg:text-5xl lg:leading-[1.05]">
             {cabecera.proyecto}
             <br />
