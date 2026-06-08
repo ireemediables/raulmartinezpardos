@@ -197,7 +197,7 @@ function Home() {
 
         {/* Contacto */}
         <Section id="contacto" n="06" label="Contacto" bordered={false}>
-          <p className="display text-balance text-[1.625rem] leading-[1.15] sm:text-3xl md:text-4xl md:leading-[1.05]">
+          <p className="display text-balance text-[1.5rem] leading-[1.18] sm:text-[1.875rem] md:text-3xl lg:text-4xl lg:leading-[1.05]">
             {contactoTexto.invitacion}
             <br />
             <span className="accent-italic text-muted-foreground">
