@@ -103,13 +103,16 @@ function Home() {
           <p className="accent-italic text-lg text-muted-foreground sm:text-xl md:text-2xl">
             {metodo.intro}
           </p>
-          <ol className="mt-10 space-y-4 font-serif text-xl text-pretty sm:mt-14 sm:space-y-5 sm:text-2xl md:text-3xl">
+          <ol className="mt-12 space-y-5 font-serif text-xl text-pretty sm:mt-14 sm:space-y-6 sm:text-2xl md:text-3xl">
             {metodo.pasos.map((paso, i) => (
-              <li key={i} className="flex gap-4 sm:gap-6">
-                <span className="eyebrow mt-2 shrink-0 sm:mt-3">
+              <li
+                key={i}
+                className="grid grid-cols-[2.25rem_1fr] items-baseline gap-x-4 sm:grid-cols-[3rem_1fr] sm:gap-x-6"
+              >
+                <span className="eyebrow self-baseline">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span>{paso}</span>
+                <span className="leading-[1.25]">{paso}</span>
               </li>
             ))}
           </ol>
