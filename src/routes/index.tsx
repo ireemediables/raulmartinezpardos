@@ -88,10 +88,10 @@ function Home() {
       <main>
         {/* Punto de partida */}
         <Section id="partida" n="01" label="Punto de partida">
-          <p className="display text-balance text-3xl md:text-4xl">
+          <p className="display text-balance text-[1.625rem] leading-[1.15] sm:text-3xl md:text-4xl md:leading-[1.05]">
             {puntoDePartida.frase}
           </p>
-          <div className="prose-essay mt-16 max-w-2xl text-lg text-muted-foreground">
+          <div className="prose-essay mt-10 max-w-2xl text-base text-muted-foreground sm:mt-14 sm:text-lg md:mt-16">
             {puntoDePartida.parrafos.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
@@ -100,13 +100,13 @@ function Home() {
 
         {/* Método */}
         <Section id="metodo" n="02" label="Método">
-          <p className="accent-italic text-xl text-muted-foreground md:text-2xl">
+          <p className="accent-italic text-lg text-muted-foreground sm:text-xl md:text-2xl">
             {metodo.intro}
           </p>
-          <ol className="mt-14 space-y-5 font-serif text-2xl text-pretty md:text-3xl">
+          <ol className="mt-10 space-y-4 font-serif text-xl text-pretty sm:mt-14 sm:space-y-5 sm:text-2xl md:text-3xl">
             {metodo.pasos.map((paso, i) => (
-              <li key={i} className="flex gap-6">
-                <span className="eyebrow mt-3 shrink-0">
+              <li key={i} className="flex gap-4 sm:gap-6">
+                <span className="eyebrow mt-2 shrink-0 sm:mt-3">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <span>{paso}</span>
@@ -117,23 +117,23 @@ function Home() {
 
         {/* Para quién */}
         <Section id="para-quien" n="03" label="Para quién">
-          <p className="accent-italic text-xl text-muted-foreground md:text-2xl">
+          <p className="accent-italic text-lg text-muted-foreground sm:text-xl md:text-2xl">
             {paraQuien.intro}
           </p>
-          <ul className="mt-14 space-y-8">
+          <ul className="mt-10 space-y-6 sm:mt-14 sm:space-y-8">
             {paraQuien.items.map((item, i) => (
               <li
                 key={i}
-                className="grid grid-cols-[2.5rem_1fr] gap-4 text-lg text-pretty md:text-xl"
+                className="grid grid-cols-[2rem_1fr] gap-3 text-base text-pretty sm:grid-cols-[2.5rem_1fr] sm:gap-4 sm:text-lg md:text-xl"
               >
-                <span className="eyebrow mt-2">{String(i + 1).padStart(2, "0")}</span>
+                <span className="eyebrow mt-1.5 sm:mt-2">{String(i + 1).padStart(2, "0")}</span>
                 <span>{item}</span>
               </li>
             ))}
           </ul>
 
-          <div className="mt-28 border-t border-[color:var(--rule)] pt-20">
-            <p className="display text-balance text-3xl md:text-5xl">
+          <div className="mt-20 border-t border-[color:var(--rule)] pt-14 sm:mt-28 sm:pt-20">
+            <p className="display text-balance text-[1.75rem] leading-[1.15] sm:text-3xl md:text-5xl md:leading-[1.05]">
               Todo proyecto gira alrededor de una idea.
               <br />
               <span className="accent-italic text-muted-foreground">
@@ -145,29 +145,29 @@ function Home() {
 
         {/* Irremediables */}
         <Section id="irremediables" n="04" label="Irremediables">
-          <p className="display text-balance text-3xl md:text-4xl">
+          <p className="display text-balance text-[1.625rem] leading-[1.15] sm:text-3xl md:text-4xl md:leading-[1.05]">
             {irremediablesIntro.titulo}
           </p>
-          <div className="prose-essay mt-12 max-w-2xl text-lg text-muted-foreground">
+          <div className="prose-essay mt-8 max-w-2xl text-base text-muted-foreground sm:mt-12 sm:text-lg">
             {irremediablesIntro.parrafos.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
 
-          <ul className="mt-20 border-t border-[color:var(--rule)]">
+          <ul className="mt-14 border-t border-[color:var(--rule)] sm:mt-20">
             {irremediables.map((p) => (
               <li key={p.slug} className="border-b border-[color:var(--rule)]">
                 <Link
                   to="/irremediables/$slug"
                   params={{ slug: p.slug }}
-                  className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-5 py-7 transition-colors md:grid-cols-[3.5rem_1fr_auto] md:gap-8 md:py-8"
+                  className="group grid grid-cols-[2rem_1fr_auto] items-baseline gap-4 py-6 transition-colors sm:grid-cols-[2.5rem_1fr_auto] sm:gap-5 sm:py-7 md:grid-cols-[3.5rem_1fr_auto] md:gap-8 md:py-8"
                 >
                   <span className="eyebrow">{p.numero}</span>
                   <div className="min-w-0">
-                    <h3 className="font-serif text-2xl leading-tight transition-transform duration-500 group-hover:translate-x-1 md:text-3xl">
+                    <h3 className="font-serif text-xl leading-[1.15] transition-transform duration-500 group-hover:translate-x-1 sm:text-2xl sm:leading-tight md:text-3xl">
                       {p.titulo}
                     </h3>
-                    <p className="mt-1.5 text-sm text-muted-foreground accent-italic">
+                    <p className="mt-1.5 text-[13px] text-muted-foreground accent-italic sm:text-sm">
                       {p.observacion}
                     </p>
                   </div>
@@ -182,10 +182,10 @@ function Home() {
 
         {/* Manifiesto */}
         <Section id="manifiesto" n="05" label="Manifiesto">
-          <p className="accent-italic text-xl text-muted-foreground md:text-2xl">
+          <p className="accent-italic text-lg text-muted-foreground sm:text-xl md:text-2xl">
             {manifiesto.titulo}
           </p>
-          <div className="prose-essay mt-14 max-w-2xl font-serif text-xl text-pretty md:text-2xl">
+          <div className="prose-essay mt-10 max-w-2xl font-serif text-lg text-pretty sm:mt-14 sm:text-xl md:text-2xl">
             {manifiesto.parrafos.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
@@ -194,14 +194,14 @@ function Home() {
 
         {/* Contacto */}
         <Section id="contacto" n="06" label="Contacto" bordered={false}>
-          <p className="display text-balance text-3xl md:text-4xl">
+          <p className="display text-balance text-[1.625rem] leading-[1.15] sm:text-3xl md:text-4xl md:leading-[1.05]">
             {contactoTexto.invitacion}
             <br />
             <span className="accent-italic text-muted-foreground">
               {contactoTexto.cierre}
             </span>
           </p>
-          <div className="mt-16 space-y-3 text-lg">
+          <div className="mt-12 space-y-3 text-base sm:mt-16 sm:text-lg">
             <p>
               <a
                 href={`mailto:${contacto.email}`}
