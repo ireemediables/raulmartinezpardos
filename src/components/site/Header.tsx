@@ -59,7 +59,11 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[color:var(--rule)] bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+    <header
+      className={`sticky top-0 z-40 border-b border-[color:var(--rule)] backdrop-blur ${
+        open ? "bg-background" : "bg-background/85 supports-[backdrop-filter]:bg-background/70"
+      }`}
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8 sm:py-5 md:px-10">
         <Link to="/" className="flex flex-col leading-tight">
           <span className="text-[11px] text-muted-foreground sm:text-xs">{cabecera.nombre}</span>
@@ -74,13 +78,13 @@ export function Header() {
           aria-label="Menú"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="eyebrow text-muted-foreground transition-colors hover:text-foreground md:hidden"
+          className="eyebrow relative z-[60] text-muted-foreground transition-colors hover:text-foreground md:hidden"
         >
           {open ? "Cerrar" : "Menú"}
         </button>
       </div>
       {open && (
-        <div className="fixed inset-0 top-[57px] z-50 flex flex-col gap-7 bg-background px-6 py-12 sm:top-[73px] sm:gap-8 sm:px-8 sm:py-14 md:hidden">
+        <div className="fixed inset-0 z-50 flex flex-col gap-7 overflow-y-auto bg-background px-6 pb-12 pt-24 sm:gap-8 sm:px-8 sm:pb-14 sm:pt-28 md:hidden">
           {sections.map((s, i) => (
             <div key={s.id} className="flex items-baseline gap-4 leading-none">
               <span className="eyebrow shrink-0">{String(i + 1).padStart(2, "0")}</span>
