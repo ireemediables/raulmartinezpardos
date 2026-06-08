@@ -41,7 +41,7 @@ export function Header() {
 
   const linkFor = (id: string, label: string) => {
     const isActive = active === id;
-    const className = `text-sm transition-colors hover:text-foreground ${
+    const className = `transition-colors hover:text-foreground ${
       isActive ? "text-foreground" : "text-muted-foreground"
     }`;
     if (isHome) {
@@ -67,7 +67,7 @@ export function Header() {
             {cabecera.proyecto}
           </span>
         </Link>
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-4 whitespace-nowrap text-[12.5px] md:flex lg:gap-7 lg:text-sm">
           {sections.map((s) => linkFor(s.id, s.label))}
         </nav>
         <button
