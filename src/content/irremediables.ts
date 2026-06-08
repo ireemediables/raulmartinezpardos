@@ -1,9 +1,24 @@
+import heroAlcahueta from "@/assets/alcahueta/hero.asset.json";
+import boardAlcahueta from "@/assets/alcahueta/board.asset.json";
+
+export type CasoCompleto = {
+  hero: { src: string; alt: string };
+  puntoDePartida: string;
+  observacion: string[];
+  concepto: string;
+  nombre: string;
+  eslogan: { texto: string; tachadas: string[] };
+  direccionVisual: string[];
+  board: { src: string; alt: string };
+};
+
 export type Irremediable = {
   slug: string;
   numero: string;
   titulo: string;
   observacion: string;
   cuerpo: string[];
+  caso?: CasoCompleto;
 };
 
 // 12 proyectos seleccionados. Los cuerpos son provisionales hasta recibir el detalle de cada caso.
@@ -14,6 +29,27 @@ export const irremediables: Irremediable[] = [
     titulo: "La Alcahueta",
     observacion: "Hay lugares que saben demasiado.",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroAlcahueta.url, alt: "Cortina entreabierta dejando ver una lavandería al fondo." },
+      puntoDePartida: "Lavandería autoservicio.",
+      observacion: [
+        "Los lugares guardan recuerdos.",
+        "Sin embargo, sería difícil que un lugar se acordase de todas las personas que pasan por ahí.",
+        "Pero, ¿qué ocurre cuando ese lugar acaba entrando en nuestra forma de vivir?",
+        "Sabe la ropa que usamos.",
+        "Escucha las conversaciones que tenemos.",
+        "Conoce nuestras pequeñas manías.",
+        "Y termina formando parte de nuestra rutina.",
+      ],
+      concepto: "Hay lugares que saben demasiado.",
+      nombre: "LA ALCAHUETA",
+      eslogan: { texto: "Si te he visto, no me acuerdo.", tachadas: ["he", "no"] },
+      direccionVisual: [
+        "La identidad se construye alrededor de una abuela alcahueta guiñando un ojo.",
+        "Sus ojos representan los dos estados de una lavadora.",
+      ],
+      board: { src: boardAlcahueta.url, alt: "Board visual del proyecto La Alcahueta." },
+    },
   },
   {
     slug: "tejados-de-libertad",
