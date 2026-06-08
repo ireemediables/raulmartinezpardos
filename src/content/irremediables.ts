@@ -10,6 +10,8 @@ import heroHabladurnia from "@/assets/habladurnia/hero.asset.json";
 import boardHabladurnia from "@/assets/habladurnia/board.asset.json";
 import heroCruak from "@/assets/cruak/hero.asset.json";
 import boardCruak from "@/assets/cruak/board.asset.json";
+import heroBonvuayas from "@/assets/bonvuayas/hero.asset.json";
+import boardBonvuayas from "@/assets/bonvuayas/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
@@ -195,6 +197,24 @@ export const irremediables: Irremediable[] = [
     titulo: "Bonvuayas",
     observacion: "Desear lo mejor.",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroBonvuayas.url, alt: "Horizonte abierto sobre una llanura difuminada en blanco y negro." },
+      puntoDePartida: "Funeraria contemporánea.",
+      observacion: [
+        "Cuando alguien se marcha solemos decir:",
+        "\u201CQue te vaya bien.\u201D",
+        "\u201CCuídate.\u201D",
+        "\u201CBuen viaje.\u201D",
+        "Son formas de desear que todo salga bien cuando dejas de ver a alguien, sepas o no hacia dónde continúa su camino.",
+      ],
+      concepto: "La despedida más sincera: desear lo mejor.",
+      nombre: "BONVUAYAS",
+      eslogan: { texto: "Vayas donde vayas.", tachadas: [] },
+      direccionVisual: [
+        "El símbolo utiliza un horizonte abierto como metáfora del viaje y de todo aquello que permanece más allá de nuestra mirada.",
+      ],
+      board: { src: boardBonvuayas.url, alt: "Board visual del proyecto Bonvuayas." },
+    },
   },
   {
     slug: "ni-mu",
