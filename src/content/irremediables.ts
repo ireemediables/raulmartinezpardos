@@ -117,6 +117,24 @@ export const irremediables: Irremediable[] = [
     titulo: "tomaTÉlo",
     observacion: "Permítete parar.",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroTomatelo.url, alt: "Persona sosteniendo una taza caliente frente a un reloj sin agujas, en blanco y negro." },
+      puntoDePartida: "Tetería alternativa.",
+      observacion: [
+        "Las teterías son lugares donde una conversación puede durar horas.",
+        "Donde un libro se lee sin mirar el reloj.",
+        "Y donde una taza caliente parece suficiente para detener el mundo durante un rato.",
+        "Sin embargo, al salir, volvemos a correr.",
+        "Como si hubiéramos olvidado que ese tiempo también era nuestro.",
+      ],
+      concepto: "Permítete parar.",
+      nombre: "tomaTÉlo",
+      eslogan: { texto: "El tiempo es tuyo.", tachadas: [] },
+      direccionVisual: [
+        "Una identidad inspirada en el tiempo, entendiendo la tetería como uno de los pocos lugares donde todavía es posible detenerlo durante un rato.",
+      ],
+      board: { src: boardTomatelo.url, alt: "Board visual del proyecto tomaTÉlo." },
+    },
   },
   {
     slug: "la-habladurnia",
