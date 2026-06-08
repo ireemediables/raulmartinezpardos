@@ -146,6 +146,13 @@ function CasoCompletoView({
             className="block h-[70vh] min-h-[420px] w-full object-cover sm:h-[80vh] md:h-[90vh]"
             loading="eager"
           />
+          <figcaption className="pointer-events-none absolute inset-x-0 bottom-0">
+            <div className="mx-auto max-w-6xl px-6 pb-6 sm:px-8 sm:pb-8 md:px-10 md:pb-10">
+              <p className="eyebrow text-white/90 [text-shadow:0_1px_12px_rgba(0,0,0,0.45)]">
+                {proyecto.numero} — {proyecto.titulo.toUpperCase()}
+              </p>
+            </div>
+          </figcaption>
         </figure>
         <div className="mx-auto max-w-3xl px-6 py-10 sm:px-8 sm:py-12 md:px-10 md:py-14">
           <Link
@@ -155,9 +162,6 @@ function CasoCompletoView({
           >
             ← Irremediables
           </Link>
-          <p className="eyebrow mt-8 text-foreground">
-            {proyecto.numero} — {proyecto.titulo.toUpperCase()}
-          </p>
         </div>
       </section>
 
