@@ -185,10 +185,10 @@ function Home() {
 
         {/* Manifiesto */}
         <Section id="manifiesto" n="05" label="Manifiesto">
-          <p className="accent-italic text-lg text-muted-foreground sm:text-xl md:text-2xl">
+          <p className="accent-italic text-[1.05rem] text-muted-foreground sm:text-xl md:text-2xl">
             {manifiesto.titulo}
           </p>
-          <div className="prose-essay mt-10 max-w-2xl font-serif text-lg text-pretty sm:mt-14 sm:text-xl md:text-2xl">
+          <div className="prose-essay mt-12 max-w-2xl font-serif text-[1.1rem] leading-[1.55] text-pretty sm:mt-14 sm:text-xl md:text-2xl">
             {manifiesto.parrafos.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
@@ -197,14 +197,14 @@ function Home() {
 
         {/* Contacto */}
         <Section id="contacto" n="06" label="Contacto" bordered={false}>
-          <p className="display text-balance text-[1.5rem] leading-[1.18] sm:text-[1.875rem] md:text-3xl lg:text-4xl lg:leading-[1.05]">
+          <p className="display text-balance text-[1.4rem] leading-[1.2] sm:text-[1.75rem] md:text-3xl lg:text-4xl lg:leading-[1.05]">
             {contactoTexto.invitacion}
             <br />
             <span className="accent-italic text-muted-foreground">
               {contactoTexto.cierre}
             </span>
           </p>
-          <div className="mt-12 space-y-3 text-base sm:mt-16 sm:text-lg">
+          <div className="mt-14 space-y-3 text-base sm:mt-16 sm:text-lg">
             <p>
               <a
                 href={`mailto:${contacto.email}`}
