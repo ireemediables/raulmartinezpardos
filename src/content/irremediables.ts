@@ -2,6 +2,8 @@ import heroAlcahueta from "@/assets/alcahueta/hero.asset.json";
 import boardAlcahueta from "@/assets/alcahueta/board.asset.json";
 import heroTejados from "@/assets/tejados/hero.asset.json";
 import boardTejados from "@/assets/tejados/board.asset.json";
+import heroPaluego from "@/assets/paluego/hero.asset.json";
+import boardPaluego from "@/assets/paluego/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
@@ -9,7 +11,7 @@ export type CasoCompleto = {
   observacion: string[];
   concepto: string;
   nombre: string;
-  eslogan: { texto: string; tachadas: string[] };
+  eslogan?: { texto: string; tachadas: string[] };
   direccionVisual: string[];
   board: { src: string; alt: string };
 };
