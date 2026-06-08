@@ -113,8 +113,8 @@ function Home() {
             <br />
             <span className="accent-italic text-muted-foreground">
               Y cuando una idea insiste lo suficiente,
-              <br />
-              le pongo nombre.
+              <br className="hidden sm:block" />
+              {" "}le pongo nombre.
             </span>
           </p>
         </Section>
