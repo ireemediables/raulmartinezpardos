@@ -1,23 +1,32 @@
-## Problema
+## Diagnóstico
 
-Al abrir el menú en móvil aparece una barra de scroll vertical a la derecha. Viene de `overflow-y-auto` que añadí en el overlay del menú para asegurar que se pudiera hacer scroll si el contenido no cabía. Con 6 secciones cortas no hace falta scroll, así que la barra solo molesta visualmente.
+En la captura se ve que, al abrir el menú móvil:
+
+- Solo aparece el primer ítem ("01 Punto de partida").
+- Detrás se ve el hero ("Ideas irremediables — una forma de mirar").
+- Hace falta scroll para ver el resto de secciones.
+
+**Causa:** el `<header>` lleva `backdrop-blur` (filtro CSS). Cualquier elemento `fixed` dentro de un ancestro con `backdrop-filter` deja de posicionarse respecto al viewport y se posiciona respecto a ese ancestro. Como el header mide ~57px, el overlay del menú (`fixed inset-0`) queda recortado a esos 57px de alto: por eso solo se ve un ítem y el hero asoma por detrás.
+
+## Respuesta a tu pregunta
+
+Hacer scroll dentro de un menú en móvil es perfectamente normal y se usa habitualmente. Pero con 6 secciones cortas el menú entero cabe de sobra en una pantalla móvil estándar (~670 px de alto). En cuanto se arregle el bug, **no hará falta scroll** y se verán todas las secciones a la vez.
 
 ## Cambio propuesto
 
-En `src/components/site/Header.tsx`, en el `<div>` del menú desplegable:
+En `src/components/site/Header.tsx`:
 
-- Sustituir `overflow-y-auto` por una solución que:
-  - Permita scroll solo si realmente hace falta (pantallas muy bajas o zoom alto).
-  - No muestre nunca una barra lateral visible en móvil.
+- Hacer que el componente devuelva un fragmento (`<>...</>`) con dos elementos hermanos:
+  1. El `<header>` (con su `backdrop-blur` intacto cuando el menú está cerrado).
+  2. El overlay del menú móvil, renderizado **fuera** del `<header>`, como hermano directo. Así su `fixed inset-0` se referencia al viewport y cubre toda la pantalla.
+- Mantener todo lo demás igual: estilos del menú, botón "Cerrar", ocultar la scrollbar, z-index, comportamiento sticky del header, versiones desktop y tablet sin tocar.
 
-Lo haré con `overflow-y-auto` + clases utilitarias que ocultan la scrollbar nativa (`[-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden`). Así:
+Resultado:
 
-- En un móvil real: el menú cabe entero y no se ve barra.
-- Si alguien gira el móvil o tiene un dispositivo pequeño y el menú no cabe: puede arrastrar con el dedo sin ver barra.
-- En la preview de Lovable simulando móvil: tampoco se ve la barra.
-
-No toco nada más: ni desktop, ni tablet, ni tipografías, ni espaciados.
+- El menú móvil cubre toda la pantalla en negro sólido.
+- Se ven las 6 secciones sin necesidad de scroll en un móvil normal.
+- Si alguien usa una pantalla muy pequeña o zoom grande, sigue pudiendo arrastrar con el dedo sin barra visible.
 
 ## Archivo afectado
 
-- `src/components/site/Header.tsx` (una sola línea, el contenedor del menú móvil).
+- `src/components/site/Header.tsx` (única reestructuración del JSX devuelto; sin cambios en estilos ni contenido).
