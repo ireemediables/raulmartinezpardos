@@ -84,7 +84,7 @@ export function Header() {
         </button>
       </div>
       {open && (
-        <div className="fixed inset-0 z-50 flex flex-col gap-7 overflow-y-auto bg-background px-6 pb-12 pt-24 sm:gap-8 sm:px-8 sm:pb-14 sm:pt-28 md:hidden">
+        <div className="fixed inset-0 z-50 flex flex-col gap-7 overflow-y-auto bg-background px-6 pb-12 pt-24 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-8 sm:px-8 sm:pb-14 sm:pt-28 md:hidden [&::-webkit-scrollbar]:hidden">
           {sections.map((s, i) => (
             <div key={s.id} className="flex items-baseline gap-4 leading-none">
               <span className="eyebrow shrink-0">{String(i + 1).padStart(2, "0")}</span>
