@@ -6,6 +6,8 @@ import heroPaluego from "@/assets/paluego/hero.asset.json";
 import boardPaluego from "@/assets/paluego/board.asset.json";
 import heroTomatelo from "@/assets/tomatelo/hero.asset.json";
 import boardTomatelo from "@/assets/tomatelo/board.asset.json";
+import heroHabladurnia from "@/assets/habladurnia/hero.asset.json";
+import boardHabladurnia from "@/assets/habladurnia/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
@@ -142,6 +144,25 @@ export const irremediables: Irremediable[] = [
     titulo: "La Habladurnia",
     observacion: "Las flores hablan.",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroHabladurnia.url, alt: "Dos personas conversando entre un campo de flores silvestres en blanco y negro." },
+      puntoDePartida: "Floristería.",
+      observacion: [
+        "Hay cosas que cuesta decir.",
+        "Gracias.",
+        "Perdón.",
+        "Te quiero.",
+        "Te echo de menos…",
+        "Por suerte, las flores llevan siglos haciéndolo por nosotros.",
+      ],
+      concepto: "Las flores hablan.",
+      nombre: "LA HABLADURNIA",
+      eslogan: { texto: "Dicen que las flores dicen.", tachadas: [] },
+      direccionVisual: [
+        "El símbolo transforma una flor en un megáfono para representar una idea sencilla: las flores llevan siglos diciendo aquello que a veces nosotros no sabemos decir.",
+      ],
+      board: { src: boardHabladurnia.url, alt: "Board visual del proyecto La Habladurnia." },
+    },
   },
   {
     slug: "cruak",
