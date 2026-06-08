@@ -1,8 +1,9 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import { cabecera } from "@/content/home";
 
 const sections = [
-  { id: "partida", label: "Partida" },
+  { id: "partida", label: "Punto de partida" },
   { id: "metodo", label: "Método" },
   { id: "para-quien", label: "Para quién" },
   { id: "irremediables", label: "Irremediables" },
@@ -40,7 +41,7 @@ export function Header() {
 
   const linkFor = (id: string, label: string) => {
     const isActive = active === id;
-    const className = `font-mono text-xs uppercase tracking-[0.18em] transition-colors hover:text-foreground ${
+    const className = `text-sm transition-colors hover:text-foreground ${
       isActive ? "text-foreground" : "text-muted-foreground"
     }`;
     if (isHome) {
@@ -51,45 +52,37 @@ export function Header() {
       );
     }
     return (
-      <Link
-        key={id}
-        to="/"
-        hash={id}
-        className={className}
-        onClick={() => setOpen(false)}
-      >
+      <Link key={id} to="/" hash={id} className={className} onClick={() => setOpen(false)}>
         {label}
       </Link>
     );
   };
 
   return (
-    <header className="sticky top-0 z-40 border-b border-[color:var(--rule)] bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
-        <Link to="/" className="flex flex-col leading-none">
-          <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
-            Raúl Martínez
-          </span>
-          <span className="mt-1 font-serif text-sm uppercase tracking-tight">
-            Ideas Irremediables
+    <header className="sticky top-0 z-40 border-b border-[color:var(--rule)] bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10">
+        <Link to="/" className="flex flex-col leading-tight">
+          <span className="text-xs text-muted-foreground">{cabecera.nombre}</span>
+          <span className="font-serif text-base">
+            {cabecera.proyecto}
           </span>
         </Link>
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {sections.map((s) => linkFor(s.id, s.label))}
         </nav>
         <button
           aria-label="Menú"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="border border-foreground px-3 py-1 font-mono text-[10px] uppercase tracking-[0.22em] transition-colors hover:bg-foreground hover:text-background md:hidden"
+          className="text-sm text-muted-foreground transition-colors hover:text-foreground md:hidden"
         >
           {open ? "Cerrar" : "Menú"}
         </button>
       </div>
       {open && (
-        <div className="fixed inset-0 top-[65px] z-30 flex flex-col gap-8 bg-background px-6 py-12 md:hidden">
+        <div className="fixed inset-0 top-[73px] z-30 flex flex-col gap-6 bg-background px-6 py-12 md:hidden">
           {sections.map((s) => (
-            <span key={s.id} className="font-serif text-3xl uppercase tracking-tight">
+            <span key={s.id} className="font-serif text-2xl">
               {linkFor(s.id, s.label)}
             </span>
           ))}

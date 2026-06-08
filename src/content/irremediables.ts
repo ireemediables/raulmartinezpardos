@@ -3,71 +3,94 @@ export type Irremediable = {
   numero: string;
   titulo: string;
   observacion: string;
-  resumen: string;
   cuerpo: string[];
 };
 
-// Proyectos seleccionados — sustituir los cuerpos por el detalle de cada caso.
+// 12 proyectos seleccionados. Los cuerpos son provisionales hasta recibir el detalle de cada caso.
 export const irremediables: Irremediable[] = [
   {
-    slug: "paluego",
+    slug: "la-alcahueta",
     numero: "01",
-    titulo: "PALUEGO",
-    observacion:
-      "Lo que se deja para después rara vez vuelve. Y aun así, lo seguimos dejando.",
-    resumen:
-      "Una marca construida sobre la honestidad incómoda de aplazar.",
-    cuerpo: [
-      "Texto provisional. Aquí irá el desarrollo del caso PALUEGO: contexto, observación originadora, estrategia, naming y propuesta de marca.",
-    ],
+    titulo: "La Alcahueta",
+    observacion: "Hay lugares que saben demasiado.",
+    cuerpo: ["Texto del proyecto pendiente."],
+  },
+  {
+    slug: "tejados-de-libertad",
+    numero: "02",
+    titulo: "Tejados de Libertad",
+    observacion: "Ampliar horizontes.",
+    cuerpo: ["Texto del proyecto pendiente."],
+  },
+  {
+    slug: "paluego",
+    numero: "03",
+    titulo: "Paluego",
+    observacion: "La otra función del palillo.",
+    cuerpo: ["Texto del proyecto pendiente."],
   },
   {
     slug: "tomatelo",
-    numero: "02",
-    titulo: "tomaTÉlo",
-    observacion:
-      "Hay frases que cambian de sentido sólo con cómo las escribes.",
-    resumen:
-      "Una identidad que vive en la tensión entre lo escrito y lo dicho.",
-    cuerpo: [
-      "Texto provisional. Desarrolla aquí la historia del proyecto tomaTÉlo.",
-    ],
-  },
-  {
-    slug: "ni-mu",
-    numero: "03",
-    titulo: "NI MU",
-    observacion:
-      "Los silencios cuentan más cosas que los discursos. Y se editan peor.",
-    resumen:
-      "Una marca que reivindica callar como acto creativo.",
-    cuerpo: [
-      "Texto provisional. Desarrolla aquí la historia del proyecto NI MU.",
-    ],
-  },
-  {
-    slug: "la-alcahueta",
     numero: "04",
-    titulo: "LA ALCAHUETA",
-    observacion:
-      "Algunas palabras antiguas todavía saben hacer cosas que las nuevas no.",
-    resumen:
-      "Una identidad que recupera un oficio sin disfrazarlo de moderno.",
-    cuerpo: [
-      "Texto provisional. Desarrolla aquí la historia del proyecto LA ALCAHUETA.",
-    ],
+    titulo: "tomaTÉlo",
+    observacion: "Permítete parar.",
+    cuerpo: ["Texto del proyecto pendiente."],
+  },
+  {
+    slug: "la-habladurnia",
+    numero: "05",
+    titulo: "La Habladurnia",
+    observacion: "Las flores hablan.",
+    cuerpo: ["Texto del proyecto pendiente."],
+  },
+  {
+    slug: "cruak",
+    numero: "06",
+    titulo: "Cruak",
+    observacion: "Salir del estanque.",
+    cuerpo: ["Texto del proyecto pendiente."],
   },
   {
     slug: "bonvuayas",
-    numero: "05",
-    titulo: "BONVUAYAS",
-    observacion:
-      "Lo mal pronunciado a veces se queda. Y termina siendo lo único que se recuerda.",
-    resumen:
-      "Una marca que abraza el error como firma.",
-    cuerpo: [
-      "Texto provisional. Desarrolla aquí la historia del proyecto BONVUAYAS.",
-    ],
+    numero: "07",
+    titulo: "Bonvuayas",
+    observacion: "Desear lo mejor.",
+    cuerpo: ["Texto del proyecto pendiente."],
+  },
+  {
+    slug: "ni-mu",
+    numero: "08",
+    titulo: "Ni Mu",
+    observacion: "¿Para qué hablar?",
+    cuerpo: ["Texto del proyecto pendiente."],
+  },
+  {
+    slug: "arte-serestre",
+    numero: "09",
+    titulo: "Arte Serestre",
+    observacion: "Arte sobre seres.",
+    cuerpo: ["Texto del proyecto pendiente."],
+  },
+  {
+    slug: "yes",
+    numero: "10",
+    titulo: "Y’es",
+    observacion: "El vino une.",
+    cuerpo: ["Texto del proyecto pendiente."],
+  },
+  {
+    slug: "siva-mas",
+    numero: "11",
+    titulo: "Síva+",
+    observacion: "Siempre hay más.",
+    cuerpo: ["Texto del proyecto pendiente."],
+  },
+  {
+    slug: "come-y-cana",
+    numero: "12",
+    titulo: "Come y Caña",
+    observacion: "“Comer y callar” no tiene sentido.",
+    cuerpo: ["Texto del proyecto pendiente."],
   },
 ];
 
