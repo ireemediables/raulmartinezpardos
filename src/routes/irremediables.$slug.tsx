@@ -269,12 +269,15 @@ function ProyectoPage() {
           {!siguiente && (
             <nav className="py-24 sm:py-28 md:py-36">
               <div className="mx-auto max-w-3xl px-6 sm:px-8 md:px-10">
-                <p className="eyebrow mb-6">Fin de la colección</p>
+                <p className="eyebrow mb-6">FIN DE LA COLECCIÓN</p>
                 <p className="display text-balance text-[1.6rem] leading-[1.15] sm:text-3xl md:text-4xl">
                   Hasta aquí, doce ideas que no se dejaron ignorar.
                 </p>
                 <p className="accent-italic mt-6 text-muted-foreground sm:text-lg">
-                  Gracias por acompañarme hasta el final del recorrido.
+                  No son encargos.
+                </p>
+                <p className="accent-italic mt-2 text-muted-foreground sm:text-lg">
+                  Son la consecuencia de prestar atención.
                 </p>
                 <ul className="mt-12 divide-y divide-[color:var(--rule)] border-y border-[color:var(--rule)]">
                   <li>
