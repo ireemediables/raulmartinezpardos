@@ -278,6 +278,26 @@ export const irremediables: Irremediable[] = [
     titulo: "Y’es",
     observacion: "El vino une.",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroYes.url, alt: "Dos manos acercándose sobre una mesa con copas de vino al fondo, en blanco y negro." },
+      puntoDePartida: "Vinoteca especializada en experiencias de degustación.",
+      observacion: [
+        "Hay cosas que, por separado, están bien.",
+        "Pero, a veces, juntas funcionan mejor.",
+        "Un trozo de queso y una rodaja de pan.",
+        "Una mesa y una buena conversación.",
+        "Una persona y otra persona\u2026",
+        "La \u201CY\u201D hace posible muchos de los encuentros que merecen la pena.",
+        "Con el vino sucede lo mismo.",
+      ],
+      concepto: "El vino une.",
+      nombre: "Y\u2019ES",
+      eslogan: { texto: "La conjunción perfecta.", tachadas: [] },
+      direccionVisual: [
+        "El símbolo transforma la conjunción \u201CY\u201D en una copa para representar la capacidad de unir que tiene el vino.",
+      ],
+      board: { src: boardYes.url, alt: "Board visual del proyecto Y\u2019es." },
+    },
   },
   {
     slug: "siva-mas",
