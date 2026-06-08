@@ -322,7 +322,7 @@ export const irremediables: Irremediable[] = [
       ],
       concepto: "Siempre hay más.",
       nombre: "SÍVA +",
-      eslogan: { texto: "El futuro ya es pasado.", tachadas: [] },
+      eslogan: { texto: "El futuro ya ha pasado.", tachadas: [] },
       direccionVisual: [
         "El símbolo prolonga el signo + más allá de sus propios límites para representar una evolución que nunca termina.",
       ],
