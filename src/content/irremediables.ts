@@ -1,5 +1,7 @@
 import heroAlcahueta from "@/assets/alcahueta/hero.asset.json";
 import boardAlcahueta from "@/assets/alcahueta/board.asset.json";
+import heroTejados from "@/assets/tejados/hero.asset.json";
+import boardTejados from "@/assets/tejados/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
@@ -57,6 +59,27 @@ export const irremediables: Irremediable[] = [
     titulo: "Tejados de Libertad",
     observacion: "Ampliar horizontes.",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroTejados.url, alt: "Escaleras de piedra ascendiendo hacia un cielo abierto con nubes." },
+      puntoDePartida: "Librería-cafetería especializada en ensayo, narrativa y actividades culturales.",
+      observacion: [
+        "Hay lugares capaces de cambiar nuestra forma de ver el mundo.",
+        "Los libros son uno de ellos.",
+        "Nos permiten viajar sin movernos.",
+        "Pensar de otra manera.",
+        "Habitar otras vidas.",
+        "Y descubrir posibilidades que antes no existían.",
+        "Porque la libertad no siempre consiste en ir más lejos.",
+        "A veces consiste en mirar más allá.",
+      ],
+      concepto: "Ampliar horizontes.",
+      nombre: "TEJADOS DE LIBERTAD",
+      eslogan: { texto: "Asomarse a otros mundos.", tachadas: [] },
+      direccionVisual: [
+        "El símbolo convierte un libro abierto en un lugar desde el que ampliar horizontes.",
+      ],
+      board: { src: boardTejados.url, alt: "Board visual del proyecto Tejados de Libertad." },
+    },
   },
   {
     slug: "paluego",
