@@ -8,6 +8,8 @@ import heroTomatelo from "@/assets/tomatelo/hero.asset.json";
 import boardTomatelo from "@/assets/tomatelo/board.asset.json";
 import heroHabladurnia from "@/assets/habladurnia/hero.asset.json";
 import boardHabladurnia from "@/assets/habladurnia/board.asset.json";
+import heroCruak from "@/assets/cruak/hero.asset.json";
+import boardCruak from "@/assets/cruak/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
@@ -170,6 +172,22 @@ export const irremediables: Irremediable[] = [
     titulo: "Cruak",
     observacion: "Salir del estanque.",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroCruak.url, alt: "Superficie de agua oscura rota por una gota que genera ondas concéntricas, en blanco y negro." },
+      puntoDePartida: "Marca especializada en aventura, bushcraft y actividades al aire libre.",
+      observacion: [
+        "El agua que permanece quieta termina estancándose.",
+        "Y con las personas ocurre algo parecido.",
+        "La evolución rara vez sucede dentro de la quietud.",
+      ],
+      concepto: "Salir del estanque.",
+      nombre: "CRUAK",
+      eslogan: { texto: "¿Acaso eres una rana?", tachadas: [] },
+      direccionVisual: [
+        "La identidad se construye alrededor de la ruptura de una superficie de agua para representar la decisión de salir del estanque.",
+      ],
+      board: { src: boardCruak.url, alt: "Board visual del proyecto Cruak." },
+    },
   },
   {
     slug: "bonvuayas",
