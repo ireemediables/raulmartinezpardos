@@ -120,14 +120,14 @@ function Home() {
 
         {/* Para quién */}
         <Section id="para-quien" n="03" label="Para quién">
-          <p className="accent-italic text-lg text-muted-foreground sm:text-xl md:text-2xl">
+          <p className="accent-italic text-[1.05rem] text-muted-foreground sm:text-xl md:text-2xl">
             {paraQuien.intro}
           </p>
-          <ul className="mt-10 space-y-6 sm:mt-14 sm:space-y-8">
+          <ul className="mt-12 space-y-7 sm:mt-14 sm:space-y-8">
             {paraQuien.items.map((item, i) => (
               <li
                 key={i}
-                className="grid grid-cols-[2rem_1fr] gap-3 text-base text-pretty sm:grid-cols-[2.5rem_1fr] sm:gap-4 sm:text-lg md:text-xl"
+                className="grid grid-cols-[2rem_1fr] gap-3 text-[15.5px] leading-[1.55] text-pretty sm:grid-cols-[2.5rem_1fr] sm:gap-4 sm:text-lg md:text-xl"
               >
                 <span className="eyebrow mt-1.5 sm:mt-2">{String(i + 1).padStart(2, "0")}</span>
                 <span>{item}</span>
@@ -135,8 +135,8 @@ function Home() {
             ))}
           </ul>
 
-          <div className="mt-20 border-t border-[color:var(--rule)] pt-14 sm:mt-24 sm:pt-16 md:mt-28 md:pt-20">
-            <p className="display text-balance text-[1.55rem] leading-[1.18] sm:text-[2rem] md:text-4xl lg:text-5xl lg:leading-[1.05]">
+          <div className="mt-24 border-t border-[color:var(--rule)] pt-16 sm:mt-28 sm:pt-20 md:mt-28 md:pt-20">
+            <p className="display text-balance text-[1.45rem] leading-[1.2] sm:text-[1.875rem] md:text-4xl lg:text-5xl lg:leading-[1.05]">
               Todo proyecto gira alrededor de una idea.
               <br />
               <span className="accent-italic text-muted-foreground">
