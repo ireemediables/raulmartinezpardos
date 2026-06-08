@@ -60,7 +60,7 @@ function ProyectoPage() {
     <div className="min-h-screen">
       <Header />
       <main>
-        <article className="mx-auto max-w-2xl px-6 py-24 md:px-10 md:py-36">
+        <article className="mx-auto max-w-2xl px-5 py-16 sm:px-6 sm:py-24 md:px-10 md:py-36">
           <Link
             to="/"
             hash="irremediables"
@@ -69,17 +69,17 @@ function ProyectoPage() {
             ← Irremediables
           </Link>
 
-          <header className="mt-14 border-b border-[color:var(--rule)] pb-14">
+          <header className="mt-10 border-b border-[color:var(--rule)] pb-10 sm:mt-14 sm:pb-14">
             <p className="eyebrow">Irremediable {proyecto.numero}</p>
-            <h1 className="mt-6 display text-balance text-5xl md:text-6xl">
+            <h1 className="mt-5 display text-balance text-[2.25rem] leading-[1.08] sm:mt-6 sm:text-5xl md:text-6xl md:leading-[1.05]">
               {proyecto.titulo}
             </h1>
-            <p className="mt-8 max-w-xl accent-italic text-xl text-muted-foreground md:text-2xl">
+            <p className="mt-6 max-w-xl accent-italic text-lg text-muted-foreground sm:mt-8 sm:text-xl md:text-2xl">
               {proyecto.observacion}
             </p>
           </header>
 
-          <div className="prose-essay mt-16 text-lg text-pretty text-muted-foreground">
+          <div className="prose-essay mt-12 text-base text-pretty text-muted-foreground sm:mt-16 sm:text-lg">
             {proyecto.cuerpo.map((parr: string, i: number) => (
               <p key={i}>{parr}</p>
             ))}
@@ -87,12 +87,12 @@ function ProyectoPage() {
         </article>
 
         {siguiente && (
-          <nav className="mx-auto max-w-2xl border-t border-[color:var(--rule)] px-6 py-20 md:px-10">
+          <nav className="mx-auto max-w-2xl border-t border-[color:var(--rule)] px-5 py-14 sm:px-6 sm:py-20 md:px-10">
             <p className="eyebrow">Siguiente</p>
             <Link
               to="/irremediables/$slug"
               params={{ slug: siguiente.slug }}
-              className="mt-5 block font-serif text-3xl leading-tight transition-transform duration-500 hover:translate-x-1 md:text-4xl"
+              className="mt-4 block font-serif text-2xl leading-[1.15] transition-transform duration-500 hover:translate-x-1 sm:mt-5 sm:text-3xl sm:leading-tight md:text-4xl"
             >
               {siguiente.titulo}
               <span className="accent-italic text-muted-foreground"> — {siguiente.observacion}</span>
