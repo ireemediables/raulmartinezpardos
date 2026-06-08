@@ -67,7 +67,7 @@ export function Header() {
             {cabecera.proyecto}
           </span>
         </Link>
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-4 whitespace-nowrap text-[12.5px] md:flex lg:gap-7 lg:text-sm">
           {sections.map((s) => linkFor(s.id, s.label))}
         </nav>
         <button
