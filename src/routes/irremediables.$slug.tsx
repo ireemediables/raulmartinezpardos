@@ -174,7 +174,7 @@ function CasoCompletoView({
 
       {/* 02 — OBSERVACIÓN */}
       <CaseSection n="02" label="Observación">
-        <div className="prose-essay max-w-2xl text-[16px] text-muted-foreground sm:text-lg md:text-xl">
+        <div className="prose-essay max-w-2xl text-[16px] text-foreground sm:text-lg md:text-xl">
           {caso.observacion.map((p, i) => (
             <p key={i}>{p}</p>
           ))}
