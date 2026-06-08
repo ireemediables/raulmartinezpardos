@@ -80,11 +80,11 @@ export function Header() {
         </button>
       </div>
       {open && (
-        <div className="fixed inset-0 top-[61px] z-30 flex flex-col gap-6 bg-background px-6 py-12 sm:top-[73px] sm:gap-7 sm:px-8 sm:py-14 md:hidden">
+        <div className="fixed inset-0 top-[57px] z-50 flex flex-col gap-7 bg-background px-6 py-12 sm:top-[73px] sm:gap-8 sm:px-8 sm:py-14 md:hidden">
           {sections.map((s, i) => (
-            <div key={s.id} className="flex items-baseline gap-5">
+            <div key={s.id} className="flex items-baseline gap-4 leading-none">
               <span className="eyebrow shrink-0">{String(i + 1).padStart(2, "0")}</span>
-              <span className="font-serif text-[1.6rem] sm:text-3xl">
+              <span className="font-serif text-[1.35rem] leading-[1.1] sm:text-3xl">
                 {linkFor(s.id, s.label)}
               </span>
             </div>
