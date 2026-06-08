@@ -20,6 +20,8 @@ import heroYes from "@/assets/yes/hero.asset.json";
 import boardYes from "@/assets/yes/board.asset.json";
 import heroSiva from "@/assets/siva/hero.asset.json";
 import boardSiva from "@/assets/siva/board.asset.json";
+import heroComeyCana from "@/assets/comeycana/hero.asset.json";
+import boardComeyCana from "@/assets/comeycana/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
