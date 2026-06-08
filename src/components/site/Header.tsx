@@ -41,7 +41,7 @@ export function Header() {
 
   const linkFor = (id: string, label: string) => {
     const isActive = active === id;
-    const className = `text-sm transition-colors hover:text-foreground ${
+    const className = `transition-colors hover:text-foreground ${
       isActive ? "text-foreground" : "text-muted-foreground"
     }`;
     if (isHome) {
