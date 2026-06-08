@@ -80,7 +80,7 @@ function Home() {
           <h1 className="display text-balance text-[1.5rem] leading-[1.15] sm:text-[2.125rem] sm:leading-[1.12] md:text-4xl lg:text-5xl lg:leading-[1.05]">
             {cabecera.proyecto}
             <br />
-            <span className="accent-italic text-[0.8em]">
+            <span className="accent-italic text-[0.7em]">
               <span className="text-muted-foreground">— </span>son esas que, cuando aparecen,
               <br />
               ya no te las sacas de encima.
