@@ -60,10 +60,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-[color:var(--rule)] bg-background/85 backdrop-blur supports-[backdrop-filter]:bg-background/70">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-10">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-6 sm:py-5 md:px-10">
         <Link to="/" className="flex flex-col leading-tight">
-          <span className="text-xs text-muted-foreground">{cabecera.nombre}</span>
-          <span className="font-serif text-base">
+          <span className="text-[11px] text-muted-foreground sm:text-xs">{cabecera.nombre}</span>
+          <span className="font-serif text-[15px] sm:text-base">
             {cabecera.proyecto}
           </span>
         </Link>
@@ -80,9 +80,9 @@ export function Header() {
         </button>
       </div>
       {open && (
-        <div className="fixed inset-0 top-[73px] z-30 flex flex-col gap-6 bg-background px-6 py-12 md:hidden">
+        <div className="fixed inset-0 top-[61px] z-30 flex flex-col gap-5 bg-background px-5 py-10 sm:top-[73px] sm:gap-6 sm:px-6 sm:py-12 md:hidden">
           {sections.map((s) => (
-            <span key={s.id} className="font-serif text-2xl">
+            <span key={s.id} className="font-serif text-2xl sm:text-2xl">
               {linkFor(s.id, s.label)}
             </span>
           ))}
