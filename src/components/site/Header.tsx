@@ -67,24 +67,27 @@ export function Header() {
             {cabecera.proyecto}
           </span>
         </Link>
-        <nav className="hidden items-center gap-7 md:flex">
+        <nav className="hidden items-center gap-7 lg:flex">
           {sections.map((s) => linkFor(s.id, s.label))}
         </nav>
         <button
           aria-label="Menú"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="text-sm text-muted-foreground transition-colors hover:text-foreground md:hidden"
+          className="eyebrow text-muted-foreground transition-colors hover:text-foreground lg:hidden"
         >
-          {open ? "Cerrar" : "Menú"}
+          {open ? "Cerrar" : "Índice"}
         </button>
       </div>
       {open && (
-        <div className="fixed inset-0 top-[61px] z-30 flex flex-col gap-5 bg-background px-5 py-10 sm:top-[73px] sm:gap-6 sm:px-6 sm:py-12 md:hidden">
-          {sections.map((s) => (
-            <span key={s.id} className="font-serif text-2xl sm:text-2xl">
-              {linkFor(s.id, s.label)}
-            </span>
+        <div className="fixed inset-0 top-[61px] z-30 flex flex-col gap-5 bg-background px-5 py-10 sm:top-[73px] sm:gap-6 sm:px-6 sm:py-12 lg:hidden">
+          {sections.map((s, i) => (
+            <div key={s.id} className="flex items-baseline gap-5">
+              <span className="eyebrow shrink-0">{String(i + 1).padStart(2, "0")}</span>
+              <span className="font-serif text-2xl sm:text-3xl">
+                {linkFor(s.id, s.label)}
+              </span>
+            </div>
           ))}
         </div>
       )}

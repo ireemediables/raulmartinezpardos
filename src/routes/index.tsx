@@ -58,7 +58,7 @@ function Section({
   return (
     <section
       id={id}
-      className={`py-20 sm:py-24 md:py-40 ${bordered ? "border-b border-[color:var(--rule)]" : ""}`}
+      className={`py-20 md:py-28 lg:py-40 ${bordered ? "border-b border-[color:var(--rule)]" : ""}`}
     >
       <div className="mx-auto max-w-3xl px-5 sm:px-6 md:px-10">
         <SectionLabel n={n}>{label}</SectionLabel>
@@ -75,9 +75,9 @@ function Home() {
 
       {/* Cabecera — apertura tranquila */}
       <section className="border-b border-[color:var(--rule)]">
-        <div className="mx-auto max-w-3xl px-5 pb-16 pt-16 sm:px-6 sm:pb-20 sm:pt-20 md:px-10 md:pb-28 md:pt-32">
+        <div className="mx-auto max-w-3xl px-5 pb-16 pt-16 sm:px-6 md:px-10 md:pb-24 md:pt-24 lg:pb-28 lg:pt-32">
           <p className="eyebrow mb-8 text-[11px] text-foreground/75 sm:mb-10 sm:text-[11.5px]">{cabecera.tagline}</p>
-          <h1 className="display text-balance text-[2.125rem] leading-[1.08] sm:text-4xl md:text-5xl md:leading-[1.05]">
+          <h1 className="display text-balance text-[1.9rem] leading-[1.1] sm:text-[2.25rem] md:text-4xl lg:text-5xl lg:leading-[1.05]">
             {cabecera.proyecto}
             <span className="accent-italic text-muted-foreground text-[0.8em]"> — </span>
             <span className="accent-italic text-[0.8em]">una forma de mirar.</span>
@@ -88,10 +88,10 @@ function Home() {
       <main>
         {/* Punto de partida */}
         <Section id="partida" n="01" label="Punto de partida">
-          <p className="display text-balance text-[1.625rem] leading-[1.15] sm:text-3xl md:text-4xl md:leading-[1.05]">
+          <p className="display text-balance text-[1.5rem] leading-[1.18] sm:text-[1.875rem] md:text-3xl lg:text-4xl lg:leading-[1.05]">
             {puntoDePartida.frase}
           </p>
-          <div className="prose-essay mt-10 max-w-2xl text-base text-muted-foreground sm:mt-14 sm:text-lg md:mt-16">
+          <div className="prose-essay mt-10 max-w-2xl text-[15.5px] text-muted-foreground sm:mt-12 sm:text-base md:mt-14 md:text-lg">
             {puntoDePartida.parrafos.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
@@ -103,13 +103,16 @@ function Home() {
           <p className="accent-italic text-lg text-muted-foreground sm:text-xl md:text-2xl">
             {metodo.intro}
           </p>
-          <ol className="mt-10 space-y-4 font-serif text-xl text-pretty sm:mt-14 sm:space-y-5 sm:text-2xl md:text-3xl">
+          <ol className="mt-12 space-y-5 font-serif text-xl text-pretty sm:mt-14 sm:space-y-6 sm:text-2xl md:text-3xl">
             {metodo.pasos.map((paso, i) => (
-              <li key={i} className="flex gap-4 sm:gap-6">
-                <span className="eyebrow mt-2 shrink-0 sm:mt-3">
+              <li
+                key={i}
+                className="grid grid-cols-[2.25rem_1fr] items-baseline gap-x-4 sm:grid-cols-[3rem_1fr] sm:gap-x-6"
+              >
+                <span className="eyebrow self-baseline">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span>{paso}</span>
+                <span className="leading-[1.25]">{paso}</span>
               </li>
             ))}
           </ol>
@@ -132,8 +135,8 @@ function Home() {
             ))}
           </ul>
 
-          <div className="mt-20 border-t border-[color:var(--rule)] pt-14 sm:mt-28 sm:pt-20">
-            <p className="display text-balance text-[1.75rem] leading-[1.15] sm:text-3xl md:text-5xl md:leading-[1.05]">
+          <div className="mt-20 border-t border-[color:var(--rule)] pt-14 sm:mt-24 sm:pt-16 md:mt-28 md:pt-20">
+            <p className="display text-balance text-[1.55rem] leading-[1.18] sm:text-[2rem] md:text-4xl lg:text-5xl lg:leading-[1.05]">
               Todo proyecto gira alrededor de una idea.
               <br />
               <span className="accent-italic text-muted-foreground">
@@ -145,7 +148,7 @@ function Home() {
 
         {/* Irremediables */}
         <Section id="irremediables" n="04" label="Irremediables">
-          <p className="display text-balance text-[1.625rem] leading-[1.15] sm:text-3xl md:text-4xl md:leading-[1.05]">
+          <p className="display text-balance text-[1.5rem] leading-[1.18] sm:text-[1.875rem] md:text-3xl lg:text-4xl lg:leading-[1.05]">
             {irremediablesIntro.titulo}
           </p>
           <div className="prose-essay mt-8 max-w-2xl text-base text-muted-foreground sm:mt-12 sm:text-lg">
@@ -194,7 +197,7 @@ function Home() {
 
         {/* Contacto */}
         <Section id="contacto" n="06" label="Contacto" bordered={false}>
-          <p className="display text-balance text-[1.625rem] leading-[1.15] sm:text-3xl md:text-4xl md:leading-[1.05]">
+          <p className="display text-balance text-[1.5rem] leading-[1.18] sm:text-[1.875rem] md:text-3xl lg:text-4xl lg:leading-[1.05]">
             {contactoTexto.invitacion}
             <br />
             <span className="accent-italic text-muted-foreground">
