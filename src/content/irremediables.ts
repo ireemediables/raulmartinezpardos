@@ -12,6 +12,8 @@ import heroCruak from "@/assets/cruak/hero.asset.json";
 import boardCruak from "@/assets/cruak/board.asset.json";
 import heroBonvuayas from "@/assets/bonvuayas/hero.asset.json";
 import boardBonvuayas from "@/assets/bonvuayas/board.asset.json";
+import heroNimu from "@/assets/nimu/hero.asset.json";
+import boardNimu from "@/assets/nimu/board.asset.json";
 
 export type CasoCompleto = {
   hero: { src: string; alt: string };
@@ -222,6 +224,22 @@ export const irremediables: Irremediable[] = [
     titulo: "Ni Mu",
     observacion: "¿Para qué hablar?",
     cuerpo: ["Texto del proyecto pendiente."],
+    caso: {
+      hero: { src: heroNimu.url, alt: "Pareja cenando frente a frente a la luz de las velas, en blanco y negro." },
+      puntoDePartida: "Restaurante de cocina contemporánea.",
+      observacion: [
+        "Hay comidas que están muy ricas.",
+        "Otras, espectaculares.",
+        "Pero algunas consiguen algo más difícil:",
+        "que dejes de hablar.",
+      ],
+      concepto: "¿Para qué hablar?",
+      nombre: "NI MU",
+      direccionVisual: [
+        "La identidad se construye alrededor de la idea de que una experiencia gastronómica excepcional puede hacer innecesarias las palabras.",
+      ],
+      board: { src: boardNimu.url, alt: "Board visual del proyecto Ni Mu." },
+    },
   },
   {
     slug: "arte-serestre",
