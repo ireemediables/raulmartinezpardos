@@ -1,34 +1,41 @@
-## Plan — Foto del autor junto al Manifiesto
+## Objetivo
 
-Colocar la imagen aportada (`foto perfil.jpg`, retrato de perfil B/N) en la sección **05 — Manifiesto** de la home, integrándola con el sistema visual ya existente (sin nuevas secciones, sin cambios tipográficos, sin alterar márgenes ni ritmo).
+Dejar la colección en 10 irremediables, eliminando `tomaTÉlo` (04) y `SÍVA+` (11), y colocando `La Habladurnia` antes que `Tejados de Libertad`. Sin tocar diseño, tipografía, márgenes, animaciones, contenido ni estructura de los proyectos restantes.
 
-### 1. Subir la imagen como asset CDN
-- Crear `src/assets/autor/perfil.asset.json` desde `/mnt/user-uploads/foto_perfil.jpg` con `lovable-assets`.
-- No se copia el binario al repositorio.
+## Nuevo orden y numeración
 
-### 2. Integrarla en la sección Manifiesto (`src/routes/index.tsx`, líneas 189–199)
-Mantener exactamente la `<Section n="05" label="Manifiesto">` y su contenido. Añadir la imagen como un elemento sobrio, en blanco y negro, alineada al margen — tratada como un "gesto", no como un retrato corporativo.
+```
+01 — La Alcahueta        (la-alcahueta)
+02 — La Habladurnia      (la-habladurnia)
+03 — Paluego             (paluego)
+04 — Tejados de Libertad (tejados-de-libertad)
+05 — Cruak               (cruak)
+06 — Bonvuayas           (bonvuayas)
+07 — Ni Mu               (ni-mu)
+08 — Arte Serestre       (arte-serestre)
+09 — Y'es                (yes)
+10 — Come y Caña         (come-y-cana)
+```
 
-**Composición propuesta (responsive, sin romper el ritmo vertical):**
+Los `slug` se mantienen tal cual (los enlaces existentes a `/irremediables/la-habladurnia`, etc. siguen funcionando). Solo cambia el campo `numero` y la posición en el array.
 
-- **Desktop (md+):** dos columnas dentro de la sección. La foto ocupa una columna estrecha (≈ 200–240 px de ancho, ratio vertical preservado del original), alineada arriba a la izquierda del bloque de texto del manifiesto. El texto mantiene su ancho actual (`max-w-2xl`) a la derecha.
-- **Mobile:** la foto aparece **debajo** del título (`manifiesto.titulo`) y **encima** de los párrafos, con un ancho contenido (≈ 160 px), alineada al margen izquierdo. Nunca a pantalla completa.
+## Cambios
 
-**Tratamiento visual:**
-- Sin marco, sin sombra, sin radio (coherente con el resto de la colección).
-- `loading="lazy"`, `alt="Raúl Martínez Pardos"`.
-- Sin pie de foto.
-- La imagen ya es B/N, así que no requiere filtro.
+1. **`src/content/irremediables.ts`**
+   - Eliminar los objetos `tomatelo` (slug `tomatelo`) y `siva-mas` (slug `siva-mas`) del array `irremediables`.
+   - Eliminar sus imports de `@/assets/tomatelo/...` y `@/assets/siva/...`.
+   - Reordenar el array al orden indicado arriba.
+   - Renumerar el campo `numero` de `"01"` a `"10"` siguiendo el nuevo orden.
+   - Los helpers `getIrremediable`, `getNextIrremediable`, `isLastIrremediable` no cambian (operan sobre el array).
 
-### 3. Lo que NO se toca
-- No se modifica `src/content/home.ts`.
-- No se crean nuevas secciones ni se cambia la numeración (sigue siendo 05 — Manifiesto, 06 — Contacto).
-- No se altera el `Header`, `Footer`, tipografía, tokens ni espaciados globales.
-- No se añade la foto en ninguna otra página (proyectos Irremediables siguen sin retrato).
+2. **Assets de los proyectos eliminados**
+   - Borrar los `.asset.json` y los assets CDN asociados:
+     - `src/assets/tomatelo/hero.asset.json`, `src/assets/tomatelo/board.asset.json`
+     - `src/assets/siva/hero.asset.json`, `src/assets/siva/board.asset.json`
 
-### Archivos afectados
-- **Nuevo:** `src/assets/autor/perfil.asset.json`
-- **Editado:** `src/routes/index.tsx` (sólo el bloque de la Section "Manifiesto")
+3. **Búsqueda de referencias residuales**
+   - Revisar `src/routes/index.tsx`, `src/content/home.ts`, `src/routes/irremediables.$slug.tsx` y cualquier otro fichero en busca de menciones a `tomatelo`, `tomaTÉlo`, `siva`, `SÍVA`, `Síva`. Eliminarlas si aparecen. Por la estructura actual no se esperan menciones fuera de `irremediables.ts`, pero se confirmará antes de cerrar.
 
-### Resultado esperado
-Al llegar al manifiesto, el visitante encuentra por primera vez al autor — de perfil, mirando hacia el texto — justo cuando la voz se vuelve personal. Sutil, alineado al sistema, fácil de revertir si no encaja.
+## Fuera del alcance
+
+No se toca diseño, tipografías, márgenes, animaciones, navegación, manifiesto, epílogo, ni el contenido editorial de los 10 proyectos restantes.
