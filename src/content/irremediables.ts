@@ -4,8 +4,6 @@ import heroTejados from "@/assets/tejados/hero.asset.json";
 import boardTejados from "@/assets/tejados/board.asset.json";
 import heroPaluego from "@/assets/paluego/hero.asset.json";
 import boardPaluego from "@/assets/paluego/board.asset.json";
-import heroTomatelo from "@/assets/tomatelo/hero.asset.json";
-import boardTomatelo from "@/assets/tomatelo/board.asset.json";
 import heroHabladurnia from "@/assets/habladurnia/hero.asset.json";
 import boardHabladurnia from "@/assets/habladurnia/board.asset.json";
 import heroCruak from "@/assets/cruak/hero.asset.json";
@@ -18,8 +16,6 @@ import heroArteSerestre from "@/assets/arteserestre/hero.asset.json";
 import boardArteSerestre from "@/assets/arteserestre/board.asset.json";
 import heroYes from "@/assets/yes/hero.asset.json";
 import boardYes from "@/assets/yes/board.asset.json";
-import heroSiva from "@/assets/siva/hero.asset.json";
-import boardSiva from "@/assets/siva/board.asset.json";
 import heroComeyCana from "@/assets/comeycana/hero.asset.json";
 import boardComeyCana from "@/assets/comeycana/board.asset.json";
 
@@ -43,7 +39,7 @@ export type Irremediable = {
   caso?: CasoCompleto;
 };
 
-// 12 proyectos seleccionados. Los cuerpos son provisionales hasta recibir el detalle de cada caso.
+// 10 proyectos seleccionados. Los cuerpos son provisionales hasta recibir el detalle de cada caso.
 export const irremediables: Irremediable[] = [
   {
     slug: "la-alcahueta",
@@ -74,31 +70,29 @@ export const irremediables: Irremediable[] = [
     },
   },
   {
-    slug: "tejados-de-libertad",
+    slug: "la-habladurnia",
     numero: "02",
-    titulo: "Tejados de Libertad",
-    observacion: "Ampliar horizontes.",
+    titulo: "La Habladurnia",
+    observacion: "Las flores hablan.",
     cuerpo: ["Texto del proyecto pendiente."],
     caso: {
-      hero: { src: heroTejados.url, alt: "Escaleras de piedra ascendiendo hacia un cielo abierto con nubes." },
-      puntoDePartida: "Librería-cafetería especializada en ensayo, narrativa y actividades culturales.",
+      hero: { src: heroHabladurnia.url, alt: "Dos personas conversando entre un campo de flores silvestres en blanco y negro." },
+      puntoDePartida: "Floristería.",
       observacion: [
-        "Hay lugares capaces de cambiar nuestra forma de ver el mundo.",
-        "Los libros son uno de ellos.",
-        "Nos permiten viajar sin movernos.",
-        "Pensar de otra manera.",
-        "Habitar otras vidas.",
-        "Y descubrir posibilidades que antes no existían.",
-        "Porque la libertad no siempre consiste en ir más lejos.",
-        "A veces consiste en mirar más allá.",
+        "Hay cosas que cuesta decir.",
+        "Gracias.",
+        "Perdón.",
+        "Te quiero.",
+        "Te echo de menos…",
+        "Por suerte, las flores llevan siglos haciéndolo por nosotros.",
       ],
-      concepto: "Ampliar horizontes.",
-      nombre: "TEJADOS DE LIBERTAD",
-      eslogan: { texto: "Asomarse a otros mundos.", tachadas: [] },
+      concepto: "Las flores hablan.",
+      nombre: "LA HABLADURNIA",
+      eslogan: { texto: "Dicen que las flores dicen.", tachadas: [] },
       direccionVisual: [
-        "El símbolo convierte un libro abierto en un lugar desde el que ampliar horizontes.",
+        "El símbolo transforma una flor en un megáfono para representar una idea sencilla: las flores llevan siglos diciendo aquello que a veces nosotros no sabemos decir.",
       ],
-      board: { src: boardTejados.url, alt: "Board visual del proyecto Tejados de Libertad." },
+      board: { src: boardHabladurnia.url, alt: "Board visual del proyecto La Habladurnia." },
     },
   },
   {
@@ -128,59 +122,36 @@ export const irremediables: Irremediable[] = [
     },
   },
   {
-    slug: "tomatelo",
+    slug: "tejados-de-libertad",
     numero: "04",
-    titulo: "tomaTÉlo",
-    observacion: "Permítete parar.",
+    titulo: "Tejados de Libertad",
+    observacion: "Ampliar horizontes.",
     cuerpo: ["Texto del proyecto pendiente."],
     caso: {
-      hero: { src: heroTomatelo.url, alt: "Persona sosteniendo una taza caliente frente a un reloj sin agujas, en blanco y negro." },
-      puntoDePartida: "Tetería alternativa.",
+      hero: { src: heroTejados.url, alt: "Escaleras de piedra ascendiendo hacia un cielo abierto con nubes." },
+      puntoDePartida: "Librería-cafetería especializada en ensayo, narrativa y actividades culturales.",
       observacion: [
-        "Las teterías son lugares donde una conversación puede durar horas.",
-        "Donde un libro se lee sin mirar el reloj.",
-        "Y donde una taza caliente parece suficiente para detener el mundo durante un rato.",
-        "Sin embargo, al salir, volvemos a correr.",
-        "Como si hubiéramos olvidado que ese tiempo también era nuestro.",
+        "Hay lugares capaces de cambiar nuestra forma de ver el mundo.",
+        "Los libros son uno de ellos.",
+        "Nos permiten viajar sin movernos.",
+        "Pensar de otra manera.",
+        "Habitar otras vidas.",
+        "Y descubrir posibilidades que antes no existían.",
+        "Porque la libertad no siempre consiste en ir más lejos.",
+        "A veces consiste en mirar más allá.",
       ],
-      concepto: "Permítete parar.",
-      nombre: "tomaTÉlo",
-      eslogan: { texto: "El tiempo es tuyo.", tachadas: [] },
+      concepto: "Ampliar horizontes.",
+      nombre: "TEJADOS DE LIBERTAD",
+      eslogan: { texto: "Asomarse a otros mundos.", tachadas: [] },
       direccionVisual: [
-        "Una identidad inspirada en el tiempo, entendiendo la tetería como uno de los pocos lugares donde todavía es posible detenerlo durante un rato.",
+        "El símbolo convierte un libro abierto en un lugar desde el que ampliar horizontes.",
       ],
-      board: { src: boardTomatelo.url, alt: "Board visual del proyecto tomaTÉlo." },
-    },
-  },
-  {
-    slug: "la-habladurnia",
-    numero: "05",
-    titulo: "La Habladurnia",
-    observacion: "Las flores hablan.",
-    cuerpo: ["Texto del proyecto pendiente."],
-    caso: {
-      hero: { src: heroHabladurnia.url, alt: "Dos personas conversando entre un campo de flores silvestres en blanco y negro." },
-      puntoDePartida: "Floristería.",
-      observacion: [
-        "Hay cosas que cuesta decir.",
-        "Gracias.",
-        "Perdón.",
-        "Te quiero.",
-        "Te echo de menos…",
-        "Por suerte, las flores llevan siglos haciéndolo por nosotros.",
-      ],
-      concepto: "Las flores hablan.",
-      nombre: "LA HABLADURNIA",
-      eslogan: { texto: "Dicen que las flores dicen.", tachadas: [] },
-      direccionVisual: [
-        "El símbolo transforma una flor en un megáfono para representar una idea sencilla: las flores llevan siglos diciendo aquello que a veces nosotros no sabemos decir.",
-      ],
-      board: { src: boardHabladurnia.url, alt: "Board visual del proyecto La Habladurnia." },
+      board: { src: boardTejados.url, alt: "Board visual del proyecto Tejados de Libertad." },
     },
   },
   {
     slug: "cruak",
-    numero: "06",
+    numero: "05",
     titulo: "Cruak",
     observacion: "Salir del estanque.",
     cuerpo: ["Texto del proyecto pendiente."],
@@ -203,7 +174,7 @@ export const irremediables: Irremediable[] = [
   },
   {
     slug: "bonvuayas",
-    numero: "07",
+    numero: "06",
     titulo: "Bonvuayas",
     observacion: "Desear lo mejor.",
     cuerpo: ["Texto del proyecto pendiente."],
@@ -228,7 +199,7 @@ export const irremediables: Irremediable[] = [
   },
   {
     slug: "ni-mu",
-    numero: "08",
+    numero: "07",
     titulo: "Ni Mu",
     observacion: "¿Para qué hablar?",
     cuerpo: ["Texto del proyecto pendiente."],
@@ -251,7 +222,7 @@ export const irremediables: Irremediable[] = [
   },
   {
     slug: "arte-serestre",
-    numero: "09",
+    numero: "08",
     titulo: "Arte Serestre",
     observacion: "Arte sobre seres.",
     cuerpo: ["Texto del proyecto pendiente."],
@@ -278,7 +249,7 @@ export const irremediables: Irremediable[] = [
   },
   {
     slug: "yes",
-    numero: "10",
+    numero: "09",
     titulo: "Y’es",
     observacion: "El vino une.",
     cuerpo: ["Texto del proyecto pendiente."],
@@ -304,36 +275,8 @@ export const irremediables: Irremediable[] = [
     },
   },
   {
-    slug: "siva-mas",
-    numero: "11",
-    titulo: "Síva+",
-    observacion: "Siempre hay más.",
-    cuerpo: ["Texto del proyecto pendiente."],
-    caso: {
-      hero: { src: heroSiva.url, alt: "Signo de interrogación luminoso formado por partículas sobre un círculo brillante, en blanco y negro." },
-      puntoDePartida: "Start up especializada en inteligencia artificial e innovación tecnológica.",
-      observacion: [
-        "Cada vez que creemos haber llegado al límite, aparece algo nuevo.",
-        "La electricidad.",
-        "Internet.",
-        "La inteligencia artificial.",
-        "Y siempre volvemos a decir lo mismo:",
-        "\u201CEsto es el no va a más.\u201D",
-        "Sin embargo, la historia de la tecnología siempre responde de la misma manera:",
-        "\u201CSí va a más.\u201D",
-      ],
-      concepto: "Siempre hay más.",
-      nombre: "SÍVA +",
-      eslogan: { texto: "El futuro ya ha pasado.", tachadas: [] },
-      direccionVisual: [
-        "El símbolo prolonga el signo + más allá de sus propios límites para representar una evolución que nunca termina.",
-      ],
-      board: { src: boardSiva.url, alt: "Board visual del proyecto SÍVA +." },
-    },
-  },
-  {
     slug: "come-y-cana",
-    numero: "12",
+    numero: "10",
     titulo: "Come y Caña",
     observacion: "“Comer y callar” no tiene sentido.",
     cuerpo: ["Texto del proyecto pendiente."],
