@@ -9,12 +9,30 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LegalPrivacidadRouteImport } from './routes/legal.privacidad'
+import { Route as LegalAvisoLegalRouteImport } from './routes/legal.aviso-legal'
 import { Route as IrremediablesSlugRouteImport } from './routes/irremediables.$slug'
 
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalPrivacidadRoute = LegalPrivacidadRouteImport.update({
+  id: '/legal/privacidad',
+  path: '/legal/privacidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalAvisoLegalRoute = LegalAvisoLegalRouteImport.update({
+  id: '/legal/aviso-legal',
+  path: '/legal/aviso-legal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IrremediablesSlugRoute = IrremediablesSlugRouteImport.update({
@@ -25,37 +43,86 @@ const IrremediablesSlugRoute = IrremediablesSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/irremediables/$slug': typeof IrremediablesSlugRoute
+  '/legal/aviso-legal': typeof LegalAvisoLegalRoute
+  '/legal/privacidad': typeof LegalPrivacidadRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/irremediables/$slug': typeof IrremediablesSlugRoute
+  '/legal/aviso-legal': typeof LegalAvisoLegalRoute
+  '/legal/privacidad': typeof LegalPrivacidadRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/irremediables/$slug': typeof IrremediablesSlugRoute
+  '/legal/aviso-legal': typeof LegalAvisoLegalRoute
+  '/legal/privacidad': typeof LegalPrivacidadRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/irremediables/$slug'
+  fullPaths:
+    | '/'
+    | '/sitemap.xml'
+    | '/irremediables/$slug'
+    | '/legal/aviso-legal'
+    | '/legal/privacidad'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/irremediables/$slug'
-  id: '__root__' | '/' | '/irremediables/$slug'
+  to:
+    | '/'
+    | '/sitemap.xml'
+    | '/irremediables/$slug'
+    | '/legal/aviso-legal'
+    | '/legal/privacidad'
+  id:
+    | '__root__'
+    | '/'
+    | '/sitemap.xml'
+    | '/irremediables/$slug'
+    | '/legal/aviso-legal'
+    | '/legal/privacidad'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   IrremediablesSlugRoute: typeof IrremediablesSlugRoute
+  LegalAvisoLegalRoute: typeof LegalAvisoLegalRoute
+  LegalPrivacidadRoute: typeof LegalPrivacidadRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/privacidad': {
+      id: '/legal/privacidad'
+      path: '/legal/privacidad'
+      fullPath: '/legal/privacidad'
+      preLoaderRoute: typeof LegalPrivacidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal/aviso-legal': {
+      id: '/legal/aviso-legal'
+      path: '/legal/aviso-legal'
+      fullPath: '/legal/aviso-legal'
+      preLoaderRoute: typeof LegalAvisoLegalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/irremediables/$slug': {
@@ -70,7 +137,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   IrremediablesSlugRoute: IrremediablesSlugRoute,
+  LegalAvisoLegalRoute: LegalAvisoLegalRoute,
+  LegalPrivacidadRoute: LegalPrivacidadRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

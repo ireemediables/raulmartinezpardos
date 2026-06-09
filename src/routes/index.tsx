@@ -30,8 +30,17 @@ export const Route = createFileRoute("/")({
         content:
           "Las ideas irremediables son esas que, cuando aparecen, ya no te las sacas de encima.",
       },
+      { property: "og:url", content: "https://raulmartinezpardos.lovable.app/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:title", content: "Raúl Martínez Pardos — Ideas irremediables" },
+      {
+        name: "twitter:description",
+        content:
+          "Nombres, conceptos y dirección visual. Encontrar la idea principal de un proyecto.",
+      },
     ],
     links: [
+      { rel: "canonical", href: "https://raulmartinezpardos.lovable.app/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
       {

@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { cabecera } from "@/content/home";
 
 const sections = [
@@ -16,6 +16,8 @@ export function Header() {
   const isHome = pathname === "/";
   const [active, setActive] = useState<string | null>(null);
   const [open, setOpen] = useState(false);
+  const toggleRef = useRef<HTMLButtonElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!isHome) {
@@ -39,14 +41,41 @@ export function Header() {
     return () => obs.disconnect();
   }, [isHome]);
 
+  // Cerrar con Escape, bloquear scroll del body, devolver foco al abridor al cerrar
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    // Foco al primer enlace del panel
+    const firstFocusable = panelRef.current?.querySelector<HTMLElement>(
+      "a, button",
+    );
+    firstFocusable?.focus();
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+      toggleRef.current?.focus();
+    };
+  }, [open]);
+
   const linkFor = (id: string, label: string) => {
     const isActive = active === id;
-    const className = `transition-colors hover:text-foreground ${
+    const className = `rounded-sm transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--background)] ${
       isActive ? "text-foreground" : "text-muted-foreground"
     }`;
     if (isHome) {
       return (
-        <a key={id} href={`#${id}`} className={className} onClick={() => setOpen(false)}>
+        <a
+          key={id}
+          href={`#${id}`}
+          aria-current={isActive ? "location" : undefined}
+          className={className}
+          onClick={() => setOpen(false)}
+        >
           {label}
         </a>
       );
@@ -66,7 +95,10 @@ export function Header() {
         }`}
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8 sm:py-5 md:px-10">
-          <Link to="/" className="flex flex-col leading-tight">
+          <Link
+            to="/"
+            className="flex flex-col leading-tight rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--background)]"
+          >
             <span className="text-[11px] text-muted-foreground sm:text-xs">{cabecera.nombre}</span>
             <span className="font-serif text-[15px] sm:text-base">
               {cabecera.proyecto}
@@ -76,17 +108,50 @@ export function Header() {
             {sections.map((s) => linkFor(s.id, s.label))}
           </nav>
           <button
-            aria-label="Menú"
+            ref={toggleRef}
+            type="button"
+            aria-label={open ? "Cerrar menú" : "Abrir menú"}
             aria-expanded={open}
+            aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
-            className="eyebrow relative z-[60] text-muted-foreground transition-colors hover:text-foreground md:hidden"
+            className="eyebrow relative z-[60] rounded-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--background)] md:hidden"
           >
             {open ? "Cerrar" : "Menú"}
           </button>
         </div>
       </header>
       {open && (
-        <div className="fixed inset-0 z-50 flex flex-col gap-7 overflow-y-auto bg-background px-6 pb-12 pt-24 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-8 sm:px-8 sm:pb-14 sm:pt-28 md:hidden [&::-webkit-scrollbar]:hidden">
+        <div
+          id="mobile-nav"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navegación"
+          ref={panelRef}
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setOpen(false);
+          }}
+          className="fixed inset-0 z-50 flex flex-col gap-7 overflow-y-auto bg-background px-6 pb-12 pt-24 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-8 sm:px-8 sm:pb-14 sm:pt-28 md:hidden [&::-webkit-scrollbar]:hidden"
+        >
+          <button
+            type="button"
+            aria-label="Cerrar menú"
+            onClick={() => setOpen(false)}
+            className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] sm:right-7 sm:top-6"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              aria-hidden="true"
+              stroke="currentColor"
+              strokeWidth="1.25"
+              strokeLinecap="round"
+            >
+              <line x1="3" y1="3" x2="15" y2="15" />
+              <line x1="15" y1="3" x2="3" y2="15" />
+            </svg>
+          </button>
           {sections.map((s, i) => (
             <div key={s.id} className="flex items-baseline gap-4 leading-none">
               <span className="eyebrow shrink-0">{String(i + 1).padStart(2, "0")}</span>
