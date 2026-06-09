@@ -48,7 +48,7 @@
   --secondary: oklch(0.22 0.006 60);
   --secondary-foreground: oklch(0.95 0.008 80);
   --muted: oklch(0.2 0.005 60);
-  --muted-foreground: oklch(0.68 0.01 70);
+  --muted-foreground: oklch(0.74 0.01 70);
   --accent: oklch(0.95 0.008 80);
   --accent-foreground: oklch(0.14 0.005 60);
   --destructive: oklch(0.6 0.18 27);
@@ -62,6 +62,12 @@
 @layer base {
   * {
     border-color: var(--color-border);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 2px;
   }
 
   html {
