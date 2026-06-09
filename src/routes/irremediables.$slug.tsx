@@ -14,23 +14,31 @@ export const Route = createFileRoute("/irremediables/$slug")({
     if (!proyecto) throw notFound();
     return { proyecto };
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
     const p = loaderData?.proyecto;
     const title = p
       ? `${p.titulo} — Ideas irremediables`
       : "Irremediable — Ideas irremediables";
-    const description = p?.observacion ?? "Un proyecto de Ideas irremediables.";
+    const description =
+      p?.caso?.concepto ?? p?.observacion ?? "Un proyecto de Ideas irremediables.";
     const ogImage = p?.caso?.hero.src;
+    const url = `https://raulmartinezpardos.lovable.app/irremediables/${params.slug}`;
     return {
       meta: [
         { title },
         { name: "description", content: description },
         { property: "og:title", content: title },
         { property: "og:description", content: description },
+        { property: "og:url", content: url },
+        { property: "og:type", content: "article" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
         ...(ogImage ? [{ property: "og:image", content: ogImage }] : []),
         ...(ogImage ? [{ name: "twitter:image", content: ogImage }] : []),
+        ...(ogImage ? [{ name: "twitter:card", content: "summary_large_image" }] : []),
       ],
       links: [
+        { rel: "canonical", href: url },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
         { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "" },
         {
@@ -146,6 +154,8 @@ function CasoCompletoView({
             alt={caso.hero.alt}
             className="block h-[70vh] min-h-[420px] w-full object-cover sm:h-[80vh] md:h-[90vh]"
             loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
           <figcaption className="pointer-events-none absolute inset-x-0 bottom-0">
             <div className="mx-auto max-w-6xl px-6 pb-6 sm:px-8 sm:pb-8 md:px-10 md:pb-10">
@@ -222,6 +232,7 @@ function CasoCompletoView({
             alt={caso.board.alt}
             className="block h-auto w-full"
             loading="lazy"
+            decoding="async"
           />
         </figure>
       </section>
