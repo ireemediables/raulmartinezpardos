@@ -8,7 +8,8 @@ function b64ToBytes(b64: string): Uint8Array {
 }
 
 export function serveBinary(b64: string, contentType: string): Response {
-  return new Response(b64ToBytes(b64), {
+  const bytes = b64ToBytes(b64);
+  return new Response(bytes.buffer as ArrayBuffer, {
     status: 200,
     headers: {
       "Content-Type": contentType,
