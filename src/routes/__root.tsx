@@ -77,23 +77,24 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Raúl Martínez Pardos — Ideas irremediables" },
-      {
-        name: "description",
-        content:
-          "Nombres, conceptos y dirección visual. Ideas irremediables, de Raúl Martínez Pardos.",
-      },
-      { name: "author", content: "Raúl Martínez Pardos" },
-      { name: "theme-color", content: "#1a1611" },
-      { property: "og:site_name", content: "Ideas irremediables" },
-      { property: "og:locale", content: "es_ES" },
+      { title: "Lovable App" },
+      { name: "description", content: "Raúl Martínez's personal portfolio website showcases \"Irremediable Ideas,\" a collection of branding projects." },
+      { name: "author", content: "Lovable" },
+      { property: "og:title", content: "Lovable App" },
+      { property: "og:description", content: "Raúl Martínez's personal portfolio website showcases \"Irremediable Ideas,\" a collection of branding projects." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:card", content: "summary" },
+      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Lovable App" },
+      { name: "twitter:description", content: "Raúl Martínez's personal portfolio website showcases \"Irremediable Ideas,\" a collection of branding projects." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ea9b697d-a3de-4120-91de-94e2abf4418d/id-preview-e23e7e4c--dfae79e4-75b4-4aa7-ace0-4dab520b2c60.lovable.app-1780919864190.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ea9b697d-a3de-4120-91de-94e2abf4418d/id-preview-e23e7e4c--dfae79e4-75b4-4aa7-ace0-4dab520b2c60.lovable.app-1780919864190.png" },
     ],
     links: [
-      { rel: "stylesheet", href: appCss },
-      { rel: "icon", type: "image/png", href: "/__l5e/assets-v1/dc64942e-3608-42f2-b1e4-af2538ce393d/favicon.png" },
-      { rel: "apple-touch-icon", href: "/__l5e/assets-v1/dc64942e-3608-42f2-b1e4-af2538ce393d/favicon.png" },
+      {
+        rel: "stylesheet",
+        href: appCss,
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -104,7 +105,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="en">
       <head>
         <HeadContent />
       </head>
