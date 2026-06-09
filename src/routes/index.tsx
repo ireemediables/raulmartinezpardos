@@ -18,25 +18,25 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Raúl Martínez Pardos — Ideas irremediables" },
+      { title: "Ideas Irremediables — Raúl Martínez Pardos" },
       {
         name: "description",
         content:
-          "Nombres, conceptos y dirección visual. Encontrar la idea principal alrededor de la que un proyecto puede contarse.",
+          "Ideas Irremediables es una colección de observaciones, nombres e identidades nacidas de aquellas ideas que insisten lo suficiente como para no ser ignoradas.",
       },
-      { property: "og:title", content: "Raúl Martínez Pardos — Ideas irremediables" },
+      { property: "og:title", content: "Ideas Irremediables" },
       {
         property: "og:description",
         content:
-          "Las ideas irremediables son esas que, cuando aparecen, ya no te las sacas de encima.",
+          "Una colección de observaciones, nombres e identidades nacidas de aquellas ideas que insisten lo suficiente como para no ser ignoradas.",
       },
       { property: "og:url", content: "https://raulmartinezpardos.lovable.app/" },
       { property: "og:type", content: "website" },
-      { name: "twitter:title", content: "Raúl Martínez Pardos — Ideas irremediables" },
+      { name: "twitter:title", content: "Ideas Irremediables" },
       {
         name: "twitter:description",
         content:
-          "Nombres, conceptos y dirección visual. Encontrar la idea principal de un proyecto.",
+          "Una colección de observaciones, nombres e identidades nacidas de aquellas ideas que insisten lo suficiente como para no ser ignoradas.",
       },
     ],
     links: [
