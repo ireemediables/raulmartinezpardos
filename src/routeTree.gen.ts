@@ -10,6 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as FaviconDotsvgRouteImport } from './routes/favicon[.]svg'
+import { Route as FaviconDoticoRouteImport } from './routes/favicon[.]ico'
+import { Route as Favicon32x32DotpngRouteImport } from './routes/favicon-32x32[.]png'
+import { Route as Favicon16x16DotpngRouteImport } from './routes/favicon-16x16[.]png'
+import { Route as AppleTouchIconDotpngRouteImport } from './routes/apple-touch-icon[.]png'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as LegalPrivacidadRouteImport } from './routes/legal.privacidad'
 import { Route as LegalAvisoLegalRouteImport } from './routes/legal.aviso-legal'
@@ -18,6 +23,31 @@ import { Route as IrremediablesSlugRouteImport } from './routes/irremediables.$s
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaviconDotsvgRoute = FaviconDotsvgRouteImport.update({
+  id: '/favicon.svg',
+  path: '/favicon.svg',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaviconDoticoRoute = FaviconDoticoRouteImport.update({
+  id: '/favicon.ico',
+  path: '/favicon.ico',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Favicon32x32DotpngRoute = Favicon32x32DotpngRouteImport.update({
+  id: '/favicon-32x32.png',
+  path: '/favicon-32x32.png',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Favicon16x16DotpngRoute = Favicon16x16DotpngRouteImport.update({
+  id: '/favicon-16x16.png',
+  path: '/favicon-16x16.png',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppleTouchIconDotpngRoute = AppleTouchIconDotpngRouteImport.update({
+  id: '/apple-touch-icon.png',
+  path: '/apple-touch-icon.png',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -43,6 +73,11 @@ const IrremediablesSlugRoute = IrremediablesSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/apple-touch-icon.png': typeof AppleTouchIconDotpngRoute
+  '/favicon-16x16.png': typeof Favicon16x16DotpngRoute
+  '/favicon-32x32.png': typeof Favicon32x32DotpngRoute
+  '/favicon.ico': typeof FaviconDoticoRoute
+  '/favicon.svg': typeof FaviconDotsvgRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/irremediables/$slug': typeof IrremediablesSlugRoute
   '/legal/aviso-legal': typeof LegalAvisoLegalRoute
@@ -50,6 +85,11 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/apple-touch-icon.png': typeof AppleTouchIconDotpngRoute
+  '/favicon-16x16.png': typeof Favicon16x16DotpngRoute
+  '/favicon-32x32.png': typeof Favicon32x32DotpngRoute
+  '/favicon.ico': typeof FaviconDoticoRoute
+  '/favicon.svg': typeof FaviconDotsvgRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/irremediables/$slug': typeof IrremediablesSlugRoute
   '/legal/aviso-legal': typeof LegalAvisoLegalRoute
@@ -58,6 +98,11 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/apple-touch-icon.png': typeof AppleTouchIconDotpngRoute
+  '/favicon-16x16.png': typeof Favicon16x16DotpngRoute
+  '/favicon-32x32.png': typeof Favicon32x32DotpngRoute
+  '/favicon.ico': typeof FaviconDoticoRoute
+  '/favicon.svg': typeof FaviconDotsvgRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/irremediables/$slug': typeof IrremediablesSlugRoute
   '/legal/aviso-legal': typeof LegalAvisoLegalRoute
@@ -67,6 +112,11 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/apple-touch-icon.png'
+    | '/favicon-16x16.png'
+    | '/favicon-32x32.png'
+    | '/favicon.ico'
+    | '/favicon.svg'
     | '/sitemap.xml'
     | '/irremediables/$slug'
     | '/legal/aviso-legal'
@@ -74,6 +124,11 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/apple-touch-icon.png'
+    | '/favicon-16x16.png'
+    | '/favicon-32x32.png'
+    | '/favicon.ico'
+    | '/favicon.svg'
     | '/sitemap.xml'
     | '/irremediables/$slug'
     | '/legal/aviso-legal'
@@ -81,6 +136,11 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/apple-touch-icon.png'
+    | '/favicon-16x16.png'
+    | '/favicon-32x32.png'
+    | '/favicon.ico'
+    | '/favicon.svg'
     | '/sitemap.xml'
     | '/irremediables/$slug'
     | '/legal/aviso-legal'
@@ -89,6 +149,11 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AppleTouchIconDotpngRoute: typeof AppleTouchIconDotpngRoute
+  Favicon16x16DotpngRoute: typeof Favicon16x16DotpngRoute
+  Favicon32x32DotpngRoute: typeof Favicon32x32DotpngRoute
+  FaviconDoticoRoute: typeof FaviconDoticoRoute
+  FaviconDotsvgRoute: typeof FaviconDotsvgRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   IrremediablesSlugRoute: typeof IrremediablesSlugRoute
   LegalAvisoLegalRoute: typeof LegalAvisoLegalRoute
@@ -102,6 +167,41 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favicon.svg': {
+      id: '/favicon.svg'
+      path: '/favicon.svg'
+      fullPath: '/favicon.svg'
+      preLoaderRoute: typeof FaviconDotsvgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favicon.ico': {
+      id: '/favicon.ico'
+      path: '/favicon.ico'
+      fullPath: '/favicon.ico'
+      preLoaderRoute: typeof FaviconDoticoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favicon-32x32.png': {
+      id: '/favicon-32x32.png'
+      path: '/favicon-32x32.png'
+      fullPath: '/favicon-32x32.png'
+      preLoaderRoute: typeof Favicon32x32DotpngRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favicon-16x16.png': {
+      id: '/favicon-16x16.png'
+      path: '/favicon-16x16.png'
+      fullPath: '/favicon-16x16.png'
+      preLoaderRoute: typeof Favicon16x16DotpngRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/apple-touch-icon.png': {
+      id: '/apple-touch-icon.png'
+      path: '/apple-touch-icon.png'
+      fullPath: '/apple-touch-icon.png'
+      preLoaderRoute: typeof AppleTouchIconDotpngRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -137,6 +237,11 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AppleTouchIconDotpngRoute: AppleTouchIconDotpngRoute,
+  Favicon16x16DotpngRoute: Favicon16x16DotpngRoute,
+  Favicon32x32DotpngRoute: Favicon32x32DotpngRoute,
+  FaviconDoticoRoute: FaviconDoticoRoute,
+  FaviconDotsvgRoute: FaviconDotsvgRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   IrremediablesSlugRoute: IrremediablesSlugRoute,
   LegalAvisoLegalRoute: LegalAvisoLegalRoute,
@@ -145,3 +250,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
