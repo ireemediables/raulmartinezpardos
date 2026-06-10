@@ -18,27 +18,9 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Ideas Irremediables — Raúl Martínez Pardos" },
-      {
-        name: "description",
-        content:
-          "Ideas Irremediables es una colección de observaciones, nombres e identidades nacidas de aquellas ideas que insisten lo suficiente como para no ser ignoradas.",
-      },
-      { property: "og:title", content: "Ideas Irremediables" },
-      {
-        property: "og:description",
-        content:
-          "Una colección de observaciones, nombres e identidades nacidas de aquellas ideas que insisten lo suficiente como para no ser ignoradas.",
-      },
-      { property: "og:url", content: "https://raulmartinezpardos.lovable.app/" },
-      { property: "og:type", content: "website" },
-      { name: "twitter:title", content: "Ideas Irremediables" },
-      {
-        name: "twitter:description",
-        content:
-          "Una colección de observaciones, nombres e identidades nacidas de aquellas ideas que insisten lo suficiente como para no ser ignoradas.",
-      },
+      { property: "og:url", content: "https://raulmartinezpardos.com/" },
     ],
+
     links: [
       { rel: "canonical", href: "https://raulmartinezpardos.lovable.app/" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
