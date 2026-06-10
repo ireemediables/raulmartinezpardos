@@ -90,7 +90,7 @@ function Home() {
             {cabecera.proyecto}
             <br />
             <span className="accent-italic text-[0.7em]">
-              <span className="text-muted-foreground">— </span>son esas que, cuando aparecen,
+              <span className="text-muted-foreground">— </span>son aquellas que, cuando aparecen,
               <br />
               ya no te las puedes quitar de encima.
             </span>

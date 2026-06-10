@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { cabecera } from "@/content/home";
+import { cabecera, contacto } from "@/content/home";
 
 export function Footer() {
   return (
@@ -7,13 +7,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 text-sm text-muted-foreground sm:gap-3 sm:px-6 sm:py-12 md:flex-row md:items-center md:justify-between md:px-10">
         <p>
           <a
-            href="/#contacto"
-            onClick={(e) => {
-              if (typeof window !== "undefined" && window.location.pathname === "/") {
-                e.preventDefault();
-                document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
+            href={`mailto:${contacto.email}`}
             className="rounded-sm transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--background)]"
           >
             Contacto
