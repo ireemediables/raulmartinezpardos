@@ -85,7 +85,7 @@ function Home() {
 
       {/* Cabecera — apertura tranquila */}
       <section className="border-b border-[color:var(--rule)]">
-        <div className="mx-auto max-w-3xl px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-20 md:px-10 md:pb-24 md:pt-24 lg:pb-28 lg:pt-28">
+        <div className="mx-auto max-w-3xl px-6 pt-12 sm:px-8 sm:pt-20 md:px-10 md:pt-24 lg:pt-28">
           <h1 className="display text-balance text-[1.5rem] leading-[1.15] sm:text-[2.125rem] sm:leading-[1.12] md:text-4xl lg:text-5xl lg:leading-[1.05]">
             {cabecera.proyecto}
             <br />
@@ -95,7 +95,9 @@ function Home() {
               ya no te las sacas de encima.
             </span>
           </h1>
-          <p className="mt-14 font-mono text-[8px] uppercase leading-none tracking-[0.16em] text-muted-foreground sm:mt-20 sm:text-[11.5px] sm:tracking-[0.18em]">
+        </div>
+        <div className="px-6 pb-32 pt-32 text-center sm:px-8 sm:pb-40 sm:pt-40 md:px-10 md:pb-48 md:pt-44 lg:pb-56 lg:pt-48">
+          <p className="font-mono text-[8px] uppercase leading-none tracking-[0.16em] text-muted-foreground sm:text-[11.5px] sm:tracking-[0.18em]">
             Conceptos <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Nombres <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Dirección visual
           </p>
         </div>
@@ -119,18 +121,39 @@ function Home() {
           <p className="accent-italic text-[1.05rem] text-muted-foreground sm:text-xl md:text-2xl">
             {metodo.intro}
           </p>
-          <p className="display text-balance mt-20 mb-12 text-[1.4rem] leading-[1.2] sm:mt-24 sm:mb-16 sm:text-[1.75rem] md:mt-28 md:mb-20 md:text-3xl lg:text-4xl lg:leading-[1.05]">
-            Observo cosas raras que no son tan raras.
-            <br />
-            <br />
-            <span className="accent-italic text-muted-foreground">
-              Y cuando una idea
-              <br className="sm:hidden" />
-              {" "}insiste lo suficiente,
-              <br />
-              le pongo nombre.
-            </span>
-          </p>
+          <ol className="mt-16 space-y-14 sm:mt-20 sm:space-y-16 md:mt-24 md:space-y-20">
+            {[
+              { n: "01", verb: "Observo", rest: "cosas que pasan desapercibidas." },
+              { n: "02", verb: "Descubro", rest: "la idea." },
+              { n: "03", verb: "La llamo", rest: "por su ", emph: "nombre", restAfter: "." },
+              { n: "04", verb: "Escucho", rest: "cómo habla." },
+              { n: "05", verb: "Y me dice", rest: "cómo quiere verse." },
+            ].map((item) => (
+              <li
+                key={item.n}
+                className="grid grid-cols-[2.5rem_1fr] gap-4 sm:grid-cols-[3rem_1fr] sm:gap-6"
+              >
+                <span className="eyebrow mt-2 sm:mt-3">{item.n}</span>
+                <p className="display text-balance text-[1.4rem] leading-[1.2] text-muted-foreground sm:text-[1.75rem] md:text-3xl lg:text-4xl lg:leading-[1.1]">
+                  {item.verb === "La llamo" ? (
+                    <>
+                      <span className="text-foreground">{item.verb}</span> {item.rest}
+                      <span className="text-foreground">{item.emph}</span>
+                      {item.restAfter}
+                    </>
+                  ) : item.verb === "Y me dice" ? (
+                    <>
+                      Y <span className="text-foreground">me dice</span> cómo quiere verse.
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-foreground">{item.verb}</span> {item.rest}
+                    </>
+                  )}
+                </p>
+              </li>
+            ))}
+          </ol>
         </Section>
 
         {/* Para quién */}
