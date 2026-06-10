@@ -104,9 +104,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const initialScrollScript = `
+    try {
+      if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+      if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+    } catch (_) {}
+  `;
+
   return (
     <html lang="en">
       <head>
+        <script dangerouslySetInnerHTML={{ __html: initialScrollScript }} />
         <HeadContent />
       </head>
       <body>
