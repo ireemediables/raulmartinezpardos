@@ -98,7 +98,7 @@ function Home() {
         </div>
         <div className="px-6 pb-56 pt-48 text-center sm:px-8 sm:pb-40 sm:pt-40 md:px-10 md:pb-48 md:pt-44 lg:pb-56 lg:pt-48">
           <p className="font-mono text-[8px] uppercase leading-none tracking-[0.16em] text-muted-foreground sm:text-[11.5px] sm:tracking-[0.18em]">
-            Conceptos <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Nombres <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Dirección visual
+            Concepto <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Nombre <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Universo visual
           </p>
         </div>
       </section>
