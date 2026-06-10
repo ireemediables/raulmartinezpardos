@@ -39,7 +39,7 @@ export const paraQuien = {
     "Tienes una agencia y, de vez en cuando, sientes que un proyecto necesita algo diferente.",
     "Estás montando un negocio y sabes que las cosas con personalidad no pasan desapercibidas.",
     "Tu proyecto está claro, pero todavía no ha encontrado la forma correcta de contarse.",
-    "O simplemente, te gustaría que tu proyecto tuviera una idea difícil de olvidar.",
+    "O simplemente, te gustaría que detrás hubiera una idea difícil de olvidar.",
   ],
   fraseDestacada: "Todo proyecto gira alrededor de una idea. La cuestión es encontrarla.",
 };
