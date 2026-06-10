@@ -92,7 +92,7 @@ function Home() {
             <span className="accent-italic text-[0.7em]">
               <span className="text-muted-foreground">— </span>son esas que, cuando aparecen,
               <br />
-              ya no te las sacas de encima.
+              ya no te las puedes quitar de encima.
             </span>
           </h1>
         </div>
@@ -137,7 +137,7 @@ function Home() {
                 <p className="display text-balance text-[1.4rem] leading-[1.2] text-muted-foreground sm:text-[1.75rem] md:text-3xl lg:text-4xl lg:leading-[1.1]">
                   {item.verb === "La llamo" ? (
                     <>
-                      <span className="text-foreground">{item.verb}</span> {item.rest}
+                      {item.verb} {item.rest}
                       <span className="text-foreground">{item.emph}</span>
                       {item.restAfter}
                     </>

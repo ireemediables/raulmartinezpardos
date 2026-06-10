@@ -282,7 +282,7 @@ function ProyectoPage() {
               <div className="mx-auto max-w-3xl px-6 sm:px-8 md:px-10">
                 <p className="eyebrow mb-6">FIN DE LA COLECCIÓN</p>
                 <p className="display text-balance text-[1.6rem] leading-[1.15] sm:text-3xl md:text-4xl">
-                  Hasta aquí, doce ideas que no se dejaron ignorar.
+                  Hasta aquí, diez ideas que no se dejaron ignorar.
                 </p>
                 <p className="accent-italic mt-6 text-muted-foreground sm:text-lg">
                   No son encargos.

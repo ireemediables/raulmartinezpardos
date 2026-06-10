@@ -99,7 +99,7 @@ export function Header() {
             to="/"
             className="flex flex-col leading-tight rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--background)]"
           >
-            <span className="font-serif text-[15px] sm:text-base">{cabecera.nombre}</span>
+            <span className="font-serif text-[13px] sm:text-[14px]">{cabecera.nombre}</span>
           </Link>
           <nav className="hidden items-center gap-4 whitespace-nowrap text-[12.5px] md:flex lg:gap-7 lg:text-sm">
             {sections.map((s) => linkFor(s.id, s.label))}
