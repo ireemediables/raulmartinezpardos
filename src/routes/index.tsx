@@ -232,7 +232,7 @@ function Home() {
                 key={i}
                 className={
                   p === "enamorarse de una idea."
-                    ? "accent-italic text-[1.5rem] leading-[1.25] text-foreground sm:text-[2rem] md:text-[2.5rem]"
+                    ? "accent-italic text-[1.5rem] leading-[1.25] text-muted-foreground sm:text-[2rem] md:text-[2.5rem]"
                     : undefined
                 }
               >
