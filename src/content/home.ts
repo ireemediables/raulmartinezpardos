@@ -1,6 +1,6 @@
 // Textos definitivos proporcionados por Raúl. No modificar el tono ni inventar.
 export const contacto = {
-  email: "raulmartinezpardos@gmail.com",
+  email: "hola@raulmartinezpardos.com",
   telefono: "+34 655 96 15 03",
 };
 
