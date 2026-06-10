@@ -92,7 +92,7 @@ function Home() {
             <span className="accent-italic text-[0.7em]">
               <span className="text-muted-foreground">— </span>son esas que, cuando aparecen,
               <br />
-              ya no te las sacas de encima.
+              ya no te las puedes quitar de encima.
             </span>
           </h1>
         </div>
