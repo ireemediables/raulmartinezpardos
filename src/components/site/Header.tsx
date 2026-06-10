@@ -101,7 +101,7 @@ export function Header() {
           >
             <span className="font-serif text-[13px] sm:text-[14px]">{cabecera.nombre}</span>
           </Link>
-          <nav className="hidden items-center gap-4 whitespace-nowrap text-[12.5px] md:flex lg:gap-7 lg:text-sm">
+          <nav className="hidden items-center gap-4 whitespace-nowrap text-[12.5px] lg:flex lg:gap-7 lg:text-sm">
             {sections.map((s) => linkFor(s.id, s.label))}
           </nav>
           <button
@@ -111,7 +111,7 @@ export function Header() {
             aria-expanded={open}
             aria-controls="mobile-nav"
             onClick={() => setOpen((v) => !v)}
-            className="eyebrow relative z-[60] rounded-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--background)] md:hidden"
+            className="eyebrow relative z-[60] rounded-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--background)] lg:hidden"
           >
             {open ? "Cerrar" : "Menú"}
           </button>
