@@ -228,7 +228,16 @@ function Home() {
           </p>
           <div className="prose-essay mt-12 max-w-2xl font-serif text-[1.1rem] leading-[1.55] text-pretty sm:mt-14 sm:text-xl md:text-2xl">
             {manifiesto.parrafos.map((p, i) => (
-              <p key={i}>{p}</p>
+              <p
+                key={i}
+                className={
+                  p === "enamorarse de una idea."
+                    ? "accent-italic text-[1.5rem] leading-[1.25] text-foreground sm:text-[2rem] md:text-[2.5rem]"
+                    : undefined
+                }
+              >
+                {p}
+              </p>
             ))}
           </div>
         </Section>
