@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { contacto, cabecera } from "@/content/home";
+import { cabecera } from "@/content/home";
 
 export function Footer() {
   return (
