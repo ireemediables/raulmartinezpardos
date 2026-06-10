@@ -127,7 +127,7 @@ export function Header() {
           onClick={(e) => {
             if (e.target === e.currentTarget) setOpen(false);
           }}
-          className="fixed inset-0 z-50 flex flex-col gap-7 overflow-y-auto bg-background px-6 pb-12 pt-24 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-8 sm:px-8 sm:pb-14 sm:pt-28 md:hidden [&::-webkit-scrollbar]:hidden"
+          className="fixed inset-0 z-50 flex flex-col gap-7 overflow-y-auto bg-background px-6 pb-12 pt-24 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-8 sm:px-8 sm:pb-14 sm:pt-28 lg:hidden [&::-webkit-scrollbar]:hidden"
         >
           <button
             type="button"
