@@ -121,18 +121,39 @@ function Home() {
           <p className="accent-italic text-[1.05rem] text-muted-foreground sm:text-xl md:text-2xl">
             {metodo.intro}
           </p>
-          <p className="display text-balance mt-20 mb-12 text-[1.4rem] leading-[1.2] sm:mt-24 sm:mb-16 sm:text-[1.75rem] md:mt-28 md:mb-20 md:text-3xl lg:text-4xl lg:leading-[1.05]">
-            Observo cosas raras que no son tan raras.
-            <br />
-            <br />
-            <span className="accent-italic text-muted-foreground">
-              Y cuando una idea
-              <br className="sm:hidden" />
-              {" "}insiste lo suficiente,
-              <br />
-              le pongo nombre.
-            </span>
-          </p>
+          <ol className="mt-16 space-y-14 sm:mt-20 sm:space-y-16 md:mt-24 md:space-y-20">
+            {[
+              { n: "01", verb: "Observo", rest: "cosas que pasan desapercibidas." },
+              { n: "02", verb: "Descubro", rest: "la idea." },
+              { n: "03", verb: "La llamo", rest: "por su ", emph: "nombre", restAfter: "." },
+              { n: "04", verb: "Escucho", rest: "cómo habla." },
+              { n: "05", verb: "Y me dice", rest: "cómo quiere verse." },
+            ].map((item) => (
+              <li
+                key={item.n}
+                className="grid grid-cols-[2.5rem_1fr] gap-4 sm:grid-cols-[3rem_1fr] sm:gap-6"
+              >
+                <span className="eyebrow mt-2 sm:mt-3">{item.n}</span>
+                <p className="display text-balance text-[1.4rem] leading-[1.2] text-muted-foreground sm:text-[1.75rem] md:text-3xl lg:text-4xl lg:leading-[1.1]">
+                  {item.verb === "La llamo" ? (
+                    <>
+                      <span className="text-foreground">{item.verb}</span> {item.rest}
+                      <span className="text-foreground">{item.emph}</span>
+                      {item.restAfter}
+                    </>
+                  ) : item.verb === "Y me dice" ? (
+                    <>
+                      Y <span className="text-foreground">me dice</span> cómo quiere verse.
+                    </>
+                  ) : (
+                    <>
+                      <span className="text-foreground">{item.verb}</span> {item.rest}
+                    </>
+                  )}
+                </p>
+              </li>
+            ))}
+          </ol>
         </Section>
 
         {/* Para quién */}
