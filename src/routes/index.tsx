@@ -66,13 +66,13 @@ function Home() {
       <Header />
 
       {/* Cabecera — apertura tranquila */}
-      <section className="border-b border-[color:var(--rule)]">
-        <div className="px-6 pt-16 text-center sm:px-8 sm:pt-20 md:px-10 md:pt-24 lg:pt-28">
+      <section className="flex min-h-[calc(100svh-57px)] flex-col border-b border-[color:var(--rule)] sm:min-h-[calc(100svh-69px)]">
+        <div className="px-6 pt-5 text-center sm:px-8 sm:pt-6 md:px-10 md:pt-7">
           <p className="font-mono text-[8px] uppercase leading-none tracking-[0.24em] text-muted-foreground sm:text-[11.5px] sm:tracking-[0.28em]">
             Ideas <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Nombres <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Marcas
           </p>
         </div>
-        <div className="mx-auto max-w-3xl px-6 pb-48 pt-24 sm:px-8 sm:pb-40 sm:pt-28 md:px-10 md:pb-48 md:pt-32 lg:pb-56 lg:pt-36">
+        <div className="mx-auto mt-auto w-full max-w-3xl px-6 pb-16 sm:px-8 sm:pb-20 md:px-10 md:pb-24 lg:pb-28">
           <h1 className="display text-balance text-[1.5rem] leading-[1.15] sm:text-[2.125rem] sm:leading-[1.12] md:text-4xl lg:text-5xl lg:leading-[1.05]">
             {cabecera.proyecto}
             <br />
