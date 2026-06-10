@@ -85,7 +85,7 @@ function Home() {
 
       {/* Cabecera — apertura tranquila */}
       <section className="border-b border-[color:var(--rule)]">
-        <div className="mx-auto max-w-3xl px-6 pb-16 pt-12 sm:px-8 sm:pb-20 sm:pt-20 md:px-10 md:pb-24 md:pt-24 lg:pb-28 lg:pt-28">
+        <div className="mx-auto max-w-3xl px-6 pt-12 sm:px-8 sm:pt-20 md:px-10 md:pt-24 lg:pt-28">
           <h1 className="display text-balance text-[1.5rem] leading-[1.15] sm:text-[2.125rem] sm:leading-[1.12] md:text-4xl lg:text-5xl lg:leading-[1.05]">
             {cabecera.proyecto}
             <br />
@@ -95,7 +95,9 @@ function Home() {
               ya no te las sacas de encima.
             </span>
           </h1>
-          <p className="mt-14 font-mono text-[8px] uppercase leading-none tracking-[0.16em] text-muted-foreground sm:mt-20 sm:text-[11.5px] sm:tracking-[0.18em]">
+        </div>
+        <div className="px-6 pb-32 pt-32 text-center sm:px-8 sm:pb-40 sm:pt-40 md:px-10 md:pb-48 md:pt-44 lg:pb-56 lg:pt-48">
+          <p className="font-mono text-[8px] uppercase leading-none tracking-[0.16em] text-muted-foreground sm:text-[11.5px] sm:tracking-[0.18em]">
             Conceptos <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Nombres <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Dirección visual
           </p>
         </div>
