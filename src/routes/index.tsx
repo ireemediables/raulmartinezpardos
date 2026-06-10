@@ -67,7 +67,7 @@ function Home() {
 
       {/* Cabecera — apertura tranquila */}
       <section className="border-b border-[color:var(--rule)]">
-        <div className="mx-auto max-w-3xl px-6 pt-32 sm:px-8 sm:pt-20 md:px-10 md:pt-24 lg:pt-28">
+        <div className="mx-auto max-w-3xl px-6 pb-40 pt-32 sm:px-8 sm:pb-32 sm:pt-20 md:px-10 md:pb-36 md:pt-24 lg:pb-44 lg:pt-28">
           <h1 className="display text-balance text-[1.5rem] leading-[1.15] sm:text-[2.125rem] sm:leading-[1.12] md:text-4xl lg:text-5xl lg:leading-[1.05]">
             {cabecera.proyecto}
             <br />
@@ -78,12 +78,15 @@ function Home() {
             </span>
           </h1>
         </div>
-        <div className="px-6 pb-56 pt-48 text-center sm:px-8 sm:pb-40 sm:pt-40 md:px-10 md:pb-48 md:pt-44 lg:pb-56 lg:pt-48">
-          <p className="font-mono text-[8px] uppercase leading-none tracking-[0.16em] text-muted-foreground sm:text-[11.5px] sm:tracking-[0.18em]">
-            Concepto <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Nombre <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Universo visual
+      </section>
+
+      <div className="border-b border-[color:var(--rule)]">
+        <div className="px-6 py-10 text-center sm:px-8 sm:py-12 md:px-10 md:py-14">
+          <p className="font-mono text-[8px] uppercase leading-none tracking-[0.32em] text-muted-foreground sm:text-[11.5px] sm:tracking-[0.4em]">
+            Ideas <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Nombres <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Marcas
           </p>
         </div>
-      </section>
+      </div>
 
       <main>
         {/* Punto de partida */}
