@@ -87,8 +87,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:site", content: "@Lovable" },
       { name: "twitter:title", content: "Raúl Martínez Pardos | Conceptos y nombres memorables" },
       { name: "twitter:description", content: "Desarrollo conceptos y nombres para proyectos que no quieren pasar desapercibidos." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/FE1uuuMEStXntz4xMiLbf6x72jk2/social-images/social-1781093978776-Captura_de_pantalla_2026-06-10_141929.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/FE1uuuMEStXntz4xMiLbf6x72jk2/social-images/social-1781093978776-Captura_de_pantalla_2026-06-10_141929.webp" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/FE1uuuMEStXntz4xMiLbf6x72jk2/social-images/social-1781119210582-Captura_de_pantalla_2026-06-10_211949.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/FE1uuuMEStXntz4xMiLbf6x72jk2/social-images/social-1781119210582-Captura_de_pantalla_2026-06-10_211949.webp" },
     ],
     links: [
       {
