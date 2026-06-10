@@ -137,13 +137,13 @@ function Home() {
                 <p className="display text-balance text-[1.4rem] leading-[1.2] text-muted-foreground sm:text-[1.75rem] md:text-3xl lg:text-4xl lg:leading-[1.1]">
                   {item.verb === "La llamo" ? (
                     <>
-                      {item.verb} {item.rest}
-                      <span className="text-foreground">{item.emph}</span>
+                      <span className="text-foreground">{item.verb}</span> {item.rest}
+                      {item.emph}
                       {item.restAfter}
                     </>
                   ) : item.verb === "Y me dice" ? (
                     <>
-                      Y <span className="text-foreground">me dice</span> cómo quiere verse.
+                      <span className="text-foreground">Y me dice</span> cómo quiere verse.
                     </>
                   ) : (
                     <>
