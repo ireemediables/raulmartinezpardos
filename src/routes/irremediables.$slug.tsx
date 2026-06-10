@@ -216,7 +216,7 @@ function CasoCompletoView({
       )}
 
       {/* 06 — DIRECCIÓN VISUAL */}
-      <CaseSection n={caso.eslogan ? "06" : "05"} label="Dirección visual">
+      <CaseSection n={caso.eslogan ? "06" : "05"} label="Universo visual">
         <div className="prose-essay max-w-2xl font-serif text-[1.15rem] leading-[1.5] sm:text-xl md:text-2xl">
           {caso.direccionVisual.map((p, i) => (
             <p key={i}>{p}</p>
