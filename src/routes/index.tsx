@@ -72,7 +72,7 @@ function Home() {
             Ideas <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Nombres <span aria-hidden="true" className="mx-2 text-muted-foreground/60">→</span> Marcas
           </p>
         </div>
-        <div className="mx-auto mt-auto w-full max-w-3xl px-6 pb-16 sm:px-8 sm:pb-20 md:px-10 md:pb-24 lg:pb-28">
+        <div className="mx-auto my-auto w-full max-w-3xl px-6 sm:px-8 md:px-10">
           <h1 className="display text-balance text-[1.5rem] leading-[1.15] sm:text-[2.125rem] sm:leading-[1.12] md:text-4xl lg:text-5xl lg:leading-[1.05]">
             {cabecera.proyecto}
             <br />
@@ -83,6 +83,7 @@ function Home() {
             </span>
           </h1>
         </div>
+        <div aria-hidden="true" className="pb-16 sm:pb-20 md:pb-24 lg:pb-28" />
       </section>
 
       <main>
