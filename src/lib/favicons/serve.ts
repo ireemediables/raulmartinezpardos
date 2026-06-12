@@ -29,5 +29,6 @@ export const icons = {
   ico: () => serveBinary(data.favicon_ico, "image/x-icon"),
   png16: () => serveBinary(data.favicon_16x16_png, "image/png"),
   png32: () => serveBinary(data.favicon_32x32_png, "image/png"),
+  png48: () => serveBinary(data.favicon_48x48_png, "image/png"),
   apple: () => serveBinary(data.apple_touch_icon_png, "image/png"),
 };
