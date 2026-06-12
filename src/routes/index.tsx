@@ -83,9 +83,8 @@ function Home() {
               ya no te las puedes quitar de encima.
             </span>
           </h1>
-          <Simbolo className="mt-10 sm:mt-12 md:mt-14" />
         </div>
-        <div aria-hidden="true" className="pb-16 sm:pb-20 md:pb-24 lg:pb-28" />
+        <Simbolo className="pb-6 sm:pb-8 md:pb-10 [&_img]:h-8 [&_img]:opacity-60 sm:[&_img]:h-9 md:[&_img]:h-10" />
       </section>
 
       <main>
