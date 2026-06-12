@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
+import { Simbolo } from "@/components/site/Simbolo";
 import {
   getIrremediable,
   getNextIrremediable,
@@ -235,6 +236,7 @@ function CasoCompletoView({
             decoding="async"
           />
         </figure>
+        <Simbolo className="mt-20 sm:mt-24 md:mt-28" />
       </section>
     </>
   );

@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
+import { Simbolo } from "@/components/site/Simbolo";
 import { Footer } from "@/components/site/Footer";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { irremediables } from "@/content/irremediables";
@@ -82,6 +83,7 @@ function Home() {
               ya no te las puedes quitar de encima.
             </span>
           </h1>
+          <Simbolo className="mt-10 sm:mt-12 md:mt-14" />
         </div>
         <div aria-hidden="true" className="pb-16 sm:pb-20 md:pb-24 lg:pb-28" />
       </section>

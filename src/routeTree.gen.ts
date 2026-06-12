@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as FaviconDotsvgRouteImport } from './routes/favicon[.]svg'
 import { Route as FaviconDoticoRouteImport } from './routes/favicon[.]ico'
+import { Route as Favicon48x48DotpngRouteImport } from './routes/favicon-48x48[.]png'
 import { Route as Favicon32x32DotpngRouteImport } from './routes/favicon-32x32[.]png'
 import { Route as Favicon16x16DotpngRouteImport } from './routes/favicon-16x16[.]png'
 import { Route as AppleTouchIconDotpngRouteImport } from './routes/apple-touch-icon[.]png'
@@ -33,6 +34,11 @@ const FaviconDotsvgRoute = FaviconDotsvgRouteImport.update({
 const FaviconDoticoRoute = FaviconDoticoRouteImport.update({
   id: '/favicon.ico',
   path: '/favicon.ico',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const Favicon48x48DotpngRoute = Favicon48x48DotpngRouteImport.update({
+  id: '/favicon-48x48.png',
+  path: '/favicon-48x48.png',
   getParentRoute: () => rootRouteImport,
 } as any)
 const Favicon32x32DotpngRoute = Favicon32x32DotpngRouteImport.update({
@@ -76,6 +82,7 @@ export interface FileRoutesByFullPath {
   '/apple-touch-icon.png': typeof AppleTouchIconDotpngRoute
   '/favicon-16x16.png': typeof Favicon16x16DotpngRoute
   '/favicon-32x32.png': typeof Favicon32x32DotpngRoute
+  '/favicon-48x48.png': typeof Favicon48x48DotpngRoute
   '/favicon.ico': typeof FaviconDoticoRoute
   '/favicon.svg': typeof FaviconDotsvgRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -88,6 +95,7 @@ export interface FileRoutesByTo {
   '/apple-touch-icon.png': typeof AppleTouchIconDotpngRoute
   '/favicon-16x16.png': typeof Favicon16x16DotpngRoute
   '/favicon-32x32.png': typeof Favicon32x32DotpngRoute
+  '/favicon-48x48.png': typeof Favicon48x48DotpngRoute
   '/favicon.ico': typeof FaviconDoticoRoute
   '/favicon.svg': typeof FaviconDotsvgRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -101,6 +109,7 @@ export interface FileRoutesById {
   '/apple-touch-icon.png': typeof AppleTouchIconDotpngRoute
   '/favicon-16x16.png': typeof Favicon16x16DotpngRoute
   '/favicon-32x32.png': typeof Favicon32x32DotpngRoute
+  '/favicon-48x48.png': typeof Favicon48x48DotpngRoute
   '/favicon.ico': typeof FaviconDoticoRoute
   '/favicon.svg': typeof FaviconDotsvgRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -115,6 +124,7 @@ export interface FileRouteTypes {
     | '/apple-touch-icon.png'
     | '/favicon-16x16.png'
     | '/favicon-32x32.png'
+    | '/favicon-48x48.png'
     | '/favicon.ico'
     | '/favicon.svg'
     | '/sitemap.xml'
@@ -127,6 +137,7 @@ export interface FileRouteTypes {
     | '/apple-touch-icon.png'
     | '/favicon-16x16.png'
     | '/favicon-32x32.png'
+    | '/favicon-48x48.png'
     | '/favicon.ico'
     | '/favicon.svg'
     | '/sitemap.xml'
@@ -139,6 +150,7 @@ export interface FileRouteTypes {
     | '/apple-touch-icon.png'
     | '/favicon-16x16.png'
     | '/favicon-32x32.png'
+    | '/favicon-48x48.png'
     | '/favicon.ico'
     | '/favicon.svg'
     | '/sitemap.xml'
@@ -152,6 +164,7 @@ export interface RootRouteChildren {
   AppleTouchIconDotpngRoute: typeof AppleTouchIconDotpngRoute
   Favicon16x16DotpngRoute: typeof Favicon16x16DotpngRoute
   Favicon32x32DotpngRoute: typeof Favicon32x32DotpngRoute
+  Favicon48x48DotpngRoute: typeof Favicon48x48DotpngRoute
   FaviconDoticoRoute: typeof FaviconDoticoRoute
   FaviconDotsvgRoute: typeof FaviconDotsvgRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -181,6 +194,13 @@ declare module '@tanstack/react-router' {
       path: '/favicon.ico'
       fullPath: '/favicon.ico'
       preLoaderRoute: typeof FaviconDoticoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/favicon-48x48.png': {
+      id: '/favicon-48x48.png'
+      path: '/favicon-48x48.png'
+      fullPath: '/favicon-48x48.png'
+      preLoaderRoute: typeof Favicon48x48DotpngRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/favicon-32x32.png': {
@@ -240,6 +260,7 @@ const rootRouteChildren: RootRouteChildren = {
   AppleTouchIconDotpngRoute: AppleTouchIconDotpngRoute,
   Favicon16x16DotpngRoute: Favicon16x16DotpngRoute,
   Favicon32x32DotpngRoute: Favicon32x32DotpngRoute,
+  Favicon48x48DotpngRoute: Favicon48x48DotpngRoute,
   FaviconDoticoRoute: FaviconDoticoRoute,
   FaviconDotsvgRoute: FaviconDotsvgRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
