@@ -12,9 +12,9 @@ export const cabecera = {
 
 export const puntoDePartida = {
   frase:
-    "Mi labor consiste en encontrar la idea que hace que un proyecto deje de parecerse a los demás.",
+    "Mi labor consiste en encontrar la idea que hace que un proyecto no se parezca a los demás.",
   parrafos: [
-    "Porque cuando esa idea aparece, el nombre, el relato y la marca empiezan a tener sentido.",
+    "Cuando aparece, el proyecto empieza a hablar con voz propia.",
   ],
 };
 
