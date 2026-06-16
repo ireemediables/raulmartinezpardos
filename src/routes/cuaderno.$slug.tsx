@@ -4,6 +4,7 @@ import { Footer } from "@/components/site/Footer";
 import {
   getArticulo,
   getArticuloAdyacentes,
+  getAutor,
   tiempoLectura,
   formatearFecha,
   type Bloque,
