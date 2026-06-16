@@ -64,7 +64,8 @@ export const articulos: Articulo[] = [
       { tipo: "parrafo", texto: "Nike es Nike. IKEA es IKEA. Y la frutería de tu barrio probablemente se llame de alguna forma que apenas recuerdas, porque cuando vas a comprar sandía, no vas a ese sitio que tiene nombre. Vas a la frutería." },
       { tipo: "parrafo", texto: "Sin embargo, cuando alguien va a Nike, muchas veces no va solo a comprar unas zapatillas. Va a Nike. Y esa diferencia importa." },
       { tipo: "parrafo", texto: "Porque una marca empieza a existir cuando deja de ser únicamente lo que vende y empieza a significar algo más. Por eso, una de las primeras oportunidades que tiene una marca para decir quién es, está en su nombre." },
-      { tipo: "parrafo", texto: "Un nombre no construye una marca por sí solo. Claro que no. Pero sí puede darle un lugar desde el que empezar a contar quién es. Y eso, para mí, es empezar con buen pie." },
+      { tipo: "parrafo", texto: "Un nombre no construye una marca por sí solo. Claro que no. Pero sí puede darle un lugar desde el que empezar a contar quién es." },
+      { tipo: "parrafo", texto: "Y eso, para mí, es empezar con buen pie." },
     ],
 
   },
