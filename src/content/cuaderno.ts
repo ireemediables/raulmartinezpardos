@@ -31,9 +31,33 @@ export const cuadernoIntro = {
 // Ordenados del más reciente al más antiguo en el índice (ver getArticulosOrdenados).
 export const articulos: Articulo[] = [
   {
+    slug: "el-problema-de-los-nombres-que-no-tienen-nada-que-decir",
+    titulo: "El problema de los nombres que no tienen nada que decir",
+    fecha: "2026-06-16",
+    extracto:
+      "Si un nombre no tiene nada que decir, quizá sea porque no lo necesita. Y si no lo necesita, probablemente sea porque el negocio funciona.",
+    cuerpo: [
+      { tipo: "parrafo", texto: "Nada más plantearme esta pregunta pensé en lo contrario." },
+      { tipo: "parrafo", texto: "Si un nombre no tiene nada que decir, quizá sea porque no lo necesita." },
+      { tipo: "parrafo", texto: "Y si no lo necesita, probablemente sea porque el negocio funciona." },
+      { tipo: "parrafo", texto: "Pero entonces aparece otra pregunta." },
+      { tipo: "parrafo", texto: "Si el negocio funciona, ¿ya no merece la pena decir algo más?" },
+      { tipo: "parrafo", texto: "A mí me va bien con mi pareja." },
+      { tipo: "parrafo", texto: "Y eso no significa que no pueda invitarla a cenar." },
+      { tipo: "parrafo", texto: "Que parezca suficiente decirle «te quiero» no significa que no pueda escribirle una carta explicándole lo que significa en mi vida." },
+      { tipo: "parrafo", texto: "Con las marcas ocurre algo parecido." },
+      { tipo: "parrafo", texto: "Siempre tienen algo que decir." },
+      { tipo: "parrafo", texto: "Lo que sucede es que, a veces, se acostumbran a pensar que lo único importante es que el negocio siga funcionando." },
+      { tipo: "parrafo", texto: "Y quizá sea cierto." },
+      { tipo: "parrafo", texto: "Pero también es cierto que las personas recordamos, apreciamos y nos acercamos a aquellas cosas que expresan algo de sí mismas." },
+      { tipo: "parrafo", texto: "Por eso no creo que el problema de los nombres que no tienen nada que decir sea que funcionen peor." },
+      { tipo: "parrafo", texto: "El problema es que renuncian a la posibilidad de significar algo más." },
+    ],
+  },
+  {
     slug: "como-poner-nombre-a-una-marca",
     titulo: "Cómo poner nombre a una marca",
-    fecha: "2026-06-16",
+    fecha: "2026-05-19",
     extracto:
       "Nombres posibles hay infinitos. Pero cuando una marca existe de verdad, ya no nos imaginamos otro.",
     cuerpo: [
@@ -58,6 +82,7 @@ export const articulos: Articulo[] = [
       { tipo: "parrafo", texto: "Y eso, para mí, es empezar con buen pie." },
     ],
   },
+
 ];
 
 export function getArticulosOrdenados() {
