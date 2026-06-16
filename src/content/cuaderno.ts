@@ -45,7 +45,8 @@ export const articulos: Articulo[] = [
       { tipo: "parrafo", texto: "Entonces, ¿por qué con las marcas iba a ser diferente? Que un negocio funcione no significa que ya no tenga nada más que decir. Ni que ya no merezca la pena decirlo." },
       { tipo: "parrafo", texto: "Porque las marcas, igual que las personas, terminan expresándose de una manera o de otra. A través de lo que hacen, de cómo lo hacen, de lo que cuentan. Y también de cómo se llaman." },
       { tipo: "parrafo", texto: "Por eso nunca he pensado demasiado en los nombres como una herramienta para vender más. Los veo más como una oportunidad: la oportunidad de que un proyecto empiece a expresar algo propio." },
-      { tipo: "parrafo", texto: "Porque una cosa es que un negocio funcione. Y otra muy distinta que tenga algo que decir. Y cuando ambas cosas ocurren al mismo tiempo, el mundo me parece un lugar un poco más interesante." },
+      { tipo: "parrafo", texto: "Porque una cosa es que un negocio funcione. Y otra muy distinta que tenga algo que decir." },
+      { tipo: "parrafo", texto: "Y cuando ambas cosas ocurren al mismo tiempo, el mundo me parece un lugar un poco más interesante." },
     ],
 
 
