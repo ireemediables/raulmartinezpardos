@@ -85,11 +85,13 @@ export function getAutor(articulo: Articulo) {
 }
 
 export function getArticuloAdyacentes(slug: string) {
+  // orden está de más reciente a más antiguo, así que el artículo
+  // "anterior" cronológicamente es el siguiente del array, y viceversa.
   const orden = getArticulosOrdenados();
   const idx = orden.findIndex((a) => a.slug === slug);
   return {
-    anterior: idx > 0 ? orden[idx - 1] : undefined,
-    siguiente: idx >= 0 && idx < orden.length - 1 ? orden[idx + 1] : undefined,
+    anterior: idx >= 0 && idx < orden.length - 1 ? orden[idx + 1] : undefined,
+    siguiente: idx > 0 ? orden[idx - 1] : undefined,
   };
 }
 
