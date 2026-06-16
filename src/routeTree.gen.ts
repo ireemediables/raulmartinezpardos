@@ -17,9 +17,11 @@ import { Route as Favicon32x32DotpngRouteImport } from './routes/favicon-32x32[.
 import { Route as Favicon16x16DotpngRouteImport } from './routes/favicon-16x16[.]png'
 import { Route as AppleTouchIconDotpngRouteImport } from './routes/apple-touch-icon[.]png'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as CuadernoIndexRouteImport } from './routes/cuaderno.index'
 import { Route as LegalPrivacidadRouteImport } from './routes/legal.privacidad'
 import { Route as LegalAvisoLegalRouteImport } from './routes/legal.aviso-legal'
 import { Route as IrremediablesSlugRouteImport } from './routes/irremediables.$slug'
+import { Route as CuadernoSlugRouteImport } from './routes/cuaderno.$slug'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -61,6 +63,11 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CuadernoIndexRoute = CuadernoIndexRouteImport.update({
+  id: '/cuaderno/',
+  path: '/cuaderno/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const LegalPrivacidadRoute = LegalPrivacidadRouteImport.update({
   id: '/legal/privacidad',
   path: '/legal/privacidad',
@@ -76,6 +83,11 @@ const IrremediablesSlugRoute = IrremediablesSlugRouteImport.update({
   path: '/irremediables/$slug',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CuadernoSlugRoute = CuadernoSlugRouteImport.update({
+  id: '/cuaderno/$slug',
+  path: '/cuaderno/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -86,9 +98,11 @@ export interface FileRoutesByFullPath {
   '/favicon.ico': typeof FaviconDoticoRoute
   '/favicon.svg': typeof FaviconDotsvgRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/cuaderno/$slug': typeof CuadernoSlugRoute
   '/irremediables/$slug': typeof IrremediablesSlugRoute
   '/legal/aviso-legal': typeof LegalAvisoLegalRoute
   '/legal/privacidad': typeof LegalPrivacidadRoute
+  '/cuaderno/': typeof CuadernoIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -99,9 +113,11 @@ export interface FileRoutesByTo {
   '/favicon.ico': typeof FaviconDoticoRoute
   '/favicon.svg': typeof FaviconDotsvgRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/cuaderno/$slug': typeof CuadernoSlugRoute
   '/irremediables/$slug': typeof IrremediablesSlugRoute
   '/legal/aviso-legal': typeof LegalAvisoLegalRoute
   '/legal/privacidad': typeof LegalPrivacidadRoute
+  '/cuaderno': typeof CuadernoIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -113,9 +129,11 @@ export interface FileRoutesById {
   '/favicon.ico': typeof FaviconDoticoRoute
   '/favicon.svg': typeof FaviconDotsvgRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/cuaderno/$slug': typeof CuadernoSlugRoute
   '/irremediables/$slug': typeof IrremediablesSlugRoute
   '/legal/aviso-legal': typeof LegalAvisoLegalRoute
   '/legal/privacidad': typeof LegalPrivacidadRoute
+  '/cuaderno/': typeof CuadernoIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -128,9 +146,11 @@ export interface FileRouteTypes {
     | '/favicon.ico'
     | '/favicon.svg'
     | '/sitemap.xml'
+    | '/cuaderno/$slug'
     | '/irremediables/$slug'
     | '/legal/aviso-legal'
     | '/legal/privacidad'
+    | '/cuaderno/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -141,9 +161,11 @@ export interface FileRouteTypes {
     | '/favicon.ico'
     | '/favicon.svg'
     | '/sitemap.xml'
+    | '/cuaderno/$slug'
     | '/irremediables/$slug'
     | '/legal/aviso-legal'
     | '/legal/privacidad'
+    | '/cuaderno'
   id:
     | '__root__'
     | '/'
@@ -154,9 +176,11 @@ export interface FileRouteTypes {
     | '/favicon.ico'
     | '/favicon.svg'
     | '/sitemap.xml'
+    | '/cuaderno/$slug'
     | '/irremediables/$slug'
     | '/legal/aviso-legal'
     | '/legal/privacidad'
+    | '/cuaderno/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -168,9 +192,11 @@ export interface RootRouteChildren {
   FaviconDoticoRoute: typeof FaviconDoticoRoute
   FaviconDotsvgRoute: typeof FaviconDotsvgRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  CuadernoSlugRoute: typeof CuadernoSlugRoute
   IrremediablesSlugRoute: typeof IrremediablesSlugRoute
   LegalAvisoLegalRoute: typeof LegalAvisoLegalRoute
   LegalPrivacidadRoute: typeof LegalPrivacidadRoute
+  CuadernoIndexRoute: typeof CuadernoIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -231,6 +257,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cuaderno/': {
+      id: '/cuaderno/'
+      path: '/cuaderno'
+      fullPath: '/cuaderno/'
+      preLoaderRoute: typeof CuadernoIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/legal/privacidad': {
       id: '/legal/privacidad'
       path: '/legal/privacidad'
@@ -252,6 +285,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IrremediablesSlugRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cuaderno/$slug': {
+      id: '/cuaderno/$slug'
+      path: '/cuaderno/$slug'
+      fullPath: '/cuaderno/$slug'
+      preLoaderRoute: typeof CuadernoSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -264,20 +304,12 @@ const rootRouteChildren: RootRouteChildren = {
   FaviconDoticoRoute: FaviconDoticoRoute,
   FaviconDotsvgRoute: FaviconDotsvgRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  CuadernoSlugRoute: CuadernoSlugRoute,
   IrremediablesSlugRoute: IrremediablesSlugRoute,
   LegalAvisoLegalRoute: LegalAvisoLegalRoute,
   LegalPrivacidadRoute: LegalPrivacidadRoute,
+  CuadernoIndexRoute: CuadernoIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}

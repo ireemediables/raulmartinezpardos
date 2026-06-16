@@ -155,7 +155,7 @@ function ArticuloPage() {
         <article className="py-20 sm:py-24 md:py-32">
           <div className="mx-auto max-w-2xl px-6 sm:px-8 md:px-10">
             <div className="prose-essay font-serif text-[1.1rem] leading-[1.65] text-pretty sm:text-[1.2rem] sm:leading-[1.7] md:text-[1.3rem]">
-              {articulo.cuerpo.map((b, i) => (
+              {articulo.cuerpo.map((b: Bloque, i: number) => (
                 <BloqueView key={i} bloque={b} />
               ))}
             </div>
