@@ -173,6 +173,19 @@ export function Header() {
               </span>
             </div>
           ))}
+          <div className="flex items-baseline gap-4 leading-none">
+            <span className="eyebrow shrink-0">{String(sections.length + 1).padStart(2, "0")}</span>
+            <span className="font-serif text-[1.35rem] leading-[1.1] sm:text-3xl">
+              <Link
+                to="/cuaderno"
+                aria-current={isCuaderno ? "page" : undefined}
+                className={cuadernoLinkClass(isCuaderno)}
+                onClick={() => setOpen(false)}
+              >
+                Cuaderno
+              </Link>
+            </span>
+          </div>
         </div>
       )}
     </>
