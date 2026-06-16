@@ -146,7 +146,7 @@ function ArticuloPage() {
             <p className="mt-3 text-sm text-muted-foreground sm:text-base">
               {getAutor(articulo)}
             </p>
-            <h1 className="mt-6 display text-balance text-[2.25rem] leading-[1.08] tracking-[-0.01em] sm:mt-8 sm:text-5xl md:text-6xl md:leading-[1.05]">
+            <h1 className="mt-6 display text-balance text-[1.65rem] leading-[1.15] tracking-[-0.01em] sm:mt-8 sm:text-5xl md:text-6xl md:leading-[1.05]">
               {articulo.titulo}
             </h1>
             <p className="mt-8 accent-italic text-lg text-muted-foreground sm:mt-10 sm:text-xl md:text-2xl">
