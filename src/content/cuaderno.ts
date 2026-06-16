@@ -35,7 +35,8 @@ export const articulos: Articulo[] = [
     titulo: "El problema de los nombres que no tienen nada que decir",
     fecha: "2026-06-16",
     extracto:
-      "Si un nombre no tiene nada que decir, quizá sea porque no lo necesita. Y si no lo necesita, probablemente sea porque el negocio funciona.",
+      "Que un negocio funcione no significa que ya no tenga nada más que decir. Ni que ya no merezca la pena decirlo.",
+
     cuerpo: [
       { tipo: "parrafo", texto: "Nada más pensar en este título me surge una duda." },
       { tipo: "parrafo", texto: "¿Y si no es un problema?" },
