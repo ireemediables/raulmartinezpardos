@@ -87,6 +87,13 @@ export function Header() {
     );
   };
 
+  const cuadernoLinkClass = (isActive: boolean) =>
+    `rounded-sm transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[color:var(--ring)] focus-visible:ring-offset-2 focus-visible:ring-offset-[color:var(--background)] ${
+      isActive ? "text-foreground" : "text-muted-foreground"
+    }`;
+
+  const isCuaderno = pathname.startsWith("/cuaderno");
+
   return (
     <>
       <header
@@ -101,8 +108,16 @@ export function Header() {
           >
             <span className="font-serif text-[13px] sm:text-[14px]">{cabecera.nombre}</span>
           </Link>
-          <nav className="hidden items-center gap-4 whitespace-nowrap text-[12.5px] lg:flex lg:gap-7 lg:text-sm">
+          <nav className="hidden items-center gap-4 whitespace-nowrap text-[12.5px] lg:flex lg:gap-5 lg:text-[13.5px] xl:gap-7 xl:text-sm">
             {sections.map((s) => linkFor(s.id, s.label))}
+            <Link
+              to="/cuaderno"
+              className={cuadernoLinkClass(isCuaderno)}
+              aria-current={isCuaderno ? "page" : undefined}
+              onClick={() => setOpen(false)}
+            >
+              Cuaderno
+            </Link>
           </nav>
           <button
             ref={toggleRef}
