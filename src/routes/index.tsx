@@ -240,6 +240,18 @@ function Home() {
           </div>
         </Section>
 
+        {/* Recorte de prensa — segundo hallazgo */}
+        <div className="-my-10 sm:-my-12 md:-my-16">
+          <PressClipping
+            seccion="Sociedad"
+            titular="Confirmado: las flores hablan"
+            texto="Los expertos todavía discuten cuándo empezaron a hacerlo."
+            slug="la-habladurnia"
+            align="left"
+            rotate={1.4}
+          />
+        </div>
+
         {/* Epílogo — foto + cierre personal */}
         <section className="border-b border-[color:var(--rule)] py-24 sm:py-28 md:py-40">
           <div className="mx-auto max-w-3xl px-6 sm:px-8 md:px-10">
