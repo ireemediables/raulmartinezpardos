@@ -143,4 +143,30 @@
 
   .prose-essay p { margin-bottom: 1.4em; }
   .prose-essay p:last-child { margin-bottom: 0; }
+
+  /* Recorte de prensa: papel ligeramente envejecido, textura muy sutil,
+     sombra suave. Pensado para aparecer como un hallazgo entre secciones. */
+  .press-clipping {
+    background-color: #f3ece1;
+    background-image:
+      radial-gradient(rgba(60, 45, 30, 0.06) 1px, transparent 1px),
+      linear-gradient(180deg, #f5eee3 0%, #ede4d4 100%);
+    background-size: 3px 3px, 100% 100%;
+    background-blend-mode: multiply, normal;
+    box-shadow:
+      0 1px 0 rgba(0, 0, 0, 0.25),
+      0 18px 28px -22px rgba(0, 0, 0, 0.55),
+      0 6px 12px -10px rgba(0, 0, 0, 0.45);
+  }
+  .press-clipping::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+      linear-gradient(135deg, rgba(0, 0, 0, 0.04) 0%, transparent 35%),
+      linear-gradient(315deg, rgba(0, 0, 0, 0.05) 0%, transparent 40%);
+    mix-blend-mode: multiply;
+  }
 }
+
