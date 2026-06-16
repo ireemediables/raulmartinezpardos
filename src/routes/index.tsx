@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
+import { PressClipping } from "@/components/site/PressClipping";
 import { Simbolo } from "@/components/site/Simbolo";
 import { Footer } from "@/components/site/Footer";
 import { SectionLabel } from "@/components/site/SectionLabel";
@@ -140,6 +141,19 @@ function Home() {
           </ol>
         </Section>
 
+        {/* Recorte de prensa — hallazgo entre secciones */}
+        <div className="-my-10 sm:-my-12 md:-my-16">
+          <PressClipping
+            seccion="Última hora"
+            titular="Una lavandería demasiado informada genera preocupación entre sus clientes"
+            texto="Fuentes cercanas aseguran que conoce más secretos de los que debería."
+            slug="la-alcahueta"
+            align="right"
+            rotate={-1.6}
+          />
+        </div>
+
+
         {/* Para quién */}
         <Section id="para-quien" n="03" label="Para quién">
           <p className="accent-italic text-[1.05rem] text-muted-foreground sm:text-xl md:text-2xl">
@@ -225,6 +239,18 @@ function Home() {
             ))}
           </div>
         </Section>
+
+        {/* Recorte de prensa — segundo hallazgo */}
+        <div className="-my-10 sm:-my-12 md:-my-16">
+          <PressClipping
+            seccion="Sociedad"
+            titular="Confirmado: las flores hablan"
+            texto="Los expertos todavía discuten cuándo empezaron a hacerlo."
+            slug="la-habladurnia"
+            align="left"
+            rotate={1.4}
+          />
+        </div>
 
         {/* Epílogo — foto + cierre personal */}
         <section className="border-b border-[color:var(--rule)] py-24 sm:py-28 md:py-40">
