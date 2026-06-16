@@ -13,9 +13,14 @@ export type Articulo = {
   titulo: string;
   /** Fecha en formato ISO (YYYY-MM-DD). */
   fecha: string;
+  /** Autor del artículo. Por defecto, Raúl Martínez Pardos. */
+  autor?: string;
   extracto: string;
   cuerpo: Bloque[];
 };
+
+/** Autor por defecto de todos los artículos del Cuaderno. */
+export const AUTOR_POR_DEFECTO = "Raúl Martínez Pardos";
 
 export const cuadernoIntro = {
   titulo: "Cuaderno",
@@ -28,92 +33,29 @@ export const articulos: Articulo[] = [
   {
     slug: "como-poner-nombre-a-una-marca",
     titulo: "Cómo poner nombre a una marca",
-    fecha: "2026-06-12",
+    fecha: "2026-06-16",
     extracto:
-      "Un nombre no se inventa: se encuentra. Notas sobre el proceso de escuchar a un proyecto hasta que dice cómo se llama.",
+      "Nombres posibles hay infinitos. Pero cuando una marca existe de verdad, ya no nos imaginamos otro.",
     cuerpo: [
-      {
-        tipo: "parrafo",
-        texto:
-          "Casi siempre que alguien me pregunta cómo se pone nombre a una marca, espera una técnica. Una fórmula. Un atajo.",
-      },
-      {
-        tipo: "parrafo",
-        texto:
-          "Y entiendo el impulso. El nombre es lo que más se ve, lo que más se repite, lo que primero se pronuncia. Es lógico querer acertar cuanto antes.",
-      },
-      {
-        tipo: "parrafo",
-        texto:
-          "Pero los buenos nombres rara vez aparecen así. Lo que tienen en común no es una técnica: es una observación previa.",
-      },
-      { tipo: "encabezado", texto: "Antes del nombre, la idea" },
-      {
-        tipo: "parrafo",
-        texto:
-          "Un nombre no nombra un negocio. Nombra una idea. Y si la idea todavía no está, el nombre no tiene a qué agarrarse.",
-      },
-      {
-        tipo: "parrafo",
-        texto:
-          "Por eso, antes de proponer nada, paso tiempo escuchando. Qué se ofrece. Qué se observa. Qué se intuye. Qué pasa alrededor de ese proyecto que el propio proyecto todavía no ha sabido contar.",
-      },
-      {
-        tipo: "cita",
-        texto:
-          "El nombre llega cuando la idea está tan clara que ya solo falta llamarla.",
-      },
-      { tipo: "encabezado", texto: "Tres preguntas que ayudan" },
-      {
-        tipo: "parrafo",
-        texto:
-          "¿Qué hace que este proyecto no se parezca a los demás? ¿Qué pasaría si desapareciese mañana? ¿Qué dirían las personas que ya lo conocen?",
-      },
-      {
-        tipo: "parrafo",
-        texto:
-          "Las respuestas no son el nombre. Son el material. Pero sin ese material, lo que aparece son etiquetas; con él, empiezan a aparecer nombres.",
-      },
-    ],
-  },
-  {
-    slug: "el-problema-de-los-nombres-que-no-tienen-nada-que-decir",
-    titulo: "El problema de los nombres que no tienen nada que decir",
-    fecha: "2026-06-04",
-    extracto:
-      "Hay nombres que suenan bien y no dicen nada. Funcionan al principio. Pero, con el tiempo, todo lo que se construye encima cruje.",
-    cuerpo: [
-      {
-        tipo: "parrafo",
-        texto:
-          "Hay nombres que pasan el primer filtro con facilidad. Suenan bien. Son cortos. El dominio está libre. Nadie se opone.",
-      },
-      {
-        tipo: "parrafo",
-        texto:
-          "Y aun así, meses después, el proyecto que llevan encima no termina de despegar. No es culpa del producto. No es culpa del equipo. Es que el nombre no está sosteniendo nada.",
-      },
-      { tipo: "encabezado", texto: "Sonar bien no es decir algo" },
-      {
-        tipo: "parrafo",
-        texto:
-          "Un nombre que solo suena bien es un nombre vacío. Y los nombres vacíos obligan a que todo lo demás haga su trabajo: la web, la publicidad, el equipo comercial, las explicaciones.",
-      },
-      {
-        tipo: "parrafo",
-        texto:
-          "Un nombre con algo dentro no necesita tantas explicaciones. Empieza a hacer parte del trabajo por su cuenta.",
-      },
-      {
-        tipo: "cita",
-        texto:
-          "Un nombre no tiene que explicarlo todo. Pero algo tiene que decir.",
-      },
-      {
-        tipo: "parrafo",
-        texto:
-          "Por eso me interesan más los nombres que parten de una observación que los que parten de una ocurrencia. Las observaciones envejecen mejor.",
-      },
+      { tipo: "parrafo", texto: "Nombres posibles hay infinitos." },
+      { tipo: "parrafo", texto: "Podrías llamar a una marca de zapatillas «Azul 47»." },
+      { tipo: "parrafo", texto: "A una floristería «Grupo Floral Mediterráneo»." },
+      { tipo: "parrafo", texto: "O a una taberna «Taberna El Vermú»." },
+      { tipo: "parrafo", texto: "Ninguno de esos nombres está mal. Simplemente podrían llamarse de otra manera." },
+      { tipo: "parrafo", texto: "Y ahí está el problema. O la solución." },
+      { tipo: "parrafo", texto: "Cuando una marca todavía no existe, casi cualquier nombre parece válido. Pero cuando una marca existe de verdad, ocurre algo curioso. Ya no nos imaginamos otro." },
+      { tipo: "parrafo", texto: "Nike es Nike." },
+      { tipo: "parrafo", texto: "IKEA es IKEA." },
+      { tipo: "parrafo", texto: "Y la frutería de tu barrio probablemente se llame de alguna forma que apenas recuerdas. Porque cuando vas a comprar sandía, no vas a ese sitio que tiene nombre." },
+      { tipo: "parrafo", texto: "Vas a la frutería." },
+      { tipo: "parrafo", texto: "Sin embargo, cuando alguien va a Nike, muchas veces no va solo a comprar unas zapatillas." },
+      { tipo: "parrafo", texto: "Va a Nike." },
+      { tipo: "parrafo", texto: "Y esa diferencia importa." },
+      { tipo: "parrafo", texto: "Porque una marca empieza a existir cuando deja de ser únicamente lo que vende. Y empieza a significar algo más." },
+      { tipo: "parrafo", texto: "Por eso, una de las primeras oportunidades que tiene una marca para decir quién es, está en su nombre." },
+      { tipo: "parrafo", texto: "Porque al final, un nombre no construye una marca por sí solo. Claro que no." },
+      { tipo: "parrafo", texto: "Pero sí puede darle un lugar desde el que empezar a contar quién es." },
+      { tipo: "parrafo", texto: "Y eso, para mí, es empezar con buen pie." },
     ],
   },
 ];
@@ -124,6 +66,10 @@ export function getArticulosOrdenados() {
 
 export function getArticulo(slug: string) {
   return articulos.find((a) => a.slug === slug);
+}
+
+export function getAutor(articulo: Articulo) {
+  return articulo.autor ?? AUTOR_POR_DEFECTO;
 }
 
 export function getArticuloAdyacentes(slug: string) {
